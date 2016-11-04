@@ -1,0 +1,209 @@
+;; Object Entity/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Entity/"
+  :tables
+  (list
+    (semanticdb-table "Player.java"
+      :major-mode 'java-mode
+      :tags 
+        '( ("com.neet.DiamondHunter.Entity" package nil nil [186 224])
+            ("java.awt.Graphics2D" include nil nil [226 253])
+            ("java.awt.image.BufferedImage" include nil nil [254 290])
+            ("com.neet.DiamondHunter.Manager.Content" include nil nil [292 338])
+            ("com.neet.DiamondHunter.Manager.JukeBox" include nil nil [339 385])
+            ("com.neet.DiamondHunter.TileMap.TileMap" include nil nil [386 432])
+            ("Player" type
+               (:typemodifiers ("public")
+                :superclasses "Entity"
+                :members 
+                  ( ("downSprites" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "BufferedImage")
+                        (reparse-symbol class_member_declaration) [486 522])
+                    ("leftSprites" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "BufferedImage")
+                        (reparse-symbol class_member_declaration) [524 560])
+                    ("rightSprites" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "BufferedImage")
+                        (reparse-symbol class_member_declaration) [562 599])
+                    ("upSprites" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "BufferedImage")
+                        (reparse-symbol class_member_declaration) [601 635])
+                    ("downBoatSprites" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "BufferedImage")
+                        (reparse-symbol class_member_declaration) [637 677])
+                    ("leftBoatSprites" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "BufferedImage")
+                        (reparse-symbol class_member_declaration) [679 719])
+                    ("rightBoatSprites" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "BufferedImage")
+                        (reparse-symbol class_member_declaration) [721 762])
+                    ("upBoatSprites" variable
+                       (:dereference 1
+                        :typemodifiers ("private")
+                        :type "BufferedImage")
+                        (reparse-symbol class_member_declaration) [764 802])
+                    ("DOWN" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [820 847])
+                    ("LEFT" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [849 876])
+                    ("RIGHT" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [878 906])
+                    ("UP" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [908 933])
+                    ("DOWNBOAT" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [935 966])
+                    ("LEFTBOAT" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [968 999])
+                    ("RIGHTBOAT" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1001 1033])
+                    ("UPBOAT" variable
+                       (:typemodifiers ("private" "final")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1035 1064])
+                    ("numDiamonds" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1081 1105])
+                    ("totalDiamonds" variable
+                       (:typemodifiers ("private")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1107 1133])
+                    ("hasBoat" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [1135 1159])
+                    ("hasAxe" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [1161 1184])
+                    ("onWater" variable
+                       (:typemodifiers ("private")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [1186 1210])
+                    ("ticks" variable
+                       (:typemodifiers ("private")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [1212 1231])
+                    ("Player" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tm" variable (:type "TileMap") (reparse-symbol formal_parameters) [1249 1259]))                          )
+                        (reparse-symbol class_member_declaration) [1235 1751])
+                    ("setAnimation" function
+                       (:typemodifiers ("private")
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol formal_parameters) [1781 1786])
+                            ("bi" variable
+                               (:dereference 1
+                                :type "BufferedImage")
+                                (reparse-symbol formal_parameters) [1788 1806])
+                            ("d" variable (:type "int") (reparse-symbol formal_parameters) [1808 1813]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1755 1895])
+                    ("collectedDiamond" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1899 1948])
+                    ("numDiamonds" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [1950 1998])
+                    ("getTotalDiamonds" function
+                       (:typemodifiers ("public")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [2000 2055])
+                    ("setTotalDiamonds" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol formal_parameters) [2086 2091]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2057 2115])
+                    ("gotBoat" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2119 2184])
+                    ("gotAxe" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2186 2225])
+                    ("hasBoat" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [2227 2271])
+                    ("hasAxe" function
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [2273 2315])
+                    ("getTicks" function
+                       (:typemodifiers ("public")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [2344 2384])
+                    ("setDown" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2426 2471])
+                    ("setLeft" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2473 2518])
+                    ("setRight" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2520 2567])
+                    ("setUp" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2569 2610])
+                    ("setAction" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2717 3423])
+                    ("update" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3427 4663])
+                    ("draw" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("g" variable (:type "Graphics2D") (reparse-symbol formal_parameters) [4701 4713]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4684 4736]))                  
+                :type "class")
+                nil [434 4740]))          
+      :file "Player.java"
+      :pointmax 4740
+      :fsize 4929
+      :lastmodtime '(20929 57382 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!danieldoynov!Downloads!DiamondHunter 3!src!com!neet!DiamondHunter!Entity!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

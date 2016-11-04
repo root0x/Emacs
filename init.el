@@ -1,4 +1,5 @@
-; Reduce the frequency of garbage collection by making it happen on
+
+					; Reduce the frequency of garbage collection by making it happen on
 ; each 100MB of allocated data (the default is on every 0.76MB). This reduces
 					; the startup time.
 ;;; Code:
@@ -21,11 +22,15 @@
 
 ;show paring braces and brackets
 (show-paren-mode 1)
-    
+
+
+(setq ring-bell-function 'ignore)
 	
 ;replace text that is hilighted
 (delete-selection-mode 1)
 
+;remove scroll accel
+(setq mouse-wheel-progressive-speed nil)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/") 
 (custom-set-variables
@@ -35,7 +40,9 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("1160f5fc215738551fce39a67b2bcf312ed07ef3568d15d53c87baa4fd1f4d4e" default))))
+    ("1160f5fc215738551fce39a67b2bcf312ed07ef3568d15d53c87baa4fd1f4d4e" default)))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil))
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -80,6 +87,14 @@
  /usr/include"))
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)
 (add-hook 'c-mode-hook 'my:ac-c-header-init)
+
+
+;semantic
+(semantic-mode 1)
+(defun my:add-semantic-to-autocomplete()
+  (add-to-list 'ac-sources 'ac-source-semantic)
+)
+(add-hook 'c-mode-common-hook 'my:add-semantic-to-autocomplete) 
 
 ;initialize flycheck
 (package-install 'flycheck)
@@ -140,6 +155,12 @@
   '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))`
 
 
+(use-package smooth-scroll
+  :config
+  (smooth-scroll-mode 1)
+  (setq smooth-scroll/vscroll-step-size 5)
+  )
+
 
 (require 'ac-math)
 (add-to-list 'ac-modes 'LaTeX-mode)
@@ -152,13 +173,16 @@
 (setq TeX-parse-self t)
 (setq-default TeX-master nil)
 (add-hook 'LaTeX-mode-hook 'visual-line-mode)
-(add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+(add-hook 'text-mode-hook 'adaptive-wrap-prefix-mode)
 (setq reftex-plug-into-AUCTeX t)
 (setq-default TeX-PDF-mode t)
+(setq LaTeX-item-indent -2 LaTeX-indent-level 4)
 (require 'auto-complete-auctex)
 
+;enable flyspell for auctex
+(add-hook 'LaTeX-mode-hook 'flyspell-mode)
 
 
 (add-to-list
@@ -175,6 +199,47 @@
       :help "Run latexmk on file")
     TeX-command-list)))
 (add-hook 'TeX-mode-hook '(lambda () (setq TeX-command-default "latexmk")))
+
+
+(eval-after-load "tex" 
+  '(setcdr (assoc "LaTeX" TeX-command-list)
+          '("%`%l%(mode) -shell-escape%' %t"
+          TeX-run-TeX nil (latex-mode doctex-mode) :help "Run LaTeX")
+    )
+  )
+
+
+ (defun TeX-run-Biber (name command file)
+    "Create a process for NAME using COMMAND to format FILE with Biber." 
+   (let ((process (TeX-run-command name command file)))
+      (setq TeX-sentinel-function 'TeX-Biber-sentinel)
+      (if TeX-process-asynchronous
+          process
+        (TeX-synchronous-sentinel name file process))))
+  
+  (defun TeX-Biber-sentinel (process name)
+    "Cleanup TeX output buffer after running Biber."
+    (goto-char (point-max))
+    (cond
+     ;; Check whether Biber reports any warnings or errors.
+     ((re-search-backward (concat
+                           "^(There \\(?:was\\|were\\) \\([0-9]+\\) "
+                           "\\(warnings?\\|error messages?\\))") nil t)
+      ;; Tell the user their number so that she sees whether the
+      ;; situation is getting better or worse.
+      (message (concat "Biber finished with %s %s. "
+                       "Type `%s' to display output.")
+               (match-string 1) (match-string 2)
+               (substitute-command-keys
+                "\\\\[TeX-recenter-output-buffer]")))
+     (t
+      (message (concat "Biber finished successfully. "
+                       "Run LaTeX again to get citations right."))))
+    (setq TeX-command-next TeX-command-default))
+
+(eval-after-load "tex"
+  '(add-to-list 'TeX-command-list '("Biber" "biber %s" TeX-run-Biber nil t :help "Run Biber"))
+  ) 
 
 ;; use Skim as default pdf viewer
 ;; Skim's displayline is used for forward search (from .tex to .pdf)

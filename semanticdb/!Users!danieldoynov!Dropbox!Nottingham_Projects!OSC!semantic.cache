@@ -1,0 +1,207 @@
+;; Object OSC/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "OSC/"
+  :tables
+  (list
+    (semanticdb-table "req1.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("sys/time.h" include (:system-flag t) nil [40 61])
+            ("time.h" include (:system-flag t) nil [62 79])
+            ("NUMBER_OF_JOBS" variable (:constant-flag t) nil [89 103])
+            ("JOB_INDEX" variable (:constant-flag t) nil [115 124])
+            ("BURST_TIME" variable (:constant-flag t) nil [135 145])
+            ("REMAINING_TIME" variable (:constant-flag t) nil [156 170])
+            ("PRIORITY" variable (:constant-flag t) nil [181 189])
+            ("aiJobs" variable
+               (:dereference 2
+                :type "int")
+                nil [193 223])
+            ("jobs_struct" type
+               (:members 
+                  ( ("job_ID" variable (:type "int") (reparse-symbol classsubparts) [250 261])
+                    ("start_Time" variable (:type "int") (reparse-symbol classsubparts) [266 281])
+                    ("end_Time" variable (:type "int") (reparse-symbol classsubparts) [286 299]))                  
+                :type "struct")
+                nil [225 302])
+            ("jobs" variable
+               (:dereference 1
+                :type ("jobs_struct" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [308 348])
+            ("generateJobs" function (:type "void") nil [350 587])
+            ("printJob" function
+               (:arguments 
+                  ( ("iId" variable (:type "int") (reparse-symbol arg-sub-list) [603 611])
+                    ("iBurstTime" variable (:type "int") (reparse-symbol arg-sub-list) [612 627])
+                    ("iRemainingTime" variable (:type "int") (reparse-symbol arg-sub-list) [628 647])
+                    ("iPriority" variable (:type "int") (reparse-symbol arg-sub-list) [648 662]))                  
+                :type "void")
+                nil [589 788])
+            ("printJobs" function (:type "void") nil [790 989])
+            ("getDifferenceInMilliSeconds" function
+               (:arguments 
+                  ( ("start" variable (:type ("timeval" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [1028 1049])
+                    ("end" variable (:type ("timeval" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [1050 1069]))                  
+                :type "long int")
+                nil [991 1247])
+            ("simulateJob" function
+               (:arguments 
+                  ( ("iTime" variable (:type "int") (reparse-symbol arg-sub-list) [1266 1276]))                  
+                :type "void")
+                nil [1249 1540])
+            ("simulateFCFS" function (:type "void") nil [1543 1830])
+            ("printFCFS" function (:type "void") nil [1832 2382])
+            ("main" function (:type "int") nil [2385 2492]))          
+      :file "req1.c"
+      :pointmax 2494
+      :fsize 2493
+      :lastmodtime '(22541 59358 0 0)
+      :unmatched-syntax '((symbol 290 . 292) (INT 286 . 289) (symbol 290 . 292) (INT 286 . 289))
+      :lexical-table 
+        '(("REMAINING_TIME" . ((number "2" 171 . 172)))
+          ("BURST_TIME" . ((number "1" 146 . 147)))
+          ("NUMBER_OF_JOBS" . ((number "10" 104 . 106)))
+          ("PRIORITY" . ((number "3" 190 . 191)))
+          ("JOB_INDEX" . ((number "0" 125 . 126)))
+          )
+)
+    (semanticdb-table "req1b.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("sys/time.h" include (:system-flag t) nil [40 61])
+            ("NUMBER_OF_JOBS" variable (:constant-flag t) nil [90 104])
+            ("time.h" include (:system-flag t) nil [62 79])
+            ("NUMBER_OF_JOBS" variable (:constant-flag t) nil [90 104])
+            ("JOB_INDEX" variable (:constant-flag t) nil [116 125])
+            ("BURST_TIME" variable (:constant-flag t) nil [136 146])
+            ("REMAINING_TIME" variable (:constant-flag t) nil [157 171])
+            ("PRIORITY" variable (:constant-flag t) nil [182 190])
+            ("TRUE" variable (:constant-flag t) nil [201 205])
+            ("FALSE" variable (:constant-flag t) nil [216 221])
+            ("TIME_SLICE" variable (:constant-flag t) nil [232 242])
+            ("aiJobs" variable
+               (:dereference 2
+                :type "int")
+                nil [266 296])
+            ("jobs_struct" type
+               (:members 
+                  ( ("index" variable (:type "int") (reparse-symbol classsubparts) [323 333])
+                    ("burst_Time" variable (:type "int") (reparse-symbol classsubparts) [338 353])
+                    ("remaining_Time" variable (:type "int") (reparse-symbol classsubparts) [358 377])
+                    ("priority" variable (:type "int") (reparse-symbol classsubparts) [382 395])
+                    ("restarted" variable (:type "bool") (reparse-symbol classsubparts) [400 415]))                  
+                :type "struct")
+                nil [298 418])
+            ("queue" type
+               (:members 
+                  ( ("x" variable (:type "int") (reparse-symbol classsubparts) [439 445])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [450 469]))                  
+                :type "struct")
+                nil [420 472])
+            ("front" variable
+               (:pointer 1
+                :type ("queue" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [473 500])
+            ("back" variable
+               (:pointer 1
+                :type ("queue" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [473 500])
+            ("jobs" variable
+               (:dereference 1
+                :type ("jobs_struct" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [502 542])
+            ("first" function (:type "int") nil [544 580])
+            ("last" function (:type "int") nil [582 616])
+            ("isEmpty" function (:type "bool") nil [618 730])
+            ("enQueue" function
+               (:arguments 
+                  ( ("elem" variable (:type "int") (reparse-symbol arg-sub-list) [745 754]))                  
+                :type "void")
+                nil [732 1027])
+            ("deQueue" function (:type "void") nil [1029 1173])
+            ("getDifferenceInMilliSeconds" function
+               (:arguments 
+                  ( ("start" variable (:type ("timeval" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [1213 1234])
+                    ("end" variable (:type ("timeval" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [1235 1254]))                  
+                :type "long int")
+                nil [1176 1432])
+            ("simulateJob" function
+               (:arguments 
+                  ( ("iTime" variable (:type "int") (reparse-symbol arg-sub-list) [1453 1463]))                  
+                :type "void")
+                nil [1436 1740])
+            ("bubblesort2d" function (:type "void") nil [1743 2163])
+            ("printRobin" function
+               (:arguments 
+                  ( ("startTime" variable (:type "int") (reparse-symbol arg-sub-list) [2181 2195])
+                    ("index" variable (:type "int") (reparse-symbol arg-sub-list) [2196 2206])
+                    ("finished" variable (:type "bool") (reparse-symbol arg-sub-list) [2207 2221]))                  
+                :type "void")
+                nil [2165 3074])
+            ("roundRobin" function (:type "void") nil [3076 4872])
+            ("fillArrayStruct" function (:type "void") nil [4874 5160])
+            ("generateJobs" function (:type "void") nil [5162 5427])
+            ("printJob" function
+               (:arguments 
+                  ( ("iId" variable (:type "int") (reparse-symbol arg-sub-list) [5443 5451])
+                    ("iBurstTime" variable (:type "int") (reparse-symbol arg-sub-list) [5452 5467])
+                    ("iRemainingTime" variable (:type "int") (reparse-symbol arg-sub-list) [5468 5487])
+                    ("iPriority" variable (:type "int") (reparse-symbol arg-sub-list) [5488 5502]))                  
+                :type "void")
+                nil [5429 5628])
+            ("printJobs" function (:type "void") nil [5630 5836])
+            ("printStruct" function (:type "void") nil [5838 6073])
+            ("main" function (:type "int") nil [6076 6343]))          
+      :file "req1b.c"
+      :pointmax 6345
+      :fsize 6344
+      :lastmodtime '(22541 59493 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("REMAINING_TIME" . ((number "2" 172 . 173)))
+          ("TRUE" . ((number "1" 206 . 207)))
+          ("TIME_SLICE" . ((number "25" 243 . 245)))
+          ("FALSE" . ((number "0" 222 . 223)))
+          ("BURST_TIME" . ((number "1" 147 . 148)))
+          ("NUMBER_OF_JOBS" . ((number "10" 105 . 107)))
+          ("PRIORITY" . ((number "3" 191 . 192)))
+          ("JOB_INDEX" . ((number "0" 126 . 127)))
+          )
+))
+  :file "!Users!danieldoynov!Dropbox!Nottingham_Projects!OSC!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
