@@ -1,0 +1,63 @@
+;; Object Downloads/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Downloads/"
+  :tables
+  (list
+    (semanticdb-table "req1 (4).c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("sys/time.h" include (:system-flag t) nil [20 41])
+            ("NUMBER_OF_JOBS" variable (:constant-flag t) nil [51 65])
+            ("JOB_INDEX" variable (:constant-flag t) nil [77 86])
+            ("BURST_TIME" variable (:constant-flag t) nil [97 107])
+            ("REMAINING_TIME" variable (:constant-flag t) nil [118 132])
+            ("PRIORITY" variable (:constant-flag t) nil [143 151])
+            ("aiJobs" variable
+               (:dereference 2
+                :type "int")
+                nil [155 185])
+            ("generateJobs" function (:type "void") nil [187 419])
+            ("printJob" function
+               (:arguments 
+                  ( ("iId" variable (:type "int") (reparse-symbol arg-sub-list) [435 443])
+                    ("iBurstTime" variable (:type "int") (reparse-symbol arg-sub-list) [444 459])
+                    ("iRemainingTime" variable (:type "int") (reparse-symbol arg-sub-list) [460 479])
+                    ("iPriority" variable (:type "int") (reparse-symbol arg-sub-list) [480 494]))                  
+                :type "void")
+                nil [421 617])
+            ("printJobs" function (:type "void") nil [619 810])
+            ("getDifferenceInMilliSeconds" function
+               (:arguments 
+                  ( ("start" variable (:type ("timeval" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [849 870])
+                    ("end" variable (:type ("timeval" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [871 890]))                  
+                :type "long int")
+                nil [812 1057])
+            ("simulateJob" function
+               (:arguments 
+                  ( ("iTime" variable (:type "int") (reparse-symbol arg-sub-list) [1076 1086]))                  
+                :type "void")
+                nil [1059 1334])
+            ("main" function (:type "int") nil [1338 1395]))          
+      :file "req1 (4).c"
+      :pointmax 1397
+      :fsize 1462
+      :lastmodtime '(22582 6967 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("REMAINING_TIME" . ((number "2" 133 . 134)))
+          ("BURST_TIME" . ((number "1" 108 . 109)))
+          ("NUMBER_OF_JOBS" . ((number "10" 66 . 68)))
+          ("PRIORITY" . ((number "3" 152 . 153)))
+          ("JOB_INDEX" . ((number "0" 87 . 88)))
+          )
+))
+  :file "!Users!danieldoynov!Downloads!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

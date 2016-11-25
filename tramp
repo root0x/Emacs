@@ -1,0 +1,16 @@
+;; -*- emacs-lisp -*- <16/11/17 23:32:47 /Users/danieldoynov/.emacs.d/tramp>
+;; Tramp connection history.  Don't change this file.
+;; You can delete it, forcing Tramp to reapply the checks.
+
+((["ssh" nil "sudo" nil "ssh:psydbd@bann.cs.nott.ac.uk|"]
+  nil)
+ (["ssh" nil "ssh" nil nil]
+  nil)
+ (["sudo" "root" "bann.cs.nott.ac.uk" nil "ssh:psydbd@bann.cs.nott.ac.uk|"]
+  nil)
+ (["ssh" nil "bann.cs.nott.ac.uk" nil "ssh:psydbd@bann.cs.nott.ac.uk|"]
+  nil)
+ (["ssh" "psydbd" "bann.cs.nott.ac.uk" nil nil]
+  nil)
+ (["sudo" "root" "bann.cs.nott.ac.uk" nil nil]
+  nil))

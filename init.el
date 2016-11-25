@@ -23,6 +23,8 @@
 ;show paring braces and brackets
 (show-paren-mode 1)
 
+(setq tramp-default-method "ssh")
+
 
 (setq ring-bell-function 'ignore)
 	
@@ -66,28 +68,26 @@
 
 
 ;start auto-complete with emacs
-(require 'auto-complete)
+;(require 'auto-complete)
 ;do default config for auto-complete
-(require 'auto-complete-config)
-(ac-config-default) 
+;(require 'auto-complete-config)
+;(ac-config-default) 
+
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
+
+;; (setq company-backends (delete 'company-semantic company-backends))
+;; (define-key c-mode-map  [(tab)] 'company-complete)
+;; (define-key c++-mode-map  [(tab)] 'company-complete)
+(setq company-minimum-prefix-length 2)
+(setq company-idle-delay 0.1)
+(add-to-list 'company-backends 'company-c-headers)
+;(add-to-list 'company-c-headers-path-system "/usr/include/c++/4.8/")
 
 
 ;start yasnipper with emacs
 (require 'yasnippet)
 (yas-global-mode 1)
-
-;initialize autocomplete-c-headers
-(defun my:ac-c-header-init()
-  (require 'autocomplete-c-headers)
-  (add-to-list 'ac-sources 'ac-sources-c-headers)
-  (add-to-list 'achead:include-directories '"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1
- /usr/local/include
- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.3.0/include
- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
- /usr/include"))
-(add-hook 'c++-mode-hook 'my:ac-c-header-init)
-(add-hook 'c-mode-hook 'my:ac-c-header-init)
-
 
 ;semantic
 (semantic-mode 1)
@@ -137,9 +137,18 @@
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 
- (add-to-list 'load-path "~/.emacs.d/plugins/neotree/")
-  (require 'neotree)
-  (global-set-key [f8] 'neotree-toggle)
+(add-to-list 'load-path "~/.emacs.d/plugins/neotree/")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+(setq neo-theme (if window-system 'icons 'arrow))
+
+;(add-to-list 'load-path "~/.emacs.d/plugins/all-the-icons/")
+;(require 'all-the-icons)
+
+(drag-stuff-global-mode 1)
+(drag-stuff-define-keys)
+
+
 
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 (setq exec-path (append exec-path '("/usr/local/bin")))
@@ -254,3 +263,16 @@
  ;; If there is more than one, they won't work right.
  )
 
+
+(defun move-line-up ()
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2))
+
+(defun move-line-down ()
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1))
+
+;

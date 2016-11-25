@@ -1,0 +1,72 @@
+;; Object Desktop/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Desktop/"
+  :tables
+  (list
+    (semanticdb-table "req2.c"
+      :major-mode 'c-mode
+      :tags nil
+      :file "req2.c"
+      :pointmax 252
+      :unmatched-syntax '((number 250 . 251) (punctuation 248 . 249) (symbol 233 . 247) (punctuation 231 . 232) (number 230 . 231) (punctuation 228 . 229) (symbol 222 . 227) (number 220 . 221) (punctuation 218 . 219) (symbol 211 . 217) (number 209 . 210) (punctuation 207 . 208) (symbol 200 . 206) (number 198 . 199) (punctuation 196 . 197) (symbol 189 . 195) (number 187 . 188) (punctuation 185 . 186) (symbol 178 . 184) (number 176 . 177) (punctuation 174 . 175) (symbol 167 . 173) (number 165 . 166) (punctuation 163 . 164) (symbol 156 . 162) (number 154 . 155) (punctuation 152 . 153) (symbol 145 . 151) (number 143 . 144) (punctuation 141 . 142) (symbol 134 . 140) (number 132 . 133) (punctuation 130 . 131) (symbol 123 . 129) (number 121 . 122) (punctuation 119 . 120) (symbol 112 . 118) (number 109 . 111) (punctuation 107 . 108) (symbol 100 . 106) (number 98 . 99) (punctuation 96 . 97) (symbol 89 . 95) (number 87 . 88) (punctuation 85 . 86) (symbol 78 . 84) (number 76 . 77) (punctuation 74 . 75) (symbol 67 . 73) (number 65 . 66) (punctuation 63 . 64) (symbol 56 . 62) (number 54 . 55) (punctuation 52 . 53) (symbol 45 . 51) (number 43 . 44) (punctuation 41 . 42) (symbol 34 . 40) (number 32 . 33) (punctuation 30 . 31) (symbol 23 . 29) (number 21 . 22) (punctuation 19 . 20) (symbol 12 . 18) (number 10 . 11) (punctuation 8 . 9) (symbol 1 . 7)))
+    (semanticdb-table "req1a.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("time.h" include (:system-flag t) nil [20 37])
+            ("sys/time.h" include (:system-flag t) nil [38 59])
+            ("stdlib.h" include (:system-flag t) nil [60 79])
+            ("NUMBER_OF_JOBS" variable (:constant-flag t) nil [88 102])
+            ("JOB_INDEX" variable (:constant-flag t) nil [116 125])
+            ("BURST_TIME" variable (:constant-flag t) nil [136 146])
+            ("REMAINING_TIME" variable (:constant-flag t) nil [157 171])
+            ("PRIORITY" variable (:constant-flag t) nil [182 190])
+            ("aiJobs" variable
+               (:dereference 2
+                :type "int")
+                nil [194 224])
+            ("generateJobs" function (:type "void") nil [226 463])
+            ("printJob" function
+               (:arguments 
+                  ( ("iId" variable (:type "int") (reparse-symbol arg-sub-list) [479 487])
+                    ("iBurstTime" variable (:type "int") (reparse-symbol arg-sub-list) [488 503])
+                    ("iRemainingTime" variable (:type "int") (reparse-symbol arg-sub-list) [504 523])
+                    ("iPriority" variable (:type "int") (reparse-symbol arg-sub-list) [524 538]))                  
+                :type "void")
+                nil [465 664])
+            ("printJobs" function (:type "void") nil [666 865])
+            ("getDifferenceInMilliSeconds" function
+               (:arguments 
+                  ( ("start" variable (:type ("timeval" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [904 925])
+                    ("end" variable (:type ("timeval" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [926 945]))                  
+                :type "long int")
+                nil [867 1122])
+            ("simulateJob" function
+               (:arguments 
+                  ( ("iTime" variable (:type "int") (reparse-symbol arg-sub-list) [1141 1151]))                  
+                :type "void")
+                nil [1124 1415])
+            ("fifo" function (:type "void") nil [1417 2531])
+            ("main" function (:type "int") nil [2627 2704]))          
+      :file "req1a.c"
+      :pointmax 2706
+      :fsize 2705
+      :lastmodtime '(22565 50399 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("REMAINING_TIME" . ((number "2" 172 . 173)))
+          ("BURST_TIME" . ((number "1" 147 . 148)))
+          ("NUMBER_OF_JOBS" . ((number "1000" 103 . 107)))
+          ("PRIORITY" . ((number "3" 191 . 192)))
+          ("JOB_INDEX" . ((number "0" 126 . 127)))
+          )
+))
+  :file "!Users!danieldoynov!Desktop!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

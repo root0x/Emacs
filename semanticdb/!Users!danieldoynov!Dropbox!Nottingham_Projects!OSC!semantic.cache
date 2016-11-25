@@ -11,69 +11,69 @@
             ("sys/time.h" include (:system-flag t) nil [40 61])
             ("time.h" include (:system-flag t) nil [62 79])
             ("NUMBER_OF_JOBS" variable (:constant-flag t) nil [89 103])
-            ("JOB_INDEX" variable (:constant-flag t) nil [115 124])
-            ("BURST_TIME" variable (:constant-flag t) nil [135 145])
-            ("REMAINING_TIME" variable (:constant-flag t) nil [156 170])
-            ("PRIORITY" variable (:constant-flag t) nil [181 189])
+            ("JOB_INDEX" variable (:constant-flag t) nil [117 126])
+            ("BURST_TIME" variable (:constant-flag t) nil [137 147])
+            ("REMAINING_TIME" variable (:constant-flag t) nil [158 172])
+            ("PRIORITY" variable (:constant-flag t) nil [183 191])
             ("aiJobs" variable
                (:dereference 2
                 :type "int")
-                nil [193 223])
+                nil [195 225])
             ("jobs_struct" type
                (:members 
-                  ( ("job_ID" variable (:type "int") (reparse-symbol classsubparts) [250 261])
-                    ("start_Time" variable (:type "int") (reparse-symbol classsubparts) [266 281])
-                    ("end_Time" variable (:type "int") (reparse-symbol classsubparts) [286 299]))                  
+                  ( ("job_ID" variable (:type "int") (reparse-symbol classsubparts) [252 263])
+                    ("start_Time" variable (:type "int") (reparse-symbol classsubparts) [268 283])
+                    ("end_Time" variable (:type "int") (reparse-symbol classsubparts) [288 301]))                  
                 :type "struct")
-                nil [225 302])
+                nil [227 304])
             ("jobs" variable
                (:dereference 1
                 :type ("jobs_struct" type
                      (:prototype t
                       :type "struct")
                       nil nil))
-                nil [308 348])
-            ("generateJobs" function (:type "void") nil [350 587])
+                nil [310 350])
+            ("generateJobs" function (:type "void") nil [352 589])
             ("printJob" function
                (:arguments 
-                  ( ("iId" variable (:type "int") (reparse-symbol arg-sub-list) [603 611])
-                    ("iBurstTime" variable (:type "int") (reparse-symbol arg-sub-list) [612 627])
-                    ("iRemainingTime" variable (:type "int") (reparse-symbol arg-sub-list) [628 647])
-                    ("iPriority" variable (:type "int") (reparse-symbol arg-sub-list) [648 662]))                  
+                  ( ("iId" variable (:type "int") (reparse-symbol arg-sub-list) [605 613])
+                    ("iBurstTime" variable (:type "int") (reparse-symbol arg-sub-list) [614 629])
+                    ("iRemainingTime" variable (:type "int") (reparse-symbol arg-sub-list) [630 649])
+                    ("iPriority" variable (:type "int") (reparse-symbol arg-sub-list) [650 664]))                  
                 :type "void")
-                nil [589 788])
-            ("printJobs" function (:type "void") nil [790 989])
+                nil [591 790])
+            ("printJobs" function (:type "void") nil [792 991])
             ("getDifferenceInMilliSeconds" function
                (:arguments 
                   ( ("start" variable (:type ("timeval" type
                          (:prototype t
                           :type "struct")
-                          nil nil)) (reparse-symbol arg-sub-list) [1028 1049])
+                          nil nil)) (reparse-symbol arg-sub-list) [1030 1051])
                     ("end" variable (:type ("timeval" type
                          (:prototype t
                           :type "struct")
-                          nil nil)) (reparse-symbol arg-sub-list) [1050 1069]))                  
+                          nil nil)) (reparse-symbol arg-sub-list) [1052 1071]))                  
                 :type "long int")
-                nil [991 1247])
+                nil [993 1249])
             ("simulateJob" function
                (:arguments 
-                  ( ("iTime" variable (:type "int") (reparse-symbol arg-sub-list) [1266 1276]))                  
+                  ( ("iTime" variable (:type "int") (reparse-symbol arg-sub-list) [1268 1278]))                  
                 :type "void")
-                nil [1249 1540])
-            ("simulateFCFS" function (:type "void") nil [1543 1830])
-            ("printFCFS" function (:type "void") nil [1832 2382])
-            ("main" function (:type "int") nil [2385 2492]))          
+                nil [1251 1542])
+            ("simulateFCFS" function (:type "void") nil [1545 1831])
+            ("printFCFS" function (:type "void") nil [1833 2383])
+            ("main" function (:type "int") nil [2386 2488]))          
       :file "req1.c"
-      :pointmax 2494
-      :fsize 2493
-      :lastmodtime '(22541 59358 0 0)
-      :unmatched-syntax '((symbol 290 . 292) (INT 286 . 289) (symbol 290 . 292) (INT 286 . 289))
+      :pointmax 2490
+      :fsize 2489
+      :lastmodtime '(22572 14584 0 0)
+      :unmatched-syntax nil
       :lexical-table 
-        '(("REMAINING_TIME" . ((number "2" 171 . 172)))
-          ("BURST_TIME" . ((number "1" 146 . 147)))
-          ("NUMBER_OF_JOBS" . ((number "10" 104 . 106)))
-          ("PRIORITY" . ((number "3" 190 . 191)))
-          ("JOB_INDEX" . ((number "0" 125 . 126)))
+        '(("REMAINING_TIME" . ((number "2" 173 . 174)))
+          ("BURST_TIME" . ((number "1" 148 . 149)))
+          ("NUMBER_OF_JOBS" . ((number "1000" 104 . 108)))
+          ("PRIORITY" . ((number "3" 192 . 193)))
+          ("JOB_INDEX" . ((number "0" 127 . 128)))
           )
 )
     (semanticdb-table "req1b.c"
@@ -82,7 +82,6 @@
         '( ("stdio.h" include (:system-flag t) nil [1 19])
             ("stdlib.h" include (:system-flag t) nil [20 39])
             ("sys/time.h" include (:system-flag t) nil [40 61])
-            ("NUMBER_OF_JOBS" variable (:constant-flag t) nil [90 104])
             ("time.h" include (:system-flag t) nil [62 79])
             ("NUMBER_OF_JOBS" variable (:constant-flag t) nil [90 104])
             ("JOB_INDEX" variable (:constant-flag t) nil [116 125])
@@ -190,7 +189,7 @@
       :pointmax 6345
       :fsize 6344
       :lastmodtime '(22541 59493 0 0)
-      :unmatched-syntax nil
+      :unmatched-syntax '((punctuation 263 . 264) (BOOL 259 . 263) (INT 255 . 258) (TYPEDEF 247 . 254))
       :lexical-table 
         '(("REMAINING_TIME" . ((number "2" 172 . 173)))
           ("TRUE" . ((number "1" 206 . 207)))
@@ -200,6 +199,175 @@
           ("NUMBER_OF_JOBS" . ((number "10" 105 . 107)))
           ("PRIORITY" . ((number "3" 191 . 192)))
           ("JOB_INDEX" . ((number "0" 126 . 127)))
+          )
+)
+    (semanticdb-table "req2.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("pthread.h" include (:system-flag t) nil [40 60])
+            ("semaphore.h" include (:system-flag t) nil [61 83])
+            ("stddef.h" include (:system-flag t) nil [84 103])
+            ("NUMBER_OF_JOBS" variable (:constant-flag t) nil [112 126])
+            ("sSync" variable (:type ("sem_t" type (:type "class") nil nil)) nil [133 161])
+            ("sDelayConsumer" variable (:type ("sem_t" type (:type "class") nil nil)) nil [133 161])
+            ("counter" variable
+               (:default-value "0"
+                :type "int")
+                nil [163 179])
+            ("print" function (:type "void") nil [182 237])
+            ("producer" function
+               (:pointer 1
+                :arguments 
+                  ( ("number_of_increments" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [255 284]))                  
+                :type "void")
+                nil [239 560])
+            ("consumer" function
+               (:pointer 1
+                :arguments 
+                  ( ("number_of_increments" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [578 606]))                  
+                :type "void")
+                nil [562 1019])
+            ("main" function (:type "int") nil [1021 1558]))          
+      :file "req2.c"
+      :pointmax 1559
+      :fsize 1558
+      :lastmodtime '(22571 38306 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NUMBER_OF_JOBS" . ((number "1000" 127 . 131)))
+          )
+)
+    (semanticdb-table "req3.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("pthread.h" include (:system-flag t) nil [40 60])
+            ("semaphore.h" include (:system-flag t) nil [61 83])
+            ("stddef.h" include (:system-flag t) nil [84 103])
+            ("stdbool.h" include (:system-flag t) nil [104 124])
+            ("NUMBER_OF_JOBS" variable (:constant-flag t) nil [133 147])
+            ("buffer" variable
+               (:dereference 1
+                :type "int")
+                nil [155 185])
+            ("bufSize" variable
+               (:default-value "NUMBER_OF_JOBS/10"
+                :type "int")
+                nil [188 220])
+            ("increasing" variable
+               (:default-value "false"
+                :type "bool")
+                nil [222 246])
+            ("sSync" variable (:type ("sem_t" type (:type "class") nil nil)) nil [248 304])
+            ("sDelayConsumer" variable (:type ("sem_t" type (:type "class") nil nil)) nil [248 304])
+            ("sDelayProducer" variable (:type ("sem_t" type (:type "class") nil nil)) nil [248 304])
+            ("sSyncBuffer" variable (:type ("sem_t" type (:type "class") nil nil)) nil [248 304])
+            ("counter" variable
+               (:default-value "0"
+                :type "int")
+                nil [306 322])
+            ("printSem" function (:type "void") nil [325 859])
+            ("print" function (:type "void") nil [861 1012])
+            ("enQueue" function (:type "void") nil [1014 1166])
+            ("deQueue" function (:type "void") nil [1168 1300])
+            ("producer" function
+               (:pointer 1
+                :arguments 
+                  ( ("number_of_increments" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1318 1347]))                  
+                :type "void")
+                nil [1302 1849])
+            ("consumer" function
+               (:pointer 1
+                :arguments 
+                  ( ("number_of_increments" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1867 1895]))                  
+                :type "void")
+                nil [1851 2575])
+            ("main" function (:type "int") nil [2577 2972]))          
+      :file "req3.c"
+      :pointmax 2973
+      :fsize 2972
+      :lastmodtime '(22575 11596 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NUMBER_OF_JOBS" . ((number "1000" 148 . 152)))
+          )
+)
+    (semanticdb-table "req4.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("pthread.h" include (:system-flag t) nil [40 60])
+            ("semaphore.h" include (:system-flag t) nil [61 83])
+            ("stddef.h" include (:system-flag t) nil [84 103])
+            ("stdbool.h" include (:system-flag t) nil [104 124])
+            ("NUMBER_OF_JOBS" variable (:constant-flag t) nil [134 148])
+            ("buffer" variable
+               (:dereference 1
+                :type "int")
+                nil [155 185])
+            ("bufSize" variable
+               (:default-value "NUMBER_OF_JOBS/10"
+                :type "int")
+                nil [188 220])
+            ("increasing" variable
+               (:default-value "false"
+                :type "bool")
+                nil [222 246])
+            ("sSync" variable (:type ("sem_t" type (:type "class") nil nil)) nil [248 315])
+            ("sDelayConsumer" variable (:type ("sem_t" type (:type "class") nil nil)) nil [248 315])
+            ("sDelayProducer" variable (:type ("sem_t" type (:type "class") nil nil)) nil [248 315])
+            ("sSyncBuffer" variable (:type ("sem_t" type (:type "class") nil nil)) nil [248 315])
+            ("sCounting" variable (:type ("sem_t" type (:type "class") nil nil)) nil [248 315])
+            ("counter" variable
+               (:default-value "0"
+                :type "int")
+                nil [317 333])
+            ("printSem" function (:type "void") nil [336 879])
+            ("print" function (:type "void") nil [881 1035])
+            ("enQueue" function (:type "void") nil [1037 1189])
+            ("deQueue" function (:type "void") nil [1191 1312])
+            ("producer" function
+               (:pointer 1
+                :arguments 
+                  ( ("number_of_increments" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1330 1359]))                  
+                :type "void")
+                nil [1314 1793])
+            ("consumer" function
+               (:pointer 1
+                :arguments 
+                  ( ("number_of_increments" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1814 1842]))                  
+                :type "void")
+                nil [1798 2482])
+            ("main" function (:type "int") nil [2484 3239]))          
+      :file "req4.c"
+      :pointmax 3240
+      :fsize 3650
+      :lastmodtime '(22578 57153 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NUMBER_OF_JOBS" . ((number "1000" 149 . 153)))
           )
 ))
   :file "!Users!danieldoynov!Dropbox!Nottingham_Projects!OSC!semantic.cache"
