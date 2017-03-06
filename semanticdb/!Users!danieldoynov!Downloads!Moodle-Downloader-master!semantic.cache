@@ -1,0 +1,48 @@
+;; Object Moodle-Downloader-master/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Moodle-Downloader-master/"
+  :tables
+  (list
+    (semanticdb-table "moodle.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("cookielib" include nil nil [1 17])
+            ("urllib2" include nil nil [18 32])
+            ("urllib" include nil nil [33 46])
+            ("os" include nil nil [47 56])
+            ("os.path" include nil nil [57 71])
+            ("re" include nil nil [72 81])
+            ("ConfigParser" include nil nil [83 120])
+            ("bs4" include nil nil [122 151])
+            ("conf" variable nil nil [153 174])
+            ("project_dir" variable nil nil [175 231])
+            ("conf" code nil nil [232 282])
+            ("root_directory" variable nil nil [284 329])
+            ("username" variable nil nil [330 369])
+            ("password" variable nil nil [370 409])
+            ("authentication_url" variable nil nil [410 467])
+            ("cj" variable nil nil [530 556])
+            ("opener" variable nil nil [557 619])
+            ("opener" variable nil nil [639 693])
+            ("urllib2" code nil nil [839 869])
+            ("payload" variable nil nil [912 976])
+            ("data" variable nil nil [1013 1045])
+            ("req" variable nil nil [1109 1156])
+            ("response" variable nil nil [1199 1230])
+            ("contents" variable nil nil [1231 1257])
+            ("if" code nil nil [1281 1363])
+            ("courses" variable nil nil [1364 1461])
+            ("regex" variable nil nil [1463 1518])
+            ("course_list" variable nil nil [1519 1555])
+            ("courses" variable nil nil [1556 1568])
+            ("for" code nil nil [1570 1771])
+            ("for" code nil nil [1772 3540])
+            ("print" code nil nil [3540 3563]))          
+      :file "moodle.py"
+      :pointmax 3564
+      :fsize 3563
+      :lastmodtime '(22615 47814 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!danieldoynov!Downloads!Moodle-Downloader-master!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

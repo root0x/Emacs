@@ -1,0 +1,362 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [2 20])
+            ("stdlib.h" include (:system-flag t) nil [21 40])
+            ("string.h" include (:system-flag t) nil [41 60])
+            ("list.h" include nil nil [62 79])
+            ("sort.h" include nil nil [80 97])
+            ("ascrobbler.h" include nil nil [98 121])
+            ("ctype.h" include (:system-flag t) nil [122 140])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [151 160])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [161 173]))                  
+                :type "int")
+                nil [142 2185]))          
+      :file "recommend.c"
+      :pointmax 2186
+      :fsize 2214
+      :lastmodtime '(22123 10099 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("LIST_H" variable (:constant-flag t) nil [24 30])
+            ("LONGBUFSIZE" variable (:constant-flag t) nil [40 51])
+            ("list" type
+               (:members 
+                  ( ("val" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [74 84])
+                    ("next" variable
+                       (:pointer 1
+                        :type ("list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [87 105]))                  
+                :type "struct")
+                nil [58 108])
+            ("add_elt" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("head" variable
+                       (:pointer 1
+                        :type ("list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [131 149])
+                    ("elt" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [150 160]))                  
+                :type ("list" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [110 161])
+            ("read_list" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("file_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [185 201])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [202 216]))                  
+                :type ("list" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [162 230])
+            ("free_list" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("lst" variable
+                       (:pointer 1
+                        :type ("list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [246 263])
+                    ("free_elt" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [281 288]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "void")
+                nil [231 290])
+            ("for_each" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("head" variable
+                       (:pointer 1
+                        :type ("list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [305 323])
+                    ("fun" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [336 343]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "void")
+                nil [291 345])
+            ("print_n" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [359 365])
+                    ("head" variable
+                       (:pointer 1
+                        :type ("list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [366 384])
+                    ("fun" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [397 404]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "void")
+                nil [346 406])
+            ("length" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("head" variable
+                       (:pointer 1
+                        :type ("list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [418 436]))                  
+                :type "int")
+                nil [407 437]))          
+      :file "list.h"
+      :pointmax 446
+      :fsize 445
+      :lastmodtime '(22098 59976 0 0)
+      :unmatched-syntax '((semantic-list 216 . 228) (semantic-list 208 . 216))
+      :lexical-table 
+        '(("LONGBUFSIZE" . ((number "1000" 52 . 56)))
+          ("LIST_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("SORT_H" variable (:constant-flag t) nil [24 30])
+            ("sort" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :type ("list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [50 65])
+                    ("comp" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("a" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [78 86])
+                            ("b" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [87 95]))                          
+                        :type "int")
+                        nil nil))                  
+                :type ("list" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [32 97])
+            ("divide" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :type ("list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [118 133]))                  
+                :type ("list" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [98 134])
+            ("merge" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :type ("list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [154 169])
+                    ("y" variable
+                       (:pointer 1
+                        :type ("list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [170 185])
+                    ("comp" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("a" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [198 206])
+                            ("b" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [207 215]))                          
+                        :type "int")
+                        nil nil))                  
+                :type ("list" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [135 217]))          
+      :file "sort.h"
+      :pointmax 226
+      :fsize 225
+      :lastmodtime '(22103 2202 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SORT_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "ascrobbler.h"
+      :fsize 1095
+      :lastmodtime '(22121 33011 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [1 20])
+            ("sort.h" include nil nil [21 38])
+            ("list.h" include nil nil [39 56])
+            ("divide" function
+               (:pointer 1
+                :arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :type ("list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [78 93]))                  
+                :type ("list" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [58 479])
+            ("merge" function
+               (:pointer 1
+                :arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :type ("list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [501 516])
+                    ("y" variable
+                       (:pointer 1
+                        :type ("list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [517 532])
+                    ("comp" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("a" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [545 553])
+                            ("b" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [554 562]))                          
+                        :type "int")
+                        nil nil))                  
+                :type ("list" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [482 1204])
+            ("sort" function
+               (:pointer 1
+                :arguments 
+                  ( ("x" variable
+                       (:pointer 1
+                        :type ("list" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1224 1239])
+                    ("comp" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("a" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1252 1260])
+                            ("b" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1261 1269]))                          
+                        :type "int")
+                        nil nil))                  
+                :type ("list" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1206 1431]))          
+      :file "sort.c"
+      :pointmax 1432
+      :fsize 1431
+      :lastmodtime '(22713 21561 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!danieldoynov!Dropbox!Nottingham_Projects!project_Audioscrobbler_Recommendations!project_Audioscrobbler_Recommendations!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

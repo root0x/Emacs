@@ -1,16 +1,10 @@
-;; Object Desktop/
+;; Object semanticdb-project-database-file
 ;; SEMANTICDB Tags save file
-(semanticdb-project-database-file "Desktop/"
+(semanticdb-project-database-file "semanticdb-project-database-file"
   :tables
   (list
-    (semanticdb-table "req2.c"
-      :major-mode 'c-mode
-      :tags nil
-      :file "req2.c"
-      :pointmax 252
-      :unmatched-syntax '((number 250 . 251) (punctuation 248 . 249) (symbol 233 . 247) (punctuation 231 . 232) (number 230 . 231) (punctuation 228 . 229) (symbol 222 . 227) (number 220 . 221) (punctuation 218 . 219) (symbol 211 . 217) (number 209 . 210) (punctuation 207 . 208) (symbol 200 . 206) (number 198 . 199) (punctuation 196 . 197) (symbol 189 . 195) (number 187 . 188) (punctuation 185 . 186) (symbol 178 . 184) (number 176 . 177) (punctuation 174 . 175) (symbol 167 . 173) (number 165 . 166) (punctuation 163 . 164) (symbol 156 . 162) (number 154 . 155) (punctuation 152 . 153) (symbol 145 . 151) (number 143 . 144) (punctuation 141 . 142) (symbol 134 . 140) (number 132 . 133) (punctuation 130 . 131) (symbol 123 . 129) (number 121 . 122) (punctuation 119 . 120) (symbol 112 . 118) (number 109 . 111) (punctuation 107 . 108) (symbol 100 . 106) (number 98 . 99) (punctuation 96 . 97) (symbol 89 . 95) (number 87 . 88) (punctuation 85 . 86) (symbol 78 . 84) (number 76 . 77) (punctuation 74 . 75) (symbol 67 . 73) (number 65 . 66) (punctuation 63 . 64) (symbol 56 . 62) (number 54 . 55) (punctuation 52 . 53) (symbol 45 . 51) (number 43 . 44) (punctuation 41 . 42) (symbol 34 . 40) (number 32 . 33) (punctuation 30 . 31) (symbol 23 . 29) (number 21 . 22) (punctuation 19 . 20) (symbol 12 . 18) (number 10 . 11) (punctuation 8 . 9) (symbol 1 . 7)))
-    (semanticdb-table "req1a.c"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("stdio.h" include (:system-flag t) nil [1 19])
             ("time.h" include (:system-flag t) nil [20 37])
@@ -66,7 +60,20 @@
           ("PRIORITY" . ((number "3" 191 . 192)))
           ("JOB_INDEX" . ((number "0" 126 . 127)))
           )
-))
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("SDL2/SDL.h" include (:system-flag t) nil [22 43])
+            ("OpenGL/gl.h" include (:system-flag t) nil [75 97])
+            ("OpenGl/freeglut.h" include (:system-flag t) nil [98 126])
+            ("main" function (:type "int") nil [127 1531]))          
+      :file "test.cpp"
+      :pointmax 1532
+      :fsize 1502
+      :lastmodtime '(22672 41526 0 0)
+      :unmatched-syntax nil))
   :file "!Users!danieldoynov!Desktop!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

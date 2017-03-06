@@ -1,10 +1,10 @@
-;; Object sys/
+;; Object semanticdb-project-database-file
 ;; SEMANTICDB Tags save file
-(semanticdb-project-database-file "sys/"
+(semanticdb-project-database-file "semanticdb-project-database-file"
   :tables
   (list
-    (semanticdb-table "time.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_SYS_TIME_H_" variable (:constant-flag t) nil [3312 3324])
             ("sys/cdefs.h" include (:system-flag t) nil [3326 3348])
@@ -213,7 +213,7 @@
       :file "time.h"
       :pointmax 7560
       :fsize 7559
-      :lastmodtime '(22509 48729 0 0)
+      :lastmodtime '(22574 33337 0 0)
       :unmatched-syntax '((semantic-list 7009 . 7047) (symbol 7002 . 7009) (INT 6998 . 7001))
       :lexical-table 
         '(("DST_WET" . ((number "3" 5254 . 5255)))
@@ -262,8 +262,8 @@
           ("_SYS_TIME_H_")
           )
 )
-    (semanticdb-table "cdefs.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_CDEFS_H_" variable (:constant-flag t) nil [3392 3401])
             ("__BEGIN_DECLS" variable (:constant-flag t) nil [3436 3449])
@@ -355,7 +355,7 @@
       :file "cdefs.h"
       :pointmax 28111
       :fsize 28110
-      :lastmodtime '(22509 48722 0 0)
+      :lastmodtime '(22574 33332 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("__dead2" . ((symbol "__attribute__" 5993 . 6006) (semantic-list "((noreturn))" 6006 . 6018)))
@@ -448,22 +448,22 @@
           ("_DARWIN_FEATURE_ONLY_UNIX_CONFORMANCE" . ((number "1" 27087 . 27088)))
           )
 )
-    (semanticdb-table "stdio.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_SYS_STDIO_H_" variable (:constant-flag t) nil [1356 1369])
             ("sys/cdefs.h" include (:system-flag t) nil [1371 1393]))          
       :file "stdio.h"
       :pointmax 2163
       :fsize 2162
-      :lastmodtime '(22509 48728 0 0)
+      :lastmodtime '(22574 33336 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_SYS_STDIO_H_")
           )
 )
-    (semanticdb-table "wait.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_SYS_WAIT_H_" variable (:constant-flag t) nil [3320 3332])
             ("sys/cdefs.h" include (:system-flag t) nil [3334 3356])
@@ -663,7 +663,7 @@
       :file "wait.h"
       :pointmax 9975
       :fsize 9974
-      :lastmodtime '(22509 48731 0 0)
+      :lastmodtime '(22574 33338 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("w_coredump" . 
@@ -701,8 +701,8 @@
           ("WNOWAIT" . ((number "0x00000020" 7342 . 7352)))
           )
 )
-    (semanticdb-table "_types.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_SYS__TYPES_H_" variable (:constant-flag t) nil [1362 1376])
             ("sys/cdefs.h" include (:system-flag t) nil [1378 1400])
@@ -793,7 +793,7 @@
       :file "_types.h"
       :pointmax 3717
       :fsize 3716
-      :lastmodtime '(22509 48732 0 0)
+      :lastmodtime '(22574 33338 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("__offsetof" (spp-arg-list ("type" "field") 3525 . 3538) . ((symbol "__builtin_offsetof" 3539 . 3557) (semantic-list "(type, field)" 3557 . 3570)))
@@ -801,8 +801,8 @@
           ("_SYS__TYPES_H_")
           )
 )
-    (semanticdb-table "_select.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_SYS__SELECT_H_" variable (:constant-flag t) nil [1715 1730])
             ("select" function
@@ -833,14 +833,14 @@
       :file "_select.h"
       :pointmax 2295
       :fsize 2294
-      :lastmodtime '(22509 48731 0 0)
+      :lastmodtime '(22574 33338 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_SYS__SELECT_H_")
           )
 )
-    (semanticdb-table "signal.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_SYS_SIGNAL_H_" variable (:constant-flag t) nil [3633 3647])
             ("sys/cdefs.h" include (:system-flag t) nil [3649 3671])
@@ -1117,7 +1117,7 @@
       :file "signal.h"
       :pointmax 15407
       :fsize 15406
-      :lastmodtime '(22509 48728 0 0)
+      :lastmodtime '(22574 33336 0 0)
       :unmatched-syntax '((punctuation 15364 . 15365) (semantic-list 15359 . 15364) (semantic-list 15330 . 15359) (VOID 15325 . 15329) (TYPEDEF 13772 . 13779))
       :lexical-table 
         '(("SIGIOT" . ((symbol "SIGABRT" 4444 . 4451)))
@@ -1239,8 +1239,8 @@
           ("MINSIGSTKSZ" . ((number "32768" 14039 . 14044)))
           )
 )
-    (semanticdb-table "resource.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_SYS_RESOURCE_H_" variable (:constant-flag t) nil [3309 3325])
             ("sys/appleapiopts.h" include (:system-flag t) nil [3327 3356])
@@ -1540,7 +1540,7 @@
       :file "resource.h"
       :pointmax 13110
       :fsize 13109
-      :lastmodtime '(22509 48727 0 0)
+      :lastmodtime '(22574 33335 0 0)
       :unmatched-syntax '((semantic-list 12880 . 12895) (symbol 12866 . 12880) (INT 12862 . 12865) (semantic-list 12577 . 12587) (symbol 12563 . 12577) (INT 12559 . 12562))
       :lexical-table 
         '(("PRIO_MIN" . ((punctuation "-" 4460 . 4461) (number "20" 4461 . 4463)))
@@ -1600,8 +1600,8 @@
           ("RLIMIT_NOFILE" . ((number "8" 10681 . 10682)))
           )
 )
-    (semanticdb-table "appleapiopts.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("__SYS_APPLEAPIOPTS_H__" variable (:constant-flag t) nil [1375 1397])
             ("__APPLE_API_STANDARD" variable (:constant-flag t) nil [1437 1457])
@@ -1613,7 +1613,7 @@
       :file "appleapiopts.h"
       :pointmax 2071
       :fsize 2070
-      :lastmodtime '(22509 48721 0 0)
+      :lastmodtime '(22574 33332 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("__APPLE_API_STANDARD")
@@ -1625,8 +1625,8 @@
           ("__APPLE_API_STABLE")
           )
 )
-    (semanticdb-table "_endian.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_SYS__ENDIAN_H_" variable (:constant-flag t) nil [4614 4629])
             ("sys/cdefs.h" include (:system-flag t) nil [4631 4653])
@@ -1645,7 +1645,7 @@
       :file "_endian.h"
       :pointmax 6399
       :fsize 6398
-      :lastmodtime '(22509 48732 0 0)
+      :lastmodtime '(22574 33338 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("ntohs" (spp-arg-list ("x") 4999 . 5002) . ((semantic-list "((__uint16_t)(x))" 5010 . 5027)))
@@ -1663,8 +1663,8 @@
           ("HTONLL" (spp-arg-list ("x") 5437 . 5440) . ((semantic-list "(x)" 5447 . 5450)))
           )
 )
-    (semanticdb-table "_symbol_aliasing.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_2_0" variable (:constant-flag t) nil [1623 1666])
             ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_2_1" variable (:constant-flag t) nil [1868 1911])
@@ -1693,81 +1693,85 @@
             ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_9_3" variable (:constant-flag t) nil [7503 7546])
             ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_10_0" variable (:constant-flag t) nil [7750 7794])
             ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_10_1" variable (:constant-flag t) nil [7998 8042])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_0" variable (:constant-flag t) nil [8178 8216])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_1" variable (:constant-flag t) nil [8410 8448])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_2" variable (:constant-flag t) nil [8642 8680])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_3" variable (:constant-flag t) nil [8874 8912])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_4" variable (:constant-flag t) nil [9106 9144])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_5" variable (:constant-flag t) nil [9338 9376])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_6" variable (:constant-flag t) nil [9570 9608])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_7" variable (:constant-flag t) nil [9802 9840])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_8" variable (:constant-flag t) nil [10034 10072])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_9" variable (:constant-flag t) nil [10266 10304])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_10" variable (:constant-flag t) nil [10500 10539])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_10_2" variable (:constant-flag t) nil [10736 10777])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_10_3" variable (:constant-flag t) nil [10976 11017])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_11" variable (:constant-flag t) nil [11216 11255])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_11_2" variable (:constant-flag t) nil [11452 11493])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_11_3" variable (:constant-flag t) nil [11692 11733])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_11_4" variable (:constant-flag t) nil [11932 11973])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_12" variable (:constant-flag t) nil [12172 12211])
-            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_12_1" variable (:constant-flag t) nil [12469 12510]))          
+            ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_10_2" variable (:constant-flag t) nil [8246 8290])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_0" variable (:constant-flag t) nil [8426 8464])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_1" variable (:constant-flag t) nil [8658 8696])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_2" variable (:constant-flag t) nil [8890 8928])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_3" variable (:constant-flag t) nil [9122 9160])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_4" variable (:constant-flag t) nil [9354 9392])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_5" variable (:constant-flag t) nil [9586 9624])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_6" variable (:constant-flag t) nil [9818 9856])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_7" variable (:constant-flag t) nil [10050 10088])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_8" variable (:constant-flag t) nil [10282 10320])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_9" variable (:constant-flag t) nil [10514 10552])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_10" variable (:constant-flag t) nil [10748 10787])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_10_2" variable (:constant-flag t) nil [10984 11025])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_10_3" variable (:constant-flag t) nil [11224 11265])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_11" variable (:constant-flag t) nil [11464 11503])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_11_2" variable (:constant-flag t) nil [11700 11741])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_11_3" variable (:constant-flag t) nil [11940 11981])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_11_4" variable (:constant-flag t) nil [12180 12221])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_12" variable (:constant-flag t) nil [12420 12459])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_12_1" variable (:constant-flag t) nil [12717 12758])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_12_2" variable (:constant-flag t) nil [12957 12998]))          
       :file "_symbol_aliasing.h"
-      :pointmax 12522
-      :fsize 12521
-      :lastmodtime '(22509 48732 0 0)
+      :pointmax 13010
+      :fsize 13009
+      :lastmodtime '(22574 33339 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_2_2" (spp-arg-list ("x") 2156 . 2159))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_5_1" (spp-arg-list ("x") 4361 . 4364))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_8_0" (spp-arg-list ("x") 5586 . 5589))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_7" (spp-arg-list ("x") 9840 . 9843) . ((symbol "x" 9844 . 9845)))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_10_2" (spp-arg-list ("x") 10777 . 10780) . ((symbol "x" 10781 . 10782)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_7" (spp-arg-list ("x") 10088 . 10091) . ((symbol "x" 10092 . 10093)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_10_2" (spp-arg-list ("x") 11025 . 11028) . ((symbol "x" 11029 . 11030)))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_8_1" (spp-arg-list ("x") 5831 . 5834))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_8" (spp-arg-list ("x") 10072 . 10075) . ((symbol "x" 10076 . 10077)))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_10_3" (spp-arg-list ("x") 11017 . 11020) . ((symbol "x" 11021 . 11022)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_8" (spp-arg-list ("x") 10320 . 10323) . ((symbol "x" 10324 . 10325)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_10_3" (spp-arg-list ("x") 11265 . 11268) . ((symbol "x" 11269 . 11270)))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_8_2" (spp-arg-list ("x") 6076 . 6079))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_9" (spp-arg-list ("x") 10304 . 10307) . ((symbol "x" 10308 . 10309)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_9" (spp-arg-list ("x") 10552 . 10555) . ((symbol "x" 10556 . 10557)))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_4_0" (spp-arg-list ("x") 3136 . 3139))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_8_3" (spp-arg-list ("x") 6321 . 6324))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_4_1" (spp-arg-list ("x") 3381 . 3384))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_7_0" (spp-arg-list ("x") 5096 . 5099))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_8_4" (spp-arg-list ("x") 6566 . 6569))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_10_0" (spp-arg-list ("x") 7794 . 7797))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_12_1" (spp-arg-list ("x") 12510 . 12513))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_12_1" (spp-arg-list ("x") 12758 . 12761))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_4_2" (spp-arg-list ("x") 3626 . 3629))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_7_1" (spp-arg-list ("x") 5341 . 5344))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_10_1" (spp-arg-list ("x") 8042 . 8045))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_12_2" (spp-arg-list ("x") 12998 . 13001))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_4_3" (spp-arg-list ("x") 3871 . 3874))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_0" (spp-arg-list ("x") 8216 . 8219) . ((symbol "x" 8220 . 8221)))
+          ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_10_2" (spp-arg-list ("x") 8290 . 8293))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_0" (spp-arg-list ("x") 8464 . 8467) . ((symbol "x" 8468 . 8469)))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_3_0" (spp-arg-list ("x") 2401 . 2404))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_1" (spp-arg-list ("x") 8448 . 8451) . ((symbol "x" 8452 . 8453)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_1" (spp-arg-list ("x") 8696 . 8699) . ((symbol "x" 8700 . 8701)))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_3_1" (spp-arg-list ("x") 2646 . 2649))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_6_0" (spp-arg-list ("x") 4606 . 4609))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_2" (spp-arg-list ("x") 8680 . 8683) . ((symbol "x" 8684 . 8685)))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_10" (spp-arg-list ("x") 10539 . 10542) . ((symbol "x" 10543 . 10544)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_2" (spp-arg-list ("x") 8928 . 8931) . ((symbol "x" 8932 . 8933)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_10" (spp-arg-list ("x") 10787 . 10790) . ((symbol "x" 10791 . 10792)))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_3_2" (spp-arg-list ("x") 2891 . 2894))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_6_1" (spp-arg-list ("x") 4851 . 4854))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_9_0" (spp-arg-list ("x") 6811 . 6814))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_3" (spp-arg-list ("x") 8912 . 8915) . ((symbol "x" 8916 . 8917)))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_11" (spp-arg-list ("x") 11255 . 11258) . ((symbol "x" 11259 . 11260)))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_11_2" (spp-arg-list ("x") 11493 . 11496) . ((symbol "x" 11497 . 11498)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_3" (spp-arg-list ("x") 9160 . 9163) . ((symbol "x" 9164 . 9165)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_11" (spp-arg-list ("x") 11503 . 11506) . ((symbol "x" 11507 . 11508)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_11_2" (spp-arg-list ("x") 11741 . 11744) . ((symbol "x" 11745 . 11746)))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_9_1" (spp-arg-list ("x") 7056 . 7059))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_4" (spp-arg-list ("x") 9144 . 9147) . ((symbol "x" 9148 . 9149)))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_11_3" (spp-arg-list ("x") 11733 . 11736) . ((symbol "x" 11737 . 11738)))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_12" (spp-arg-list ("x") 12211 . 12214) . ((symbol "x" 12215 . 12216)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_4" (spp-arg-list ("x") 9392 . 9395) . ((symbol "x" 9396 . 9397)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_11_3" (spp-arg-list ("x") 11981 . 11984) . ((symbol "x" 11985 . 11986)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_12" (spp-arg-list ("x") 12459 . 12462) . ((symbol "x" 12463 . 12464)))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_2_0" (spp-arg-list ("x") 1666 . 1669))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_9_2" (spp-arg-list ("x") 7301 . 7304))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_5" (spp-arg-list ("x") 9376 . 9379) . ((symbol "x" 9380 . 9381)))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_11_4" (spp-arg-list ("x") 11973 . 11976) . ((symbol "x" 11977 . 11978)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_5" (spp-arg-list ("x") 9624 . 9627) . ((symbol "x" 9628 . 9629)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_11_4" (spp-arg-list ("x") 12221 . 12224) . ((symbol "x" 12225 . 12226)))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_2_1" (spp-arg-list ("x") 1911 . 1914))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_5_0" (spp-arg-list ("x") 4116 . 4119))
           ("__DARWIN_ALIAS_STARTING_IPHONE___IPHONE_9_3" (spp-arg-list ("x") 7546 . 7549))
-          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_6" (spp-arg-list ("x") 9608 . 9611) . ((symbol "x" 9612 . 9613)))
+          ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_6" (spp-arg-list ("x") 9856 . 9859) . ((symbol "x" 9860 . 9861)))
           )
 )
-    (semanticdb-table "_posix_availability.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("___POSIX_C_DEPRECATED_STARTING_198808L" variable (:constant-flag t) nil [1599 1637])
             ("___POSIX_C_DEPRECATED_STARTING_199009L" variable (:constant-flag t) nil [1809 1847])
@@ -1779,7 +1783,7 @@
       :file "_posix_availability.h"
       :pointmax 2906
       :fsize 2905
-      :lastmodtime '(22509 48732 0 0)
+      :lastmodtime '(22574 33339 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("___POSIX_C_DEPRECATED_STARTING_199506L")
@@ -1791,8 +1795,8 @@
           ("___POSIX_C_DEPRECATED_STARTING_200809L")
           )
 )
-    (semanticdb-table "qos.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_SYS_QOS_H" variable (:constant-flag t) nil [1000 1010])
             ("sys/cdefs.h" include (:system-flag t) nil [1012 1034])
@@ -1829,7 +1833,7 @@
       :file "qos.h"
       :pointmax 7952
       :fsize 7951
-      :lastmodtime '(22496 24164 0 0)
+      :lastmodtime '(22459 29440 0 0)
       :unmatched-syntax '((semantic-list 7837 . 7864) (symbol 7813 . 7837) (semantic-list 7200 . 7227) (symbol 7176 . 7200))
       :lexical-table 
         '(("_SYS_QOS_H")
@@ -1837,8 +1841,8 @@
           ("QOS_MIN_RELATIVE_PRIORITY" . ((semantic-list "(-15)" 6931 . 6936)))
           )
 )
-    (semanticdb-table "types.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_SYS_TYPES_H_" variable (:constant-flag t) nil [3621 3634])
             ("sys/appleapiopts.h" include (:system-flag t) nil [3636 3665])
@@ -1976,7 +1980,7 @@
       :file "types.h"
       :pointmax 8058
       :fsize 8057
-      :lastmodtime '(22509 48730 0 0)
+      :lastmodtime '(22574 33337 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_SYS_TYPES_H_")
@@ -1986,8 +1990,8 @@
           ("NBBY" . ((symbol "__DARWIN_NBBY" 6625 . 6638)))
           )
 )
-    (semanticdb-table "fcntl.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_SYS_FCNTL_H_" variable (:constant-flag t) nil [3611 3624])
             ("sys/_types.h" include (:system-flag t) nil [3775 3798])
@@ -2403,7 +2407,7 @@
       :file "fcntl.h"
       :pointmax 19548
       :fsize 19547
-      :lastmodtime '(22509 48723 0 0)
+      :lastmodtime '(22574 33333 0 0)
       :unmatched-syntax '((semantic-list 19287 . 19318) (symbol 19265 . 19287) (INT 19261 . 19264) (semantic-list 17640 . 17642) (symbol 17636 . 17640) (symbol 17629 . 17635) (punctuation 17628 . 17629) (semantic-list 17184 . 17187) (symbol 17180 . 17184) (number 17185 . 17186) (symbol 17173 . 17179) (number 17185 . 17186) (punctuation 17172 . 17173))
       :lexical-table 
         '(("O_ASYNC" . ((number "0x0040" 5354 . 5360)))
@@ -2504,8 +2508,8 @@
           ("F_ADDFILESIGS_FOR_DYLD_SIM" . ((number "83" 11230 . 11232)))
           )
 )
-    (semanticdb-table "semaphore.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_SYS_SEMAPHORE_H_" variable (:constant-flag t) nil [1524 1541])
             ("sem_t" type
@@ -2619,12 +2623,312 @@
       :file "semaphore.h"
       :pointmax 2100
       :fsize 2099
-      :lastmodtime '(22509 48727 0 0)
+      :lastmodtime '(22574 33336 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("SEM_FAILED" . ((semantic-list "((sem_t *)-1)" 1644 . 1657)))
           ("SEM_VALUE_MAX" . ((number "32767" 1619 . 1624)))
           ("_SYS_SEMAPHORE_H_")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_SYS_ERRNO_H_" variable (:constant-flag t) nil [3616 3629])
+            ("sys/cdefs.h" include (:system-flag t) nil [3631 3653])
+            ("sys/_types/_errno_t.h" include (:system-flag t) nil [3723 3755])
+            ("errno" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [3814 3819])
+            ("__error" function
+               (:type "int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3799 3804]))                  
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [3778 3805])
+            ("EPERM" variable (:constant-flag t) nil [3877 3882])
+            ("ENOENT" variable (:constant-flag t) nil [3925 3931])
+            ("ESRCH" variable (:constant-flag t) nil [3976 3981])
+            ("EINTR" variable (:constant-flag t) nil [4016 4021])
+            ("EIO" variable (:constant-flag t) nil [4064 4067])
+            ("ENXIO" variable (:constant-flag t) nil [4105 4110])
+            ("E2BIG" variable (:constant-flag t) nil [4151 4156])
+            ("ENOEXEC" variable (:constant-flag t) nil [4198 4205])
+            ("EBADF" variable (:constant-flag t) nil [4242 4247])
+            ("ECHILD" variable (:constant-flag t) nil [4286 4292])
+            ("EDEADLK" variable (:constant-flag t) nil [4331 4338])
+            ("ENOMEM" variable (:constant-flag t) nil [4409 4415])
+            ("EACCES" variable (:constant-flag t) nil [4458 4464])
+            ("EFAULT" variable (:constant-flag t) nil [4502 4508])
+            ("ENOTBLK" variable (:constant-flag t) nil [4580 4587])
+            ("EBUSY" variable (:constant-flag t) nil [4636 4641])
+            ("EEXIST" variable (:constant-flag t) nil [4684 4690])
+            ("EXDEV" variable (:constant-flag t) nil [4722 4727])
+            ("ENODEV" variable (:constant-flag t) nil [4765 4771])
+            ("ENOTDIR" variable (:constant-flag t) nil [4825 4832])
+            ("EISDIR" variable (:constant-flag t) nil [4868 4874])
+            ("EINVAL" variable (:constant-flag t) nil [4909 4915])
+            ("ENFILE" variable (:constant-flag t) nil [4952 4958])
+            ("EMFILE" variable (:constant-flag t) nil [5008 5014])
+            ("ENOTTY" variable (:constant-flag t) nil [5054 5060])
+            ("ETXTBSY" variable (:constant-flag t) nil [5111 5118])
+            ("EFBIG" variable (:constant-flag t) nil [5153 5158])
+            ("ENOSPC" variable (:constant-flag t) nil [5193 5199])
+            ("ESPIPE" variable (:constant-flag t) nil [5243 5249])
+            ("EROFS" variable (:constant-flag t) nil [5282 5287])
+            ("EMLINK" variable (:constant-flag t) nil [5329 5335])
+            ("EPIPE" variable (:constant-flag t) nil [5370 5375])
+            ("EDOM" variable (:constant-flag t) nil [5428 5432])
+            ("ERANGE" variable (:constant-flag t) nil [5485 5491])
+            ("EAGAIN" variable (:constant-flag t) nil [5566 5572])
+            ("EWOULDBLOCK" variable (:constant-flag t) nil [5625 5636])
+            ("EINPROGRESS" variable (:constant-flag t) nil [5681 5692])
+            ("EALREADY" variable (:constant-flag t) nil [5737 5745])
+            ("ENOTSOCK" variable (:constant-flag t) nil [5841 5849])
+            ("EDESTADDRREQ" variable (:constant-flag t) nil [5899 5911])
+            ("EMSGSIZE" variable (:constant-flag t) nil [5959 5967])
+            ("EPROTOTYPE" variable (:constant-flag t) nil [6003 6013])
+            ("ENOPROTOOPT" variable (:constant-flag t) nil [6063 6074])
+            ("EPROTONOSUPPORT" variable (:constant-flag t) nil [6116 6131])
+            ("ESOCKTNOSUPPORT" variable (:constant-flag t) nil [6213 6228])
+            ("ENOTSUP" variable (:constant-flag t) nil [6280 6287])
+            ("EPFNOSUPPORT" variable (:constant-flag t) nil [6959 6971])
+            ("EAFNOSUPPORT" variable (:constant-flag t) nil [7027 7039])
+            ("EADDRINUSE" variable (:constant-flag t) nil [7106 7116])
+            ("EADDRNOTAVAIL" variable (:constant-flag t) nil [7158 7171])
+            ("ENETDOWN" variable (:constant-flag t) nil [7271 7279])
+            ("ENETUNREACH" variable (:constant-flag t) nil [7314 7325])
+            ("ENETRESET" variable (:constant-flag t) nil [7367 7376])
+            ("ECONNABORTED" variable (:constant-flag t) nil [7431 7443])
+            ("ECONNRESET" variable (:constant-flag t) nil [7495 7505])
+            ("ENOBUFS" variable (:constant-flag t) nil [7549 7556])
+            ("EISCONN" variable (:constant-flag t) nil [7602 7609])
+            ("ENOTCONN" variable (:constant-flag t) nil [7657 7665])
+            ("ESHUTDOWN" variable (:constant-flag t) nil [7748 7757])
+            ("ETOOMANYREFS" variable (:constant-flag t) nil [7809 7821])
+            ("ETIMEDOUT" variable (:constant-flag t) nil [7881 7890])
+            ("ECONNREFUSED" variable (:constant-flag t) nil [7929 7941])
+            ("ELOOP" variable (:constant-flag t) nil [7980 7985])
+            ("ENAMETOOLONG" variable (:constant-flag t) nil [8039 8051])
+            ("EHOSTDOWN" variable (:constant-flag t) nil [8157 8166])
+            ("EHOSTUNREACH" variable (:constant-flag t) nil [8205 8217])
+            ("ENOTEMPTY" variable (:constant-flag t) nil [8253 8262])
+            ("EPROCLIM" variable (:constant-flag t) nil [8362 8370])
+            ("EUSERS" variable (:constant-flag t) nil [8408 8414])
+            ("EDQUOT" variable (:constant-flag t) nil [8456 8462])
+            ("ESTALE" variable (:constant-flag t) nil [8529 8535])
+            ("EREMOTE" variable (:constant-flag t) nil [8617 8624])
+            ("EBADRPC" variable (:constant-flag t) nil [8678 8685])
+            ("ERPCMISMATCH" variable (:constant-flag t) nil [8723 8735])
+            ("EPROGUNAVAIL" variable (:constant-flag t) nil [8772 8784])
+            ("EPROGMISMATCH" variable (:constant-flag t) nil [8823 8836])
+            ("EPROCUNAVAIL" variable (:constant-flag t) nil [8877 8889])
+            ("ENOLCK" variable (:constant-flag t) nil [8942 8948])
+            ("ENOSYS" variable (:constant-flag t) nil [8987 8993])
+            ("EFTYPE" variable (:constant-flag t) nil [9079 9085])
+            ("EAUTH" variable (:constant-flag t) nil [9139 9144])
+            ("ENEEDAUTH" variable (:constant-flag t) nil [9185 9194])
+            ("EPWROFF" variable (:constant-flag t) nil [9265 9272])
+            ("EDEVERR" variable (:constant-flag t) nil [9311 9318])
+            ("EOVERFLOW" variable (:constant-flag t) nil [9374 9383])
+            ("EBADEXEC" variable (:constant-flag t) nil [9514 9522])
+            ("EBADARCH" variable (:constant-flag t) nil [9555 9563])
+            ("ESHLIBVERS" variable (:constant-flag t) nil [9608 9618])
+            ("EBADMACHO" variable (:constant-flag t) nil [9668 9677])
+            ("ECANCELED" variable (:constant-flag t) nil [9724 9733])
+            ("EIDRM" variable (:constant-flag t) nil [9772 9777])
+            ("ENOMSG" variable (:constant-flag t) nil [9816 9822])
+            ("EILSEQ" variable (:constant-flag t) nil [9872 9878])
+            ("ENOATTR" variable (:constant-flag t) nil [9960 9967])
+            ("EBADMSG" variable (:constant-flag t) nil [10015 10022])
+            ("EMULTIHOP" variable (:constant-flag t) nil [10054 10063])
+            ("ENODATA" variable (:constant-flag t) nil [10091 10098])
+            ("ENOLINK" variable (:constant-flag t) nil [10149 10156])
+            ("ENOSR" variable (:constant-flag t) nil [10185 10190])
+            ("ENOSTR" variable (:constant-flag t) nil [10230 10236])
+            ("EPROTO" variable (:constant-flag t) nil [10269 10275])
+            ("ETIME" variable (:constant-flag t) nil [10311 10316])
+            ("EOPNOTSUPP" variable (:constant-flag t) nil [10474 10484])
+            ("ENOPOLICY" variable (:constant-flag t) nil [10578 10587])
+            ("EQFULL" variable (:constant-flag t) nil [10826 10832])
+            ("ELAST" variable (:constant-flag t) nil [10884 10889]))          
+      :file "errno.h"
+      :pointmax 10965
+      :fsize 10964
+      :lastmodtime '(22574 33333 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ENOMEM" . ((number "12" 4417 . 4419)))
+          ("ENOTBLK" . ((number "15" 4589 . 4591)))
+          ("EINVAL" . ((number "22" 4917 . 4919)))
+          ("EINPROGRESS" . ((number "36" 5693 . 5695)))
+          ("ECONNRESET" . ((number "54" 7506 . 7508)))
+          ("ENOBUFS" . ((number "55" 7558 . 7560)))
+          ("ETIMEDOUT" . ((number "60" 7891 . 7893)))
+          ("ERPCMISMATCH" . ((number "73" 8736 . 8738)))
+          ("EBADEXEC" . ((number "85" 9523 . 9525)))
+          ("ENOSTR" . ((number "99" 10238 . 10240)))
+          ("ETIME" . ((number "101" 10318 . 10321)))
+          ("ENOENT" . ((number "2" 3933 . 3934)))
+          ("ESRCH" . ((number "3" 3983 . 3984)))
+          ("EBADF" . ((number "9" 4249 . 4250)))
+          ("ECHILD" . ((number "10" 4294 . 4296)))
+          ("EAGAIN" . ((number "35" 5574 . 5576)))
+          ("ENETDOWN" . ((number "50" 7280 . 7282)))
+          ("EHOSTUNREACH" . ((number "65" 8218 . 8220)))
+          ("EILSEQ" . ((number "92" 9880 . 9882)))
+          ("ENOSR" . ((number "98" 10192 . 10194)))
+          ("EQFULL" . ((number "106" 10834 . 10837)))
+          ("ENOPROTOOPT" . ((number "42" 6075 . 6077)))
+          ("EADDRINUSE" . ((number "48" 7117 . 7119)))
+          ("EBADMSG" . ((number "94" 10024 . 10026)))
+          ("ENODATA" . ((number "96" 10100 . 10102)))
+          ("ENOPOLICY" . ((number "103" 10588 . 10591)))
+          ("_SYS_ERRNO_H_")
+          ("EINTR" . ((number "4" 4023 . 4024)))
+          ("ENOTDIR" . ((number "20" 4834 . 4836)))
+          ("EISDIR" . ((number "21" 4876 . 4878)))
+          ("ENOTTY" . ((number "25" 5062 . 5064)))
+          ("ENOTSUP" . ((number "45" 6289 . 6291)))
+          ("EDQUOT" . ((number "69" 8464 . 8466)))
+          ("ESTALE" . ((number "70" 8537 . 8539)))
+          ("ENOSYS" . ((number "78" 8995 . 8997)))
+          ("EOVERFLOW" . ((number "84" 9384 . 9386)))
+          ("EXDEV" . ((number "18" 4729 . 4731)))
+          ("EMFILE" . ((number "24" 5016 . 5018)))
+          ("EFBIG" . ((number "27" 5160 . 5162)))
+          ("EALREADY" . ((number "37" 5746 . 5748)))
+          ("ENOTSOCK" . ((number "38" 5850 . 5852)))
+          ("ESOCKTNOSUPPORT" . ((number "44" 6229 . 6231)))
+          ("EAFNOSUPPORT" . ((number "47" 7040 . 7042)))
+          ("ENETRESET" . ((number "52" 7377 . 7379)))
+          ("EHOSTDOWN" . ((number "64" 8167 . 8169)))
+          ("EREMOTE" . ((number "71" 8626 . 8628)))
+          ("ENEEDAUTH" . ((number "81" 9195 . 9197)))
+          ("EPWROFF" . ((number "82" 9274 . 9276)))
+          ("ESPIPE" . ((number "29" 5251 . 5253)))
+          ("EPIPE" . ((number "32" 5377 . 5379)))
+          ("ERANGE" . ((number "34" 5493 . 5495)))
+          ("ENAMETOOLONG" . ((number "63" 8052 . 8054)))
+          ("ENOATTR" . ((number "93" 9969 . 9971)))
+          ("EOPNOTSUPP" . ((number "102" 10485 . 10488)))
+          ("ELAST" . ((number "106" 10891 . 10894)))
+          ("ENODEV" . ((number "19" 4773 . 4775)))
+          ("EROFS" . ((number "30" 5289 . 5291)))
+          ("ENOTEMPTY" . ((number "66" 8263 . 8265)))
+          ("EPROGUNAVAIL" . ((number "74" 8785 . 8787)))
+          ("EBADARCH" . ((number "86" 9564 . 9566)))
+          ("EIDRM" . ((number "90" 9779 . 9781)))
+          ("ENFILE" . ((number "23" 4960 . 4962)))
+          ("EDOM" . ((number "33" 5434 . 5436)))
+          ("EADDRNOTAVAIL" . ((number "49" 7172 . 7174)))
+          ("EPROCUNAVAIL" . ((number "76" 8890 . 8892)))
+          ("EACCES" . ((number "13" 4466 . 4468)))
+          ("EEXIST" . ((number "17" 4692 . 4694)))
+          ("EDESTADDRREQ" . ((number "39" 5912 . 5914)))
+          ("EPROCLIM" . ((number "67" 8371 . 8373)))
+          ("EBADRPC" . ((number "72" 8687 . 8689)))
+          ("EPROGMISMATCH" . ((number "75" 8837 . 8839)))
+          ("EPERM" . ((number "1" 3884 . 3885)))
+          ("EIO" . ((number "5" 4069 . 4070)))
+          ("EDEADLK" . ((number "11" 4340 . 4342)))
+          ("EMLINK" . ((number "31" 5337 . 5339)))
+          ("EMSGSIZE" . ((number "40" 5968 . 5970)))
+          ("ESHUTDOWN" . ((number "58" 7758 . 7760)))
+          ("ECONNREFUSED" . ((number "61" 7942 . 7944)))
+          ("ENOLCK" . ((number "77" 8950 . 8952)))
+          ("EAUTH" . ((number "80" 9146 . 9148)))
+          ("ESHLIBVERS" . ((number "87" 9619 . 9621)))
+          ("ENOLINK" . ((number "97" 10158 . 10160)))
+          ("EPROTO" . ((number "100" 10277 . 10280)))
+          ("ENXIO" . ((number "6" 4112 . 4113)))
+          ("E2BIG" . ((number "7" 4158 . 4159)))
+          ("EFAULT" . ((number "14" 4510 . 4512)))
+          ("EPFNOSUPPORT" . ((number "46" 6972 . 6974)))
+          ("EFTYPE" . ((number "79" 9087 . 9089)))
+          ("ECANCELED" . ((number "89" 9734 . 9736)))
+          ("ENOMSG" . ((number "91" 9824 . 9826)))
+          ("ENOEXEC" . ((number "8" 4207 . 4208)))
+          ("EBUSY" . ((number "16" 4643 . 4645)))
+          ("EWOULDBLOCK" . ((symbol "EAGAIN" 5637 . 5643)))
+          ("EPROTONOSUPPORT" . ((number "43" 6132 . 6134)))
+          ("ENETUNREACH" . ((number "51" 7326 . 7328)))
+          ("ECONNABORTED" . ((number "53" 7444 . 7446)))
+          ("EISCONN" . ((number "56" 7611 . 7613)))
+          ("ENOTCONN" . ((number "57" 7666 . 7668)))
+          ("ETOOMANYREFS" . ((number "59" 7822 . 7824)))
+          ("ELOOP" . ((number "62" 7987 . 7989)))
+          ("EUSERS" . ((number "68" 8416 . 8418)))
+          ("ETXTBSY" . ((number "26" 5120 . 5122)))
+          ("ENOSPC" . ((number "28" 5201 . 5203)))
+          ("EPROTOTYPE" . ((number "41" 6014 . 6016)))
+          ("EDEVERR" . ((number "83" 9320 . 9322)))
+          ("EBADMACHO" . ((number "88" 9678 . 9680)))
+          ("EMULTIHOP" . ((number "95" 10064 . 10066)))
+          ("errno" . ((semantic-list "(*__error())" 3820 . 3832)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_SYS_SYSLIMITS_H_" variable (:constant-flag t) nil [3312 3329])
+            ("sys/cdefs.h" include (:system-flag t) nil [3331 3353])
+            ("ARG_MAX" variable (:constant-flag t) nil [3532 3539])
+            ("CHILD_MAX" variable (:constant-flag t) nil [3661 3670])
+            ("GID_MAX" variable (:constant-flag t) nil [3720 3727])
+            ("LINK_MAX" variable (:constant-flag t) nil [3841 3849])
+            ("MAX_CANON" variable (:constant-flag t) nil [3891 3900])
+            ("MAX_INPUT" variable (:constant-flag t) nil [3957 3966])
+            ("NAME_MAX" variable (:constant-flag t) nil [4016 4024])
+            ("NGROUPS_MAX" variable (:constant-flag t) nil [4071 4082])
+            ("UID_MAX" variable (:constant-flag t) nil [4191 4198])
+            ("OPEN_MAX" variable (:constant-flag t) nil [4261 4269])
+            ("PATH_MAX" variable (:constant-flag t) nil [4401 4409])
+            ("PIPE_BUF" variable (:constant-flag t) nil [4453 4461])
+            ("BC_BASE_MAX" variable (:constant-flag t) nil [4517 4528])
+            ("BC_DIM_MAX" variable (:constant-flag t) nil [4582 4592])
+            ("BC_SCALE_MAX" variable (:constant-flag t) nil [4642 4654])
+            ("BC_STRING_MAX" variable (:constant-flag t) nil [4701 4714])
+            ("CHARCLASS_NAME_MAX" variable (:constant-flag t) nil [4769 4787])
+            ("COLL_WEIGHTS_MAX" variable (:constant-flag t) nil [4838 4854])
+            ("EQUIV_CLASS_MAX" variable (:constant-flag t) nil [4905 4920])
+            ("EXPR_NEST_MAX" variable (:constant-flag t) nil [4936 4949])
+            ("LINE_MAX" variable (:constant-flag t) nil [5005 5013])
+            ("RE_DUP_MAX" variable (:constant-flag t) nil [5062 5072])
+            ("NZERO" variable (:constant-flag t) nil [5145 5150]))          
+      :file "syslimits.h"
+      :pointmax 5533
+      :fsize 5532
+      :lastmodtime '(22574 33336 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("GID_MAX" . ((symbol "2147483647U" 3732 . 3743)))
+          ("MAX_INPUT" . ((number "1024" 3969 . 3973)))
+          ("UID_MAX" . ((symbol "2147483647U" 4203 . 4214)))
+          ("BC_BASE_MAX" . ((number "99" 4533 . 4535)))
+          ("BC_STRING_MAX" . ((number "1000" 4717 . 4721)))
+          ("CHILD_MAX" . ((number "266" 3675 . 3678)))
+          ("BC_DIM_MAX" . ((number "2048" 4595 . 4599)))
+          ("BC_SCALE_MAX" . ((number "99" 4659 . 4661)))
+          ("EXPR_NEST_MAX" . ((number "32" 4954 . 4956)))
+          ("PIPE_BUF" . ((number "512" 4465 . 4468)))
+          ("CHARCLASS_NAME_MAX" . ((number "14" 4791 . 4793)))
+          ("LINE_MAX" . ((number "2048" 5016 . 5020)))
+          ("ARG_MAX" . ((semantic-list "(256 * 1024)" 3544 . 3556)))
+          ("MAX_CANON" . ((number "1024" 3903 . 3907)))
+          ("OPEN_MAX" . ((number "10240" 4271 . 4276)))
+          ("NAME_MAX" . ((number "255" 4028 . 4031)))
+          ("PATH_MAX" . ((number "1024" 4412 . 4416)))
+          ("EQUIV_CLASS_MAX" . ((number "2" 4926 . 4927)))
+          ("NZERO" . ((number "20" 5156 . 5158)))
+          ("_SYS_SYSLIMITS_H_")
+          ("LINK_MAX" . ((number "32767" 3851 . 3856)))
+          ("NGROUPS_MAX" . ((number "16" 4087 . 4089)))
+          ("COLL_WEIGHTS_MAX" . ((number "2" 4859 . 4860)))
+          ("RE_DUP_MAX" . ((number "255" 5076 . 5079)))
           )
 ))
   :file "!usr!include!sys!semantic.cache"

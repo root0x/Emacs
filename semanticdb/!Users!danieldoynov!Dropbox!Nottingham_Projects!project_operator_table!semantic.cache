@@ -1,0 +1,75 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("algorithm" include (:system-flag t) nil [21 41])
+            ("iterator" include (:system-flag t) nil [42 61])
+            ("stdlib.h" include (:system-flag t) nil [62 81])
+            ("stdio.h" include (:system-flag t) nil [82 100])
+            ("string" include (:system-flag t) nil [101 118])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [119 139])
+            ("is_number" function
+               (:arguments 
+                  ( ("s" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [156 172]))                  
+                :type "bool")
+                nil [141 312])
+            ("drawtopRow" function
+               (:arguments 
+                  ( ("row" variable (:type "int") (reparse-symbol arg-sub-list) [330 338])
+                    ("op" variable (:type "char") (reparse-symbol arg-sub-list) [339 347]))                  
+                :type "void")
+                nil [314 558])
+            ("calc" function
+               (:arguments 
+                  ( ("y" variable (:type "int") (reparse-symbol arg-sub-list) [569 575])
+                    ("x" variable (:type "int") (reparse-symbol arg-sub-list) [576 582])
+                    ("op" variable (:type "char") (reparse-symbol arg-sub-list) [583 591]))                  
+                :type "int")
+                nil [560 1025])
+            ("draw" function
+               (:arguments 
+                  ( ("row" variable (:type "int") (reparse-symbol arg-sub-list) [1037 1045])
+                    ("col" variable (:type "int") (reparse-symbol arg-sub-list) [1045 1053])
+                    ("op" variable (:type "char") (reparse-symbol arg-sub-list) [1054 1062]))                  
+                :type "void")
+                nil [1027 1231])
+            ("validate" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1247 1256])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1257 1269]))                  
+                :type "void")
+                nil [1233 2242])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2253 2262])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2263 2276]))                  
+                :type "int")
+                nil [2244 2426]))          
+      :file "main.cpp"
+      :pointmax 2427
+      :fsize 2426
+      :lastmodtime '(22695 462 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!danieldoynov!Dropbox!Nottingham_Projects!project_operator_table!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

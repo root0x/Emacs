@@ -1,0 +1,763 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("ADDRESS_PRIVATE" variable (:constant-flag t) nil [311 326])
+            ("orconfig.h" include nil nil [328 349])
+            ("compat.h" include nil nil [853 872])
+            ("util.h" include nil nil [873 890])
+            ("util_format.h" include nil nil [891 915])
+            ("address.h" include nil nil [916 936])
+            ("torlog.h" include nil nil [937 956])
+            ("container.h" include nil nil [957 979])
+            ("sandbox.h" include nil nil [980 1000])
+            ("stdarg.h" include (:system-flag t) nil [1666 1685])
+            ("stdio.h" include (:system-flag t) nil [1686 1704])
+            ("stdlib.h" include (:system-flag t) nil [1705 1724])
+            ("string.h" include (:system-flag t) nil [1725 1744])
+            ("assert.h" include (:system-flag t) nil [1745 1764])
+            ("tor_addr_to_sockaddr" function
+               (:arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2464 2484])
+                    ("port" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2506 2520])
+                    ("sa_out" variable
+                       (:pointer 1
+                        :type ("sockaddr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2542 2566])
+                    ("len" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2588 2602]))                  
+                :type ("socklen_t" type (:type "class") nil nil))
+                nil [2433 3581])
+            ("tor_addr_make_af_unix" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3702 3716]))                  
+                :type "void")
+                nil [3668 3771])
+            ("tor_addr_from_sockaddr" function
+               (:arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4038 4052])
+                    ("sa" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("sockaddr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4053 4079])
+                    ("port_out" variable
+                       (:pointer 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4103 4122]))                  
+                :type "int")
+                nil [4011 4752])
+            ("tor_sockaddr_to_str" function
+               (:pointer 1
+                :arguments 
+                  ( ("sa" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("sockaddr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4925 4951]))                  
+                :type "char")
+                nil [4898 5523])
+            ("tor_addr_make_unspec" function
+               (:arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5646 5660]))                  
+                :type "void")
+                nil [5620 5717])
+            ("tor_addr_make_null" function
+               (:arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5935 5949])
+                    ("family" variable (:type ("sa_family_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5950 5969]))                  
+                :type "void")
+                nil [5911 6023])
+            ("tor_addr_lookup" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6448 6465])
+                    ("family" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6466 6482])
+                    ("addr" variable
+                       (:pointer 1
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6483 6500]))                  
+                :type "int")
+                nil [6428 9729])
+            ("tor_addr_is_internal_" function
+               (:arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9953 9976])
+                    ("for_listening" variable (:type "int") (reparse-symbol arg-sub-list) [9977 9995])
+                    ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10018 10039])
+                    ("lineno" variable (:type "int") (reparse-symbol arg-sub-list) [10040 10051]))                  
+                :type "int")
+                nil [9927 12231])
+            ("tor_addr_to_str" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("dest" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12497 12508])
+                    ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12509 12532])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12533 12544])
+                    ("decorate" variable (:type "int") (reparse-symbol arg-sub-list) [12545 12558]))                  
+                :type "char")
+                nil [12468 13434])
+            ("tor_addr_parse_PTR_name" function
+               (:arguments 
+                  ( ("result" variable
+                       (:pointer 1
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14086 14105])
+                    ("address" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14106 14126])
+                    ("family" variable (:type "int") (reparse-symbol arg-sub-list) [14162 14173])
+                    ("accept_regular" variable (:type "int") (reparse-symbol arg-sub-list) [14174 14193]))                  
+                :type "int")
+                nil [14058 16355])
+            ("tor_addr_to_PTR_name" function
+               (:arguments 
+                  ( ("out" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16649 16659])
+                    ("outlen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16660 16674])
+                    ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16696 16719]))                  
+                :type "int")
+                nil [16624 17610])
+            ("tor_addr_parse_mask_ports" function
+               (:arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [19495 19509])
+                    ("flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [19536 19551])
+                    ("addr_out" variable
+                       (:pointer 1
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19578 19599])
+                    ("maskbits_out" variable
+                       (:pointer 1
+                        :type ("maskbits_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19626 19651])
+                    ("port_min_out" variable
+                       (:pointer 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19678 19701])
+                    ("port_max_out" variable
+                       (:pointer 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19702 19725]))                  
+                :type "int")
+                nil [19465 26035])
+            ("tor_addr_is_v4" function
+               (:arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26307 26330]))                  
+                :type "int")
+                nil [26288 26710])
+            ("tor_addr_is_null" function
+               (:arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26847 26870]))                  
+                :type "int")
+                nil [26826 27376])
+            ("tor_addr_is_loopback" function
+               (:arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27460 27483]))                  
+                :type "int")
+                nil [27435 27990])
+            ("tor_addr_is_valid" function
+               (:arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28212 28235])
+                    ("for_listening" variable (:type "int") (reparse-symbol arg-sub-list) [28236 28254]))                  
+                :type "int")
+                nil [28190 28621])
+            ("tor_addr_is_valid_ipv4n" function
+               (:arguments 
+                  ( ("v4n_addr" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28812 28830])
+                    ("for_listening" variable (:type "int") (reparse-symbol arg-sub-list) [28831 28849]))                  
+                :type "int")
+                nil [28784 29020])
+            ("tor_port_is_valid" function
+               (:arguments 
+                  ( ("port" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29189 29203])
+                    ("for_listening" variable (:type "int") (reparse-symbol arg-sub-list) [29204 29222]))                  
+                :type "int")
+                nil [29167 29383])
+            ("tor_addr_from_ipv4n" function
+               (:arguments 
+                  ( ("dest" variable
+                       (:pointer 1
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29505 29522])
+                    ("v4addr" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29523 29539]))                  
+                :type "void")
+                nil [29480 29666])
+            ("tor_addr_from_ipv6_bytes" function
+               (:arguments 
+                  ( ("dest" variable
+                       (:pointer 1
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29788 29805])
+                    ("ipv6_bytes" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [29806 29829]))                  
+                :type "void")
+                nil [29758 30000])
+            ("tor_addr_from_in6" function
+               (:arguments 
+                  ( ("dest" variable
+                       (:pointer 1
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30102 30119])
+                    ("in6" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("in6_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [30120 30147]))                  
+                :type "void")
+                nil [30079 30212])
+            ("tor_addr_copy" function
+               (:arguments 
+                  ( ("dest" variable
+                       (:pointer 1
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30291 30308])
+                    ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30309 30331]))                  
+                :type "void")
+                nil [30272 30446])
+            ("tor_addr_copy_tight" function
+               (:arguments 
+                  ( ("dest" variable
+                       (:pointer 1
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30635 30652])
+                    ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30653 30675]))                  
+                :type "void")
+                nil [30610 31135])
+            ("tor_addr_compare" function
+               (:arguments 
+                  ( ("addr1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31758 31782])
+                    ("addr2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31783 31807])
+                    ("how" variable (:type ("tor_addr_comparison_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [31825 31851]))                  
+                :type "int")
+                nil [31737 31913])
+            ("tor_addr_compare_masked" function
+               (:arguments 
+                  ( ("addr1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32540 32564])
+                    ("addr2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32565 32589])
+                    ("mbits" variable (:type ("maskbits_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32614 32631])
+                    ("how" variable (:type ("tor_addr_comparison_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [32632 32658]))                  
+                :type "int")
+                nil [32512 35999])
+            ("tor_addr_hash" function
+               (:arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36090 36113]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [36067 36442])
+            ("tor_addr_to_str_dup" function
+               (:pointer 1
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36548 36571]))                  
+                :type "char")
+                nil [36521 36749])
+            ("fmt_addr_impl" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37205 37228])
+                    ("decorate" variable (:type "int") (reparse-symbol arg-sub-list) [37229 37242]))                  
+                :type "char")
+                nil [37178 37411])
+            ("fmt_addrport" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37643 37666])
+                    ("port" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37667 37681]))                  
+                :type "char")
+                nil [37617 37868])
+            ("fmt_addr32" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("addr" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38051 38065]))                  
+                :type "char")
+                nil [38027 38209])
+            ("tor_addr_parse" function
+               (:arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38504 38521])
+                    ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [38522 38538]))                  
+                :type "int")
+                nil [38485 39106])
+            ("tor_addr_port_lookup" function
+               (:arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [39352 39366])
+                    ("addr_out" variable
+                       (:pointer 1
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39367 39388])
+                    ("port_out" variable
+                       (:pointer 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39389 39408]))                  
+                :type "int")
+                nil [39327 40273])
+            ("MOCK_IMPL" function
+               (:arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("smartlist_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47984 47998])
+                    ("" variable (:type ("get_interface_addresses_raw" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [47999 48027]))                  
+                :type "int")
+                nil [47974 48544])
+            ("tor_addr_is_multicast" function
+               (:arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48629 48649]))                  
+                :type "int")
+                nil [48603 48971])
+            ("MOCK_IMPL" function
+               (:arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [49238 49242])
+                    ("" variable (:type ("get_interface_address6_via_udp_socket_hack" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49243 49286]))                  
+                :type "int")
+                nil [49228 51599])
+            ("MOCK_IMPL" function
+               (:arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [52056 52060])
+                    ("" variable (:type ("get_interface_address6" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52061 52084]))                  
+                :type "int")
+                nil [52046 52824])
+            ("free_interface_address6_list" function
+               (:arguments 
+                  ( ("addrs" variable
+                       (:pointer 1
+                        :type ("smartlist_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52942 52961]))                  
+                :type "void")
+                nil [52908 53079])
+            ("MOCK_IMPL" function
+               (:arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("smartlist_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53585 53599])
+                    ("" variable (:type ("get_interface_address6_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53599 53627]))                  
+                :type "int")
+                nil [53575 55286])
+            ("tor_addr_port_parse" function
+               (:arguments 
+                  ( ("severity" variable (:type "int") (reparse-symbol arg-sub-list) [55909 55922])
+                    ("addrport" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [55923 55944])
+                    ("address_out" variable
+                       (:pointer 1
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55965 55989])
+                    ("port_out" variable
+                       (:pointer 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55990 56009])
+                    ("default_port" variable (:type "int") (reparse-symbol arg-sub-list) [56030 56047]))                  
+                :type "int")
+                nil [55885 56566])
+            ("tor_addr_port_split" function
+               (:arguments 
+                  ( ("severity" variable (:type "int") (reparse-symbol arg-sub-list) [56884 56897])
+                    ("addrport" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [56898 56919])
+                    ("address_out" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [56940 56959])
+                    ("port_out" variable
+                       (:pointer 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56960 56979]))                  
+                :type "int")
+                nil [56860 57420])
+            ("addr_port_lookup" function
+               (:arguments 
+                  ( ("severity" variable (:type "int") (reparse-symbol arg-sub-list) [57985 57998])
+                    ("addrport" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [57999 58020])
+                    ("address" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [58021 58036])
+                    ("addr" variable
+                       (:pointer 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58053 58068])
+                    ("port_out" variable
+                       (:pointer 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58069 58088]))                  
+                :type "int")
+                nil [57964 59256])
+            ("addr_mask_get_bits" function
+               (:arguments 
+                  ( ("mask" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [59393 59407]))                  
+                :type "int")
+                nil [59370 59606])
+            ("parse_port_range" function
+               (:arguments 
+                  ( ("port" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [59790 59807])
+                    ("port_min_out" variable
+                       (:pointer 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59808 59831])
+                    ("port_max_out" variable
+                       (:pointer 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59849 59872]))                  
+                :type "int")
+                nil [59769 61014])
+            ("tor_inet_ntoa" function
+               (:arguments 
+                  ( ("in" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("in_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [61192 61217])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [61218 61228])
+                    ("buf_len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [61229 61244]))                  
+                :type "int")
+                nil [61174 61542])
+            ("tor_dup_ip" function
+               (:pointer 1
+                :arguments 
+                  ( ("addr" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [61679 61693]))                  
+                :type "char")
+                nil [61661 61851])
+            ("MOCK_IMPL" function
+               (:arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [62328 62332])
+                    ("" variable (:type ("get_interface_address" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [62333 62355]))                  
+                :type "int")
+                nil [62318 62593])
+            ("tor_addr_hostname_is_local" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [62726 62743]))                  
+                :type "int")
+                nil [62695 62860])
+            ("tor_addr_port_new" function
+               (:pointer 1
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tor_addr_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62994 63017])
+                    ("port" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [63018 63032]))                  
+                :type ("tor_addr_port_t" type (:type "class") nil nil))
+                nil [62958 63182]))          
+      :file "address.c"
+      :pointmax 63184
+      :fsize 63183
+      :lastmodtime '(22536 53536 0 0)
+      :unmatched-syntax '((semantic-list 62355 . 62385) (semantic-list 53627 . 53789) (semantic-list 52084 . 52136) (semantic-list 49286 . 49426) (semantic-list 48027 . 48061))
+      :lexical-table 
+        '(("ADDRESS_PRIVATE")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "compat.h"
+      :fsize 25082
+      :lastmodtime '(22536 53536 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "util.h"
+      :fsize 21159
+      :lastmodtime '(22536 53536 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "util_format.h"
+      :fsize 1376
+      :lastmodtime '(22536 53536 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "address.h"
+      :fsize 14505
+      :lastmodtime '(22536 53536 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "torlog.h"
+      :fsize 9428
+      :lastmodtime '(22536 53536 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "container.h"
+      :fsize 31969
+      :lastmodtime '(22536 53536 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "sandbox.h"
+      :fsize 4941
+      :lastmodtime '(22536 53536 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("orconfig.h" include nil nil [401 422])
+            ("stdlib.h" include (:system-flag t) nil [423 442])
+            ("compat.h" include nil nil [443 462])
+            ("compat_threads.h" include nil nil [463 490])
+            ("util.h" include nil nil [492 509])
+            ("torlog.h" include nil nil [510 529])
+            ("tor_mutex_new" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [766 771]))                  
+                :type ("tor_mutex_t" type (:type "class") nil nil))
+                nil [738 865])
+            ("tor_mutex_new_nonrecursive" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1016 1021]))                  
+                :type ("tor_mutex_t" type (:type "class") nil nil))
+                nil [975 1128])
+            ("tor_mutex_free" function
+               (:arguments 
+                  ( ("m" variable
+                       (:pointer 1
+                        :type ("tor_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1215 1230]))                  
+                :type "void")
+                nil [1195 1294])
+            ("tor_cond_new" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1375 1380]))                  
+                :type ("tor_cond_t" type (:type "class") nil nil))
+                nil [1349 1524])
+            ("tor_cond_free" function
+               (:arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("tor_cond_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1587 1601]))                  
+                :type "void")
+                nil [1568 1664])
+            ("main_thread_id" variable
+               (:typemodifiers ("static")
+                :default-value "-1"
+                :type "unsigned long")
+                nil [1703 1744])
+            ("set_main_thread" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1897 1902]))                  
+                :type "void")
+                nil [1876 1946])
+            ("in_main_thread" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2018 2023]))                  
+                :type "int")
+                nil [1999 2075])
+            ("send_ni" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [2587 2594])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2595 2611])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2612 2621])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [2622 2632]))                  
+                :type "int")
+                nil [2568 2771])
+            ("recv_ni" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [2830 2837])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2838 2848])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2849 2858])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [2859 2869]))                  
+                :type "int")
+                nil [2811 3008])
+            ("sock_alert" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fd" variable (:type ("tor_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4160 4176]))                  
+                :type "int")
+                nil [4138 4300])
+            ("sock_drain" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fd" variable (:type ("tor_socket_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4429 4445]))                  
+                :type "int")
+                nil [4407 4698])
+            ("alert_sockets_create" function
+               (:arguments 
+                  ( ("socks_out" variable
+                       (:pointer 1
+                        :type ("alert_sockets_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4836 4863])
+                    ("flags" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4864 4879]))                  
+                :type "int")
+                nil [4811 7655])
+            ("alert_sockets_close" function
+               (:arguments 
+                  ( ("socks" variable
+                       (:pointer 1
+                        :type ("alert_sockets_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7724 7747]))                  
+                :type "void")
+                nil [7699 8051]))          
+      :file "compat_threads.c"
+      :pointmax 8053
+      :fsize 8052
+      :lastmodtime '(22536 53536 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "compat_threads.h"
+      :fsize 4790
+      :lastmodtime '(22536 53536 0 0)))
+  :file "!Users!danieldoynov!Downloads!tor-0.2.9.9!src!common!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

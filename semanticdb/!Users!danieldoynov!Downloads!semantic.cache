@@ -57,6 +57,42 @@
           ("PRIORITY" . ((number "3" 152 . 153)))
           ("JOB_INDEX" . ((number "0" 87 . 88)))
           )
+)
+    (semanticdb-table "arg_04.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("pthread.h" include (:system-flag t) nil [394 414])
+            ("stdio.h" include (:system-flag t) nil [415 433])
+            ("stdlib.h" include (:system-flag t) nil [434 453])
+            ("string.h" include (:system-flag t) nil [471 490])
+            ("errno.h" include (:system-flag t) nil [507 525])
+            ("COND_CHECK" variable (:constant-flag t) nil [769 779])
+            ("ErrnoCheck" variable (:constant-flag t) nil [1015 1025])
+            ("ErrnoCheck" variable (:constant-flag t) nil [1015 1025])
+            ("PthreadCheck" variable (:constant-flag t) nil [1087 1099])
+            ("LIFE_AND_UNIVERSE" variable
+               (:constant-flag t
+                :default-value "42"
+                :type "int")
+                nil [1145 1176])
+            ("thread" function
+               (:pointer 1
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1458 1468]))                  
+                :type "void")
+                nil [1445 1517])
+            ("main" function (:type "int") nil [1754 2255]))          
+      :file "arg_04.c"
+      :pointmax 2255
+      :fsize 2279
+      :lastmodtime '(22585 31350 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ErrnoCheck" (spp-arg-list ("func" "cond" "retv") 1025 . 1041) . ((symbol "COND_CHECK" 1043 . 1053) (semantic-list "(func, cond, retv, errno)" 1053 . 1078)))
+          )
 ))
   :file "!Users!danieldoynov!Downloads!semantic.cache"
   :semantic-tag-version "2.0"

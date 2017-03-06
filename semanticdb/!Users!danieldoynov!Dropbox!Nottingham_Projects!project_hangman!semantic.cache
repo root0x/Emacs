@@ -1,0 +1,51 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("string" include (:system-flag t) nil [21 38])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [40 60])
+            ("guessLeft" variable
+               (:default-value "10"
+                :type "int")
+                nil [63 82])
+            ("guessSoFar" variable
+               (:default-value "\"\""
+                :type ("string" type (:type "class") nil nil))
+                nil [83 106])
+            ("availableAlphabet" variable
+               (:default-value "\"ABCDEFGHIJKLMNOPQRSTUVWXYZ\""
+                :type ("string" type (:type "class") nil nil))
+                nil [107 163])
+            ("word" variable
+               (:default-value "\"banana\""
+                :type ("string" type (:type "class") nil nil))
+                nil [164 187])
+            ("workingWord" variable (:type ("string" type (:type "class") nil nil)) nil [188 207])
+            ("print" function (:type "void") nil [210 405])
+            ("playGame" function (:type "void") nil [407 473])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [484 493])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [494 507]))                  
+                :type "int")
+                nil [475 599]))          
+      :file "main.cpp"
+      :pointmax 600
+      :fsize 599
+      :lastmodtime '(22695 1089 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!danieldoynov!Dropbox!Nottingham_Projects!project_hangman!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
