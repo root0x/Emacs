@@ -7756,6 +7756,90 @@
           ("TARGET_IPHONE_SIMULATOR" . ((symbol "TARGET_OS_SIMULATOR" 5108 . 5127)))
           ("TARGET_RT_MAC_CFM" . ((number "0" 15012 . 15013)))
           )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("sys/cdefs.h" include (:system-flag t) nil [2251 2273])
+            ("stdlib.h" include (:system-flag t) nil [2293 2312])
+            ("__assert_rtn" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2965 2978])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2979 2992])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [2993 2997])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2998 3011]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [2947 3020])
+            ("__assert" variable (:constant-flag t) nil [3542 3550])
+            ("assert" variable (:constant-flag t) nil [3656 3662])
+            ("_ASSERT_H_" variable (:constant-flag t) nil [3987 3997]))          
+      :file "assert.h"
+      :pointmax 4198
+      :fsize 4197
+      :lastmodtime '(22517 34307 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("assert" (spp-arg-list ("e") 3662 . 3665) . ((semantic-list "(__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)" 3672 . 3758)))
+          ("_ASSERT_H_")
+          ("__assert" (spp-arg-list ("e" "file" "line") 3550 . 3565) . ((symbol "__assert_rtn" 3572 . 3584) (semantic-list "((const char *)-1L, file, line, e)" 3585 . 3619)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "signal.h"
+      :fsize 5442
+      :lastmodtime '(22517 34307 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("_EXECINFO_H_" variable (:constant-flag t) nil [999 1011])
+            ("sys/cdefs.h" include (:system-flag t) nil [1015 1037])
+            ("Availability.h" include (:system-flag t) nil [1038 1063])
+            ("__OSX_AVAILABLE_STARTING" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type ("__MAC_10_5" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1326 1337])
+                    ("" variable (:type ("__IPHONE_2_0" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1338 1351]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1301 1352])
+            ("__OSX_AVAILABLE_STARTING" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type ("__MAC_10_5" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1226 1237])
+                    ("" variable (:type ("__IPHONE_2_0" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1238 1251]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1201 1252])
+            ("__OSX_AVAILABLE_STARTING" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type ("__MAC_10_5" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1131 1142])
+                    ("" variable (:type ("__IPHONE_2_0" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1143 1156]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1106 1157]))          
+      :file "execinfo.h"
+      :pointmax 1394
+      :fsize 1393
+      :lastmodtime '(22517 34307 0 0)
+      :unmatched-syntax '((semantic-list 1278 . 1300) (symbol 1258 . 1278) (VOID 1253 . 1257) (semantic-list 1182 . 1200) (symbol 1165 . 1182) (punctuation 1163 . 1164) (punctuation 1162 . 1163) (CHAR 1158 . 1162) (semantic-list 1093 . 1105) (symbol 1084 . 1093) (INT 1080 . 1083))
+      :lexical-table 
+        '(("_EXECINFO_H_" . ((number "1" 1012 . 1013)))
+          )
 ))
   :file "!usr!include!semantic.cache"
   :semantic-tag-version "2.0"

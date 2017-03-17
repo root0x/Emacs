@@ -1,0 +1,67 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("signal.h" include (:system-flag t) nil [677 696])
+            ("stdio.h" include (:system-flag t) nil [697 715])
+            ("stdlib.h" include (:system-flag t) nil [716 735])
+            ("rct/EventLoop.h" include nil nil [787 813])
+            ("rct/FileSystemWatcher.h" include nil nil [814 848])
+            ("rct/Log.h" include nil nil [849 869])
+            ("rct/Process.h" include nil nil [870 894])
+            ("rct/rct-config.h" include nil nil [895 922])
+            ("rct/Rct.h" include nil nil [923 943])
+            ("rct/StackBuffer.h" include nil nil [944 972])
+            ("rct/Thread.h" include nil nil [973 996])
+            ("rct/ThreadPool.h" include nil nil [997 1024])
+            ("RTags.h" include nil nil [1025 1043])
+            ("CommandLineParser.h" include nil nil [1044 1074])
+            ("Server.h" include nil nil [1075 1094])
+            ("crashDumpTempFilePath" variable
+               (:dereference 1
+                :type "char")
+                nil [1234 1271])
+            ("crashDumpFilePath" variable
+               (:dereference 1
+                :type "char")
+                nil [1272 1305])
+            ("crashDumpFile" variable
+               (:pointer 1
+                :default-value "0"
+                :type ("FILE" type (:type "class") nil nil))
+                nil [1306 1330])
+            ("signalHandler" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("signal" variable (:type "int") (reparse-symbol arg-sub-list) [1357 1368]))                  
+                :type "void")
+                nil [1331 2276])
+            ("DEFAULT_EXCLUDEFILTER" variable (:constant-flag t) nil [2286 2307]))          
+      :file "rdm.cpp"
+      :pointmax 39085
+      :fsize 39084
+      :lastmodtime '(22732 1394 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DEFAULT_EXCLUDEFILTER" . ((string "\"*/CMakeFiles/*;*/cmake*/Modules/*;*/conftest.c*;/tmp/*;/private/tmp/*;/private/var" 2308 . 2391)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "RTags.h"
+      :fsize 28623
+      :lastmodtime '(22732 1394 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "CommandLineParser.h"
+      :fsize 11857
+      :lastmodtime '(22732 1394 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "Server.h"
+      :fsize 11587
+      :lastmodtime '(22732 1394 0 0)))
+  :file "!Users!danieldoynov!Downloads!rtags!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

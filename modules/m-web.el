@@ -20,17 +20,19 @@
 
 (setq web-mode-markup-indent-offset 2)
 (setq web-mode-css-indent-offset 2)
-(setq web-mode-code-indent-offset 2)
+(setq web-mode-code-indent-offset 4)
 
 
 (setq web-mode-extra-auto-pairs
       '(("erb"  . (("beg" "end")))
         ("php"  . (("beg" "end")
                    ("beg" "end")))
-       ))
+	))
 
-(use-package dumb-jump
-  :bind (("M-g o" . dumb-jump-go-other-window)
-         ("M-g j" . dumb-jump-go))
-  :config (setq dumb-jump-selector 'ivy)
-  :ensure)
+(add-hook 'web-mode-hook 'helm-gtags-mode)
+
+(add-hook 'web-mode-hook
+          '(lambda ()
+             (require 'company-php)
+             (company-mode t)
+             (add-to-list 'company-backends 'company-ac-php-backend )))

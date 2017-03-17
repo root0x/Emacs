@@ -2,7 +2,7 @@
 ; each 100MB of allocated data (the default is on every 0.76MB). This reduces
 					; the startup time.
 ;;; Code:
-(setq gc-cons-threshold 200000000)
+(setq gc-cons-threshold 400000000)
 
 ;; Allow hash to be entered  
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))

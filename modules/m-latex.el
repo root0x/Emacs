@@ -5,6 +5,9 @@
 ;(setenv "PATH" (concat (getenv "PATH") ":/usr/texbin/"))
 (setenv "PATH" "/usr/local/bin:/Library/TeX/texbin/:$PATH" t)
 
+(setq ispell-program-name "/usr/local/bin/ispell")
+
+
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
 ;(setq-default TeX-master nil)

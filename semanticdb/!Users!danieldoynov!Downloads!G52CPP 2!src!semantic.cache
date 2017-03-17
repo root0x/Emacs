@@ -1,0 +1,446 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("header.h" include nil nil [1 20])
+            ("math.h" include (:system-flag t) nil [75 92])
+            ("BaseEngine.h" include nil nil [94 117])
+            ("DisplayableObject.h" include nil nil [118 148])
+            ("templates.h" include nil nil [150 172])
+            ("BaseEngine" function
+               (:constructor-flag t
+                :parent "BaseEngine"
+                :arguments 
+                  ( ("iUnusedSinceSDL2" variable (:type "int") (reparse-symbol arg-sub-list) [220 241]))                  
+                :type ("BaseEngine" type (:type "class") nil nil))
+                nil [197 745])
+            ("BaseEngine" function
+               (:destructor-flag t
+                :parent "BaseEngine"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [817 822]))                  
+                :type "void")
+                nil [793 851])
+            ("Initialise" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("strCaption" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [947 970])
+                    ("iScreenWidth" variable (:type "int") (reparse-symbol arg-sub-list) [971 988])
+                    ("iScreenHeight" variable (:type "int") (reparse-symbol arg-sub-list) [989 1007])
+                    ("szFontName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1008 1031])
+                    ("iFontSize" variable (:type "int") (reparse-symbol arg-sub-list) [1032 1046]))                  
+                :type "int")
+                nil [920 3262])
+            ("GameInit" function
+               (:parent "BaseEngine"
+                :type "int")
+                nil [3379 3559])
+            ("InitialiseObjects" function
+               (:parent "BaseEngine"
+                :type "int")
+                nil [3773 4995])
+            ("CreateObjectArray" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iNumberObjects" variable (:type "int") (reparse-symbol arg-sub-list) [5032 5051]))                  
+                :type "void")
+                nil [4997 5344])
+            ("StoreObjectInArray" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iIndex" variable (:type "int") (reparse-symbol arg-sub-list) [5385 5396])
+                    ("pObject" variable
+                       (:pointer 1
+                        :type ("DisplayableObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5397 5424]))                  
+                :type "void")
+                nil [5349 5474])
+            ("DestroyOldObjects" function
+               (:parent "BaseEngine"
+                :type "void")
+                nil [5524 5922])
+            ("MainLoop" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6103 6108]))                  
+                :type "int")
+                nil [6078 7545])
+            ("GameAction" function
+               (:parent "BaseEngine"
+                :type "void")
+                nil [7653 8051])
+            ("GameRender" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [9036 9041]))                  
+                :type "void")
+                nil [9008 11935])
+            ("UpdateAllObjects" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iCurrentTime" variable (:type "int") (reparse-symbol arg-sub-list) [12078 12096]))                  
+                :type "void")
+                nil [12043 12401])
+            ("Deinitialise" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12492 12497]))                  
+                :type "void")
+                nil [12462 12638])
+            ("CleanUp" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [12739 12744]))                  
+                :type "void")
+                nil [12714 12748])
+            ("CopyAllBackgroundBuffer" function
+               (:parent "BaseEngine"
+                :type "void")
+                nil [12859 13516])
+            ("CopyBackgroundPixels" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iX" variable (:type "int") (reparse-symbol arg-sub-list) [13656 13663])
+                    ("iY" variable (:type "int") (reparse-symbol arg-sub-list) [13664 13671])
+                    ("iWidth" variable (:type "int") (reparse-symbol arg-sub-list) [13672 13683])
+                    ("iHeight" variable (:type "int") (reparse-symbol arg-sub-list) [13684 13697]))                  
+                :type "void")
+                nil [13617 14673])
+            ("IsKeyPressed" function
+               (:methodconst-flag t
+                :parent "BaseEngine"
+                :arguments 
+                  ( ("iKeyCode" variable (:type "int") (reparse-symbol arg-sub-list) [14764 14777]))                  
+                :type "bool")
+                nil [14734 14839])
+            ("KeyUp" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iKeyCode" variable (:type "int") (reparse-symbol arg-sub-list) [14984 14997]))                  
+                :type "void")
+                nil [14961 15001])
+            ("KeyDown" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iKeyCode" variable (:type "int") (reparse-symbol arg-sub-list) [15145 15159]))                  
+                :type "void")
+                nil [15119 15163])
+            ("MouseMoved" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iX" variable (:type "int") (reparse-symbol arg-sub-list) [15347 15354])
+                    ("iY" variable (:type "int") (reparse-symbol arg-sub-list) [15355 15363]))                  
+                :type "void")
+                nil [15318 15528])
+            ("MouseDown" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iButton" variable (:type "int") (reparse-symbol arg-sub-list) [15725 15737])
+                    ("iX" variable (:type "int") (reparse-symbol arg-sub-list) [15738 15745])
+                    ("iY" variable (:type "int") (reparse-symbol arg-sub-list) [15746 15754]))                  
+                :type "void")
+                nil [15697 15829])
+            ("MouseUp" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iButton" variable (:type "int") (reparse-symbol arg-sub-list) [16025 16037])
+                    ("iX" variable (:type "int") (reparse-symbol arg-sub-list) [16038 16045])
+                    ("iY" variable (:type "int") (reparse-symbol arg-sub-list) [16046 16054]))                  
+                :type "void")
+                nil [15999 16127])
+            ("SetupBackgroundBuffer" function
+               (:parent "BaseEngine"
+                :type "void")
+                nil [16232 16397])
+            ("FillBackground" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("uiPixelColour" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [16480 16507]))                  
+                :type "void")
+                nil [16448 16842])
+            ("DrawStrings" function
+               (:parent "BaseEngine"
+                :type "void")
+                nil [16976 17291])
+            ("UnDrawStrings" function
+               (:parent "BaseEngine"
+                :type "void")
+                nil [17469 17604])
+            ("DrawStringsUnderneath" function
+               (:parent "BaseEngine"
+                :type "void")
+                nil [17674 17799])
+            ("DrawStringsOnTop" function
+               (:parent "BaseEngine"
+                :type "void")
+                nil [17901 18021])
+            ("UndrawObjects" function
+               (:parent "BaseEngine"
+                :type "void")
+                nil [18124 18523])
+            ("DrawObjects" function
+               (:parent "BaseEngine"
+                :type "void")
+                nil [18594 18955])
+            ("GetDisplayableObject" function
+               (:pointer 1
+                :parent "BaseEngine"
+                :arguments 
+                  ( ("iIndex" variable (:type "int") (reparse-symbol arg-sub-list) [19135 19147]))                  
+                :type ("DisplayableObject" type (:type "class") nil nil))
+                nil [19082 19268])
+            ("GetColour" function
+               (:methodconst-flag t
+                :parent "BaseEngine"
+                :arguments 
+                  ( ("iColourIndex" variable (:type "int") (reparse-symbol arg-sub-list) [19433 19450]))                  
+                :type "unsigned int")
+                nil [19398 20766])
+            ("DrawString" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iX" variable (:type "int") (reparse-symbol arg-sub-list) [20836 20843])
+                    ("iY" variable (:type "int") (reparse-symbol arg-sub-list) [20844 20851])
+                    ("pText" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [20852 20870])
+                    ("uiColour" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [20879 20901])
+                    ("pFont" variable
+                       (:pointer 1
+                        :type ("Font" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20902 20914])
+                    ("pTarget" variable
+                       (:pointer 1
+                        :type ("SDL_Surface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20915 20937]))                  
+                :type "void")
+                nil [20808 21666])
+            ("DrawTriangle" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("fX1" variable (:type "double") (reparse-symbol arg-sub-list) [21755 21766])
+                    ("fY1" variable (:type "double") (reparse-symbol arg-sub-list) [21767 21778])
+                    ("fX2" variable (:type "double") (reparse-symbol arg-sub-list) [21783 21794])
+                    ("fY2" variable (:type "double") (reparse-symbol arg-sub-list) [21795 21806])
+                    ("fX3" variable (:type "double") (reparse-symbol arg-sub-list) [21811 21822])
+                    ("fY3" variable (:type "double") (reparse-symbol arg-sub-list) [21823 21834])
+                    ("uiColour" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [21840 21862])
+                    ("pTarget" variable
+                       (:pointer 1
+                        :type ("SDL_Surface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21868 21890]))                  
+                :type "void")
+                nil [21720 22870])
+            ("DrawVerticalSidedRegion" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("fX1" variable (:type "double") (reparse-symbol arg-sub-list) [23103 23114])
+                    ("fX2" variable (:type "double") (reparse-symbol arg-sub-list) [23115 23126])
+                    ("fY1a" variable (:type "double") (reparse-symbol arg-sub-list) [23145 23157])
+                    ("fY2a" variable (:type "double") (reparse-symbol arg-sub-list) [23158 23170])
+                    ("fY1b" variable (:type "double") (reparse-symbol arg-sub-list) [23210 23222])
+                    ("fY2b" variable (:type "double") (reparse-symbol arg-sub-list) [23223 23235])
+                    ("uiColour" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [23273 23295])
+                    ("pTarget" variable
+                       (:pointer 1
+                        :type ("SDL_Surface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23300 23321]))                  
+                :type "void")
+                nil [23057 25099])
+            ("DrawRectangle" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iX1" variable (:type "int") (reparse-symbol arg-sub-list) [25179 25187])
+                    ("iY1" variable (:type "int") (reparse-symbol arg-sub-list) [25188 25196])
+                    ("iX2" variable (:type "int") (reparse-symbol arg-sub-list) [25197 25205])
+                    ("iY2" variable (:type "int") (reparse-symbol arg-sub-list) [25206 25214])
+                    ("uiColour" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [25226 25248])
+                    ("pTarget" variable
+                       (:pointer 1
+                        :type ("SDL_Surface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25249 25270]))                  
+                :type "void")
+                nil [25148 25580])
+            ("DrawOval" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iX1" variable (:type "int") (reparse-symbol arg-sub-list) [25649 25657])
+                    ("iY1" variable (:type "int") (reparse-symbol arg-sub-list) [25658 25666])
+                    ("iX2" variable (:type "int") (reparse-symbol arg-sub-list) [25667 25675])
+                    ("iY2" variable (:type "int") (reparse-symbol arg-sub-list) [25676 25684])
+                    ("uiColour" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [25691 25713])
+                    ("pTarget" variable
+                       (:pointer 1
+                        :type ("SDL_Surface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25714 25735]))                  
+                :type "void")
+                nil [25623 26441])
+            ("DrawHollowOval" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iX1" variable (:type "int") (reparse-symbol arg-sub-list) [26517 26525])
+                    ("iY1" variable (:type "int") (reparse-symbol arg-sub-list) [26526 26534])
+                    ("iX2" variable (:type "int") (reparse-symbol arg-sub-list) [26535 26543])
+                    ("iY2" variable (:type "int") (reparse-symbol arg-sub-list) [26544 26552])
+                    ("iX3" variable (:type "int") (reparse-symbol arg-sub-list) [26559 26567])
+                    ("iY3" variable (:type "int") (reparse-symbol arg-sub-list) [26568 26576])
+                    ("iX4" variable (:type "int") (reparse-symbol arg-sub-list) [26577 26585])
+                    ("iY4" variable (:type "int") (reparse-symbol arg-sub-list) [26586 26594])
+                    ("uiColour" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [26601 26623])
+                    ("pTarget" variable
+                       (:pointer 1
+                        :type ("SDL_Surface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26624 26645]))                  
+                :type "void")
+                nil [26484 27796])
+            ("DrawLine" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("fX1" variable (:type "double") (reparse-symbol arg-sub-list) [27865 27876])
+                    ("fY1" variable (:type "double") (reparse-symbol arg-sub-list) [27877 27888])
+                    ("fX2" variable (:type "double") (reparse-symbol arg-sub-list) [27889 27900])
+                    ("fY2" variable (:type "double") (reparse-symbol arg-sub-list) [27901 27912])
+                    ("uiColour" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [27919 27941])
+                    ("pTarget" variable
+                       (:pointer 1
+                        :type ("SDL_Surface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27942 27963]))                  
+                :type "void")
+                nil [27839 28541])
+            ("DrawThickLine" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("fX1" variable (:type "double") (reparse-symbol arg-sub-list) [28623 28634])
+                    ("fY1" variable (:type "double") (reparse-symbol arg-sub-list) [28635 28646])
+                    ("fX2" variable (:type "double") (reparse-symbol arg-sub-list) [28647 28658])
+                    ("fY2" variable (:type "double") (reparse-symbol arg-sub-list) [28659 28670])
+                    ("uiColour" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [28676 28698])
+                    ("iThickness" variable (:type "int") (reparse-symbol arg-sub-list) [28699 28714])
+                    ("pTarget" variable
+                       (:pointer 1
+                        :type ("SDL_Surface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28715 28736]))                  
+                :type "void")
+                nil [28591 29903])
+            ("DrawPolygon" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iPoints" variable (:type "int") (reparse-symbol arg-sub-list) [29985 29997])
+                    ("pXArray" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [29998 30014])
+                    ("pYArray" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [30015 30031])
+                    ("uiColour" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [30036 30058])
+                    ("pTarget" variable
+                       (:pointer 1
+                        :type ("SDL_Surface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30059 30080]))                  
+                :type "void")
+                nil [29950 34013])
+            ("DrawShortenedArrow" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iX1" variable (:type "int") (reparse-symbol arg-sub-list) [34190 34198])
+                    ("iY1" variable (:type "int") (reparse-symbol arg-sub-list) [34198 34206])
+                    ("iX2" variable (:type "int") (reparse-symbol arg-sub-list) [34206 34214])
+                    ("iY2" variable (:type "int") (reparse-symbol arg-sub-list) [34214 34222])
+                    ("iShortenedStart" variable (:type "int") (reparse-symbol arg-sub-list) [34232 34252])
+                    ("iShortenedEnd" variable (:type "int") (reparse-symbol arg-sub-list) [34252 34270])
+                    ("uiColour" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [34280 34302])
+                    ("iThickness" variable (:type "int") (reparse-symbol arg-sub-list) [34302 34317])
+                    ("iHeadSize" variable (:type "int") (reparse-symbol arg-sub-list) [34327 34341])
+                    ("pTarget" variable
+                       (:pointer 1
+                        :type ("SDL_Surface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [34341 34363]))                  
+                :type "void")
+                nil [34153 35654])
+            ("DrawShortenedLine" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iX1" variable (:type "int") (reparse-symbol arg-sub-list) [35830 35838])
+                    ("iY1" variable (:type "int") (reparse-symbol arg-sub-list) [35838 35846])
+                    ("iX2" variable (:type "int") (reparse-symbol arg-sub-list) [35846 35854])
+                    ("iY2" variable (:type "int") (reparse-symbol arg-sub-list) [35854 35862])
+                    ("iShortenedStart" variable (:type "int") (reparse-symbol arg-sub-list) [35871 35891])
+                    ("iShortenedEnd" variable (:type "int") (reparse-symbol arg-sub-list) [35891 35909])
+                    ("uiColour" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [35918 35940])
+                    ("iThickness" variable (:type "int") (reparse-symbol arg-sub-list) [35940 35955])
+                    ("pTarget" variable
+                       (:pointer 1
+                        :type ("SDL_Surface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [35955 35977]))                  
+                :type "void")
+                nil [35794 36979])
+            ("NotifyAllObjects" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iSignalNumber" variable (:type "int") (reparse-symbol arg-sub-list) [37016 37035]))                  
+                :type "void")
+                nil [36981 37215])
+            ("NotifyAllObjectsGetCountNonZero" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iSignalNumber" variable (:type "int") (reparse-symbol arg-sub-list) [37388 37407]))                  
+                :type "int")
+                nil [37339 37652])
+            ("NotifyAllObjectsGetSum" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iSignalNumber" variable (:type "int") (reparse-symbol arg-sub-list) [37806 37825]))                  
+                :type "int")
+                nil [37766 38057])
+            ("NotifyAllObjectsGetMax" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iSignalNumber" variable (:type "int") (reparse-symbol arg-sub-list) [38215 38234]))                  
+                :type "int")
+                nil [38175 38517])
+            ("NotifyAllObjectsGetMin" function
+               (:parent "BaseEngine"
+                :arguments 
+                  ( ("iSignalNumber" variable (:type "int") (reparse-symbol arg-sub-list) [38676 38695]))                  
+                :type "int")
+                nil [38636 38978]))          
+      :file "BaseEngine.cpp"
+      :pointmax 38980
+      :fsize 40228
+      :lastmodtime '(22731 61339 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "header.h"
+      :fsize 387
+      :lastmodtime '(22725 27366 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "BaseEngine.h"
+      :fsize 29447
+      :lastmodtime '(22725 27366 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "DisplayableObject.h"
+      :fsize 3717
+      :lastmodtime '(22725 27366 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "templates.h"
+      :fsize 1132
+      :lastmodtime '(22725 27366 0 0)))
+  :file "!Users!danieldoynov!Downloads!G52CPP 2!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
