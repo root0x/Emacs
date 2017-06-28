@@ -1,0 +1,18 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-automake-mode
+      :tags 
+        '( ("dist_noinst_SCRIPTS" variable (:default-value ("build_solaris_package")) nil [93 137])
+            ("EXTRA_DIST" variable (:default-value ("gdb-sol-thread.patch" "valgrind.p5m" "vgpreload-solaris.mapfile")) nil [140 222]))          
+      :file "Makefile.am"
+      :pointmax 222
+      :fsize 221
+      :lastmodtime '(21998 57678 0 0)
+      :unmatched-syntax '((shell-command 138 . 139) (bol 137 . 137))))
+  :file "!Users!danieldoynov!Downloads!valgrind-3.11.0!solaris!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

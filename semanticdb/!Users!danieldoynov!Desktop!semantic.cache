@@ -4,75 +4,104 @@
   :tables
   (list
     (semanticdb-table "semanticdb-table"
-      :major-mode c-mode
+      :major-mode c++-mode
       :tags 
-        '( ("stdio.h" include (:system-flag t) nil [1 19])
-            ("time.h" include (:system-flag t) nil [20 37])
-            ("sys/time.h" include (:system-flag t) nil [38 59])
-            ("stdlib.h" include (:system-flag t) nil [60 79])
-            ("NUMBER_OF_JOBS" variable (:constant-flag t) nil [88 102])
-            ("JOB_INDEX" variable (:constant-flag t) nil [116 125])
-            ("BURST_TIME" variable (:constant-flag t) nil [136 146])
-            ("REMAINING_TIME" variable (:constant-flag t) nil [157 171])
-            ("PRIORITY" variable (:constant-flag t) nil [182 190])
-            ("aiJobs" variable
-               (:dereference 2
-                :type "int")
-                nil [194 224])
-            ("generateJobs" function (:type "void") nil [226 463])
-            ("printJob" function
-               (:arguments 
-                  ( ("iId" variable (:type "int") (reparse-symbol arg-sub-list) [479 487])
-                    ("iBurstTime" variable (:type "int") (reparse-symbol arg-sub-list) [488 503])
-                    ("iRemainingTime" variable (:type "int") (reparse-symbol arg-sub-list) [504 523])
-                    ("iPriority" variable (:type "int") (reparse-symbol arg-sub-list) [524 538]))                  
-                :type "void")
-                nil [465 664])
-            ("printJobs" function (:type "void") nil [666 865])
-            ("getDifferenceInMilliSeconds" function
-               (:arguments 
-                  ( ("start" variable (:type ("timeval" type
-                         (:prototype t
-                          :type "struct")
-                          nil nil)) (reparse-symbol arg-sub-list) [904 925])
-                    ("end" variable (:type ("timeval" type
-                         (:prototype t
-                          :type "struct")
-                          nil nil)) (reparse-symbol arg-sub-list) [926 945]))                  
-                :type "long int")
-                nil [867 1122])
-            ("simulateJob" function
-               (:arguments 
-                  ( ("iTime" variable (:type "int") (reparse-symbol arg-sub-list) [1141 1151]))                  
-                :type "void")
-                nil [1124 1415])
-            ("fifo" function (:type "void") nil [1417 2531])
-            ("main" function (:type "int") nil [2627 2704]))          
-      :file "req1a.c"
-      :pointmax 2706
-      :fsize 2705
-      :lastmodtime '(22565 50399 0 0)
-      :unmatched-syntax nil
-      :lexical-table 
-        '(("REMAINING_TIME" . ((number "2" 172 . 173)))
-          ("BURST_TIME" . ((number "1" 147 . 148)))
-          ("NUMBER_OF_JOBS" . ((number "1000" 103 . 107)))
-          ("PRIORITY" . ((number "3" 191 . 192)))
-          ("JOB_INDEX" . ((number "0" 126 . 127)))
-          )
-)
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [21 41])
+            ("A" type
+               (:members 
+                  ( ("i" variable (:type "int") (reparse-symbol classsubparts) [56 62])
+                    ("public" label nil (reparse-symbol classsubparts) [63 70])
+                    ("A" function
+                       (:constructor-flag t
+                        :type ("A" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [75 124])
+                    ("first" function (:type "void") (reparse-symbol classsubparts) [129 176])
+                    ("second" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [181 238])
+                    ("third" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [243 319])
+                    ("fourth" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [324 402])
+                    ("A" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [407 445]))                  
+                :type "class")
+                nil [42 448])
+            ("B" type
+               (:superclasses 
+                  ( ("A" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("i" variable (:type "int") (reparse-symbol classsubparts) [474 480])
+                    ("public" label nil (reparse-symbol classsubparts) [481 488])
+                    ("B" function
+                       (:constructor-flag t
+                        :type ("B" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [493 542])
+                    ("first" function (:type "void") (reparse-symbol classsubparts) [547 594])
+                    ("second" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [599 656])
+                    ("fourth" function (:type "void") (reparse-symbol classsubparts) [661 731])
+                    ("B" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [736 779]))                  
+                :type "class")
+                nil [449 782])
+            ("main" function (:type "int") nil [783 866]))          
+      :file "test.cpp"
+      :pointmax 868
+      :fsize 867
+      :lastmodtime '(22830 54256 0 0)
+      :unmatched-syntax nil)
     (semanticdb-table "semanticdb-table"
       :major-mode c++-mode
       :tags 
         '( ("iostream" include (:system-flag t) nil [1 20])
-            ("SDL2/SDL.h" include (:system-flag t) nil [22 43])
-            ("OpenGL/gl.h" include (:system-flag t) nil [75 97])
-            ("OpenGl/freeglut.h" include (:system-flag t) nil [98 126])
-            ("main" function (:type "int") nil [127 1531]))          
-      :file "test.cpp"
-      :pointmax 1532
-      :fsize 1502
-      :lastmodtime '(22672 41526 0 0)
+            ("array" include (:system-flag t) nil [21 37])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [38 58])
+            ("myFunc" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [174 181])
+                    ("()" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("x" variable (:type "double") (reparse-symbol arg-sub-list) [227 236]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [211 264]))                  
+                :type "class")
+                nil [159 267])
+            ("myFun" function
+               (:arguments 
+                  ( ("x" variable
+                       (:reference 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [281 291]))                  
+                :type "void")
+                nil [270 308])
+            ("main" function (:type "int") nil [310 1017]))          
+      :file "test2.cpp"
+      :pointmax 1018
+      :fsize 1017
+      :lastmodtime '(22836 30555 0 0)
       :unmatched-syntax nil))
   :file "!Users!danieldoynov!Desktop!semantic.cache"
   :semantic-tag-version "2.0"

@@ -137,6 +137,8 @@ The additional ARGS are the fonts applied.  This uses `powerline' functions."
    #b00000000
    #b00000000])
 
+;(linum-highligth-current-line-number)
+
 ;change cursor to bar
 (setq-default cursor-type 'bar) 
 (set-cursor-color "#ffffff") 
@@ -172,3 +174,43 @@ The additional ARGS are the fonts applied.  This uses `powerline' functions."
 
 ;(add-to-list 'load-path "~/.emacs.d/plugins/all-the-icons/")
 ;(require 'all-the-icons)
+
+(require 'linum)
+
+(defvar linum-current-line 1 "Current line number.")
+(defvar linum-border-width 1 "Border width for linum.")
+
+(defface linum-current-line
+  `((t :inherit linum
+       :foreground "LightSlateGrey"
+       :weight bold
+       ))
+  "Face for displaying the current line number."
+  :group 'linum)
+
+(defadvice linum-update (before advice-linum-update activate)
+  "Set the current line."
+  (setq linum-current-line (line-number-at-pos)
+        ;; It's the same algorithm that linum dynamic. I only had added one
+        ;; space in front of the first digit.
+        linum-border-width (number-to-string
+                            (+ 1 (length
+                                  (number-to-string
+                                   (count-lines (point-min) (point-max))))))))
+
+(defun linum-highlight-current-line (line-number)
+  "Highlight the current line number using `linum-current-line' face."
+  (let ((face (if (= line-number linum-current-line)
+                  'linum-current-line
+                'linum)))
+    (propertize (format (concat "%" linum-border-width "d") line-number)
+                'face face)))
+
+(setq linum-format 'linum-highlight-current-line)
+
+(setq backup-directory-alist `(("." . "~/.saves")))
+
+(setq delete-old-versions t
+  kept-new-versions 6
+  kept-old-versions 2
+  version-control t)

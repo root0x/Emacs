@@ -1,0 +1,86 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [43 62])
+            ("header.h" include nil nil [63 82])
+            ("templates.h" include nil nil [83 105])
+            ("string.h" include nil nil [106 125])
+            ("PsydbdEngine.h" include nil nil [126 151])
+            ("Object1.h" include nil nil [152 172])
+            ("Object2.h" include nil nil [173 193])
+            ("vector" include (:system-flag t) nil [194 211])
+            ("GreenPipe.h" include nil nil [212 234])
+            ("Mario.h" include nil nil [235 253])
+            ("Brick.h" include nil nil [254 272])
+            ("Goomba.h" include nil nil [273 292])
+            ("fstream" include (:system-flag t) nil [293 311])
+            ("INIT" variable (:constant-flag t) nil [322 326])
+            ("START" variable (:constant-flag t) nil [337 342])
+            ("PAUSE" variable (:constant-flag t) nil [353 358])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [362 382])
+            ("PsydbdEngine" function
+               (:constructor-flag t
+                :parent "PsydbdEngine"
+                :type ("PsydbdEngine" type (:type "class") nil nil))
+                nil [385 521])
+            ("PsydbdEngine" function
+               (:destructor-flag t
+                :parent "PsydbdEngine"
+                :type "void")
+                nil [523 557])
+            ("SetupBackgroundBuffer" function
+               (:parent "PsydbdEngine"
+                :type "void")
+                nil [560 1725])
+            ("InitialiseObjects" function
+               (:parent "PsydbdEngine"
+                :type "int")
+                nil [1727 4844])
+            ("KeyDown" function
+               (:parent "PsydbdEngine"
+                :arguments 
+                  ( ("iKeyCode" variable (:type "int") (reparse-symbol arg-sub-list) [4873 4886]))                  
+                :type "void")
+                nil [4846 7114])
+            ("DrawStrings" function
+               (:parent "PsydbdEngine"
+                :type "void")
+                nil [7116 7831])
+            ("GameAction" function
+               (:parent "PsydbdEngine"
+                :type "void")
+                nil [7833 9175])
+            ("objetSize" function
+               (:parent "PsydbdEngine"
+                :type "int")
+                nil [9177 9245])
+            ("MouseDown" function
+               (:parent "PsydbdEngine"
+                :arguments 
+                  ( ("iButton" variable (:type "int") (reparse-symbol arg-sub-list) [9276 9288])
+                    ("iX" variable (:type "int") (reparse-symbol arg-sub-list) [9289 9296])
+                    ("iY" variable (:type "int") (reparse-symbol arg-sub-list) [9297 9304]))                  
+                :type "void")
+                nil [9247 9528]))          
+      :file "PsydbdEngine.cpp"
+      :pointmax 9531
+      :fsize 9530
+      :lastmodtime '(22803 35653 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("START" . ((number "1" 343 . 344)))
+          ("PAUSE" . ((number "2" 359 . 360)))
+          ("INIT" . ((number "0" 327 . 328)))
+          )
+))
+  :file "!Users!danieldoynov!Desktop!CPP!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

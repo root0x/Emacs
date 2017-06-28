@@ -1,0 +1,19 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-automake-mode
+      :tags 
+        '( ("$(top_srcdir)/Makefile.tool-tests.am" include nil nil [2 47])
+            ("dist_noinst_SCRIPTS" variable (:default-value ("filter_stderr")) nil [48 87])
+            ("EXTRA_DIST" variable (:default-value ("nlcontrolc.stderrB.exp" "nlcontrolc.stderr.exp" "nlcontrolc.stdinB.gdb" "nlcontrolc.stdoutB.exp" "nlcontrolc.vgtest")) nil [88 224]))          
+      :file "Makefile.am"
+      :pointmax 224
+      :fsize 223
+      :lastmodtime '(21998 57677 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!danieldoynov!Downloads!valgrind-3.11.0!gdbserver_tests!solaris!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

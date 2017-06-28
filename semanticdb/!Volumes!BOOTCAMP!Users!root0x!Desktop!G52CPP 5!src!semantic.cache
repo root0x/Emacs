@@ -1,0 +1,272 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [43 62])
+            ("header.h" include nil nil [63 82])
+            ("templates.h" include nil nil [83 105])
+            ("string.h" include nil nil [106 125])
+            ("PsydbdEngine.h" include nil nil [126 151])
+            ("Object2.h" include nil nil [175 195])
+            ("vector" include (:system-flag t) nil [196 213])
+            ("GreenPipe.h" include nil nil [214 236])
+            ("Mario.h" include nil nil [237 255])
+            ("Brick.h" include nil nil [256 274])
+            ("Goomba.h" include nil nil [275 294])
+            ("fstream" include (:system-flag t) nil [295 313])
+            ("string" include (:system-flag t) nil [314 331])
+            ("Enemy.h" include nil nil [332 350])
+            ("INIT" variable (:constant-flag t) nil [359 363])
+            ("START" variable (:constant-flag t) nil [379 384])
+            ("PAUSE" variable (:constant-flag t) nil [395 400])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [404 424])
+            ("PsydbdEngine" function
+               (:constructor-flag t
+                :parent "PsydbdEngine"
+                :type ("PsydbdEngine" type (:type "class") nil nil))
+                nil [427 631])
+            ("PsydbdEngine" function
+               (:destructor-flag t
+                :parent "PsydbdEngine"
+                :type "void")
+                nil [633 667])
+            ("SetupBackgroundBuffer" function
+               (:parent "PsydbdEngine"
+                :type "void")
+                nil [670 1941])
+            ("InitialiseObjects" function
+               (:parent "PsydbdEngine"
+                :type "int")
+                nil [1943 4441])
+            ("KeyDown" function
+               (:parent "PsydbdEngine"
+                :arguments 
+                  ( ("iKeyCode" variable (:type "int") (reparse-symbol arg-sub-list) [4470 4483]))                  
+                :type "void")
+                nil [4443 5973])
+            ("DrawStrings" function
+               (:parent "PsydbdEngine"
+                :type "void")
+                nil [5975 6625])
+            ("GameAction" function
+               (:parent "PsydbdEngine"
+                :type "void")
+                nil [6627 7706])
+            ("objetSize" function
+               (:parent "PsydbdEngine"
+                :type "int")
+                nil [7708 7772])
+            ("MouseDown" function
+               (:parent "PsydbdEngine"
+                :arguments 
+                  ( ("iButton" variable (:type "int") (reparse-symbol arg-sub-list) [7803 7815])
+                    ("iX" variable (:type "int") (reparse-symbol arg-sub-list) [7816 7823])
+                    ("iY" variable (:type "int") (reparse-symbol arg-sub-list) [7824 7831]))                  
+                :type "void")
+                nil [7774 8026]))          
+      :file "PsydbdEngine.cpp"
+      :pointmax 8029
+      :fsize 8403
+      :lastmodtime '(22804 25917 19911 800000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("START" . ((number "1" 385 . 386)))
+          ("PAUSE" . ((number "2" 401 . 402)))
+          ("INIT" . ((number "0" 364 . 365)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "header.h"
+      :fsize 387
+      :lastmodtime '(22725 23766 0 0))
+    (semanticdb-table "semanticdb-table"
+      :file "templates.h"
+      :fsize 1132
+      :lastmodtime '(22725 23766 0 0))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("G52CPP_PSYDBDENGINE_H" variable (:constant-flag t) nil [82 103])
+            ("BaseEngine.h" include nil nil [106 129])
+            ("PsydbdTileManager.h" include nil nil [130 160])
+            ("Object2.h" include nil nil [161 181])
+            ("vector" include (:system-flag t) nil [182 199])
+            ("Mario" type
+               (:prototype t
+                :type "class")
+                nil [200 212])
+            ("PsydbdEngine" type
+               (:superclasses 
+                  ( ("BaseEngine" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [255 262])
+                    ("PsydbdEngine" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("PsydbdEngine" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [264 279])
+                    ("PsydbdEngine" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [281 297])
+                    ("SetupBackgroundBuffer" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [299 328])
+                    ("InitialiseObjects" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [330 354])
+                    ("GetTileManager" function (:type ("PsydbdTileManager" type (:type "class") nil nil)) (reparse-symbol classsubparts) [356 411])
+                    ("DrawStrings" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [414 433])
+                    ("GameAction" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [435 453])
+                    ("MouseDown" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("iButton" variable (:type "int") (reparse-symbol arg-sub-list) [470 482])
+                            ("iX" variable (:type "int") (reparse-symbol arg-sub-list) [483 490])
+                            ("iY" variable (:type "int") (reparse-symbol arg-sub-list) [491 498]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [455 499])
+                    ("cameraLow" variable (:type "bool") (reparse-symbol classsubparts) [501 528])
+                    ("cameraHigh" variable (:type "bool") (reparse-symbol classsubparts) [501 528])
+                    ("offsett" variable
+                       (:default-value "0"
+                        :type "int")
+                        (reparse-symbol classsubparts) [530 546])
+                    ("objetSize" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [548 564])
+                    ("m_state" variable (:type "int") (reparse-symbol classsubparts) [566 578])
+                    ("seen" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [580 598])
+                    ("private" label nil (reparse-symbol classsubparts) [599 607])
+                    ("state" variable
+                       (:default-value "0"
+                        :type "int")
+                        (reparse-symbol classsubparts) [631 645])
+                    ("im" variable (:type ("ImageData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [647 660])
+                    ("m_oTiles" variable (:type ("PsydbdTileManager" type (:type "class") nil nil)) (reparse-symbol classsubparts) [662 689])
+                    ("KeyDown" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("iKeyCode" variable (:type "int") (reparse-symbol arg-sub-list) [704 717]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [691 718])
+                    ("protected" label nil (reparse-symbol classsubparts) [719 729])
+                    ("mario" variable
+                       (:pointer 1
+                        :type ("Mario" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [731 744])
+                    ("bottomRow" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("DisplayableObject" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [746 788])
+                    ("player" variable (:type "int") (reparse-symbol classsubparts) [790 801]))                  
+                :type "class")
+                nil [214 804]))          
+      :file "PsydbdEngine.h"
+      :pointmax 838
+      :fsize 881
+      :lastmodtime '(22804 21898 832428 700000)
+      :unmatched-syntax '((punctuation 411 . 412))
+      :lexical-table 
+        '(("G52CPP_PSYDBDENGINE_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "Object2.h"
+      :fsize 481
+      :lastmodtime '(22803 38866 182878 500000))
+    (semanticdb-table "semanticdb-table"
+      :file "GreenPipe.h"
+      :fsize 539
+      :lastmodtime '(22803 38868 674273 600000))
+    (semanticdb-table "semanticdb-table"
+      :file "Mario.h"
+      :fsize 603
+      :lastmodtime '(22804 18554 694448 300000))
+    (semanticdb-table "semanticdb-table"
+      :file "Brick.h"
+      :fsize 463
+      :lastmodtime '(22803 38859 925404 300000))
+    (semanticdb-table "semanticdb-table"
+      :file "Goomba.h"
+      :fsize 447
+      :lastmodtime '(22804 20534 547281 100000))
+    (semanticdb-table "semanticdb-table"
+      :file "Enemy.h"
+      :fsize 331
+      :lastmodtime '(22804 20794 561207 500000))
+    (semanticdb-table "semanticdb-table"
+      :file "BaseEngine.h"
+      :fsize 29477
+      :lastmodtime '(22803 48170 124097 0))
+    (semanticdb-table "semanticdb-table"
+      :file "PsydbdTileManager.h"
+      :fsize 467
+      :lastmodtime '(22803 38945 664377 300000))
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [43 62])
+            ("header.h" include nil nil [63 82])
+            ("templates.h" include nil nil [83 105])
+            ("PsydbdTileManager.h" include nil nil [107 137])
+            ("PsydbdTileManager" function
+               (:constructor-flag t
+                :parent "PsydbdTileManager"
+                :type ("PsydbdTileManager" type (:type "class") nil nil))
+                nil [139 203])
+            ("PsydbdTileManager" function
+               (:destructor-flag t
+                :parent "PsydbdTileManager"
+                :type "void")
+                nil [205 249])
+            ("DrawTileAt" function
+               (:methodconst-flag t
+                :parent "PsydbdTileManager"
+                :arguments 
+                  ( ("pEngine" variable
+                       (:pointer 1
+                        :type ("BaseEngine" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [288 308])
+                    ("pSurface" variable
+                       (:pointer 1
+                        :type ("SDL_Surface" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [310 332])
+                    ("iMapX" variable (:type "int") (reparse-symbol arg-sub-list) [334 344])
+                    ("iMapY" variable (:type "int") (reparse-symbol arg-sub-list) [345 355])
+                    ("iStartPositionScreenX" variable (:type "int") (reparse-symbol arg-sub-list) [357 383])
+                    ("iStartPositionScreenY" variable (:type "int") (reparse-symbol arg-sub-list) [384 410]))                  
+                :type "void")
+                nil [251 1601]))          
+      :file "PsydbdTileManager.cpp"
+      :pointmax 1602
+      :fsize 1671
+      :lastmodtime '(22803 38945 649206 400000)
+      :unmatched-syntax nil))
+  :file "!Volumes!BOOTCAMP!Users!root0x!Desktop!G52CPP 5!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

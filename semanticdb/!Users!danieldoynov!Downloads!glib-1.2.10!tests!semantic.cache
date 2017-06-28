@@ -1,0 +1,32 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-automake-mode
+      :tags 
+        '( ("INCLUDES" variable (:default-value ("-I$(top_srcdir)")) nil [2 29])
+            ("EXTRA_DIST" variable (:default-value ("makefile.msc" "makefile.msc.in")) nil [30 78])
+            ("TESTS" variable (:default-value ("array-test" "dirname-test" "hash-test" "list-test" "node-test" "relation-test" "slist-test" "string-test" "strfunc-test" "tree-test" "type-test")) nil [79 244])
+            ("noinst_PROGRAMS" variable (:default-value ("$(TESTS)")) nil [245 272])
+            ("array_test_LDADD" variable (:default-value ("$(top_builddir)/libglib.la")) nil [273 319])
+            ("dirname_test_LDADD" variable (:default-value ("$(top_builddir)/libglib.la")) nil [319 367])
+            ("hash_test_LDADD" variable (:default-value ("$(top_builddir)/libglib.la")) nil [367 412])
+            ("list_test_LDADD" variable (:default-value ("$(top_builddir)/libglib.la")) nil [412 457])
+            ("node_test_LDADD" variable (:default-value ("$(top_builddir)/libglib.la")) nil [457 502])
+            ("relation_test_LDADD" variable (:default-value ("$(top_builddir)/libglib.la")) nil [502 551])
+            ("slist_test_LDADD" variable (:default-value ("$(top_builddir)/libglib.la")) nil [551 597])
+            ("string_test_LDADD" variable (:default-value ("$(top_builddir)/libglib.la")) nil [597 644])
+            ("strfunc_test_LDADD" variable (:default-value ("$(top_builddir)/libglib.la")) nil [644 692])
+            ("tree_test_LDADD" variable (:default-value ("$(top_builddir)/libglib.la")) nil [692 737])
+            ("type_test_LDADD" variable (:default-value ("$(top_builddir)/libglib.la")) nil [737 782])
+            ("makefile.msc" function (:arguments ("$(top_builddir)/config.status" "$(top_srcdir)/tests/makefile.msc.in")) nil [783 949]))          
+      :file "Makefile.am"
+      :pointmax 949
+      :fsize 948
+      :lastmodtime '(14240 58857 0 0)
+      :unmatched-syntax '((shell-command 864 . 948) (bol 863 . 863))))
+  :file "!Users!danieldoynov!Downloads!glib-1.2.10!tests!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

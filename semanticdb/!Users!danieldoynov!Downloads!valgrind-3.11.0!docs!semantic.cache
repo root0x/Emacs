@@ -1,0 +1,53 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-automake-mode
+      :tags 
+        '( ("BUILD_ALL_DOCS" variable (:default-value ("yes")) nil [447 466])
+            ("EXTRA_DIST" variable (:default-value ("README" "images/home.png" "images/next.png" "images/prev.png" "images/up.png" "internals/3_0_BUGSTATUS.txt" "internals/3_1_BUGSTATUS.txt" "internals/3_2_BUGSTATUS.txt" "internals/3_3_BUGSTATUS.txt" "internals/3_4_BUGSTATUS.txt" "internals/3_5_BUGSTATUS.txt" "internals/3_7_BUGSTATUS.txt" "internals/3_8_BUGSTATUS.txt" "internals/3_9_BUGSTATUS.txt" "internals/3_10_BUGSTATUS.txt" "internals/MERGE_3_10_1.txt" "internals/arm_thumb_notes_gdbserver.txt" "internals/avx-notes.txt" "internals/BIG_APP_NOTES.txt" "internals/Darwin-notes.txt" "internals/SPEC-notes.txt" "internals/directory-structure.txt" "internals/howto_BUILD_KDE42.txt" "internals/howto_oprofile.txt" "internals/m_replacemalloc.txt" "internals/m_syswrap.txt" "internals/module-structure.txt" "internals/multiple-architectures.txt" "internals/notes.txt" "internals/performance.txt" "internals/porting-HOWTO.txt" "internals/mpi2entries.txt" "internals/porting-to-ARM.txt" "internals/qemu-aarch64-linux-HOWTO.txt" "internals/qemu-mips64-linux-HOWTO.txt" "internals/register-uses.txt" "internals/release-HOWTO.txt" "internals/segments-seginfos.txt" "internals/t-chaining-notes.txt" "internals/threads-syscalls-signals.txt" "internals/tm-mutexstates.dot" "internals/tm-threadstates.dot" "internals/tracking-fn-entry-exit.txt" "internals/why-no-libc.txt" "internals/xml-output.txt" "internals/xml-output-protocol4.txt" "lib/line-wrap.xsl" "lib/vg_basic.css" "lib/vg-fo.xsl" "lib/vg-faq2txt.xsl" "lib/vg-html-chunk.xsl" "lib/vg-html-website.xsl" "lib/vg-html-common.xsl" "xml/FAQ.xml" "xml/dist-docs.xml" "xml/index.xml" "xml/licenses.xml" "xml/manpages-index.xml" "xml/manual.xml" "xml/manual-intro.xml" "xml/manual-core.xml" "xml/manual-core-adv.xml" "xml/manual-writing-tools.xml" "xml/design-impl.xml" "xml/quick-start-guide.xml" "xml/tech-docs.xml" "xml/valgrind-manpage.xml" "xml/vg-entities.xml" "xml/xml_help.txt")) nil [611 2571])
+            ("myxmldir" variable (:default-value ("$(top_srcdir)/docs/xml")) nil [2758 2794])
+            ("myimgdir" variable (:default-value ("$(top_srcdir)/docs/images")) nil [2794 2833])
+            ("mylibdir" variable (:default-value ("$(top_srcdir)/docs/lib")) nil [2833 2869])
+            ("myhtmldir" variable (:default-value ("$(top_builddir)/docs/html")) nil [2870 2909])
+            ("myprintdir" variable (:default-value ("$(top_builddir)/docs/print")) nil [2909 2949])
+            ("websitedir" variable (:default-value ("$(top_builddir)/docs/website")) nil [2950 2994])
+            ("valkyriedir" variable (:default-value ("$(top_builddir)/docs/vg-html")) nil [2994 3038])
+            ("downloadsdir" variable (:default-value ("$(top_builddir)/docs/downloads")) nil [3038 3084])
+            ("vgdir" variable (:default-value ("$(top_builddir)/docs/valgrind")) nil [3084 3129])
+            ("XML_CATALOG_FILES" variable (:default-value ("/etc/xml/catalog")) nil [3130 3167])
+            ("LOGFILE" variable (:default-value ("print.log")) nil [3198 3218])
+            ("XMLLINT" variable (:default-value ("xmllint")) nil [3238 3262])
+            ("LINT_FLAGS" variable (:default-value ("--noblanks" "--noout" "--xinclude" "--postvalid" "--noent")) nil [3262 3328])
+            ("VALID_FLAGS" variable (:default-value ("--dtdvalid" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd")) nil [3391 3474])
+            ("XMLLINT_FLAGS" variable (:default-value ("$(LINT_FLAGS)" "$(VALID_FLAGS)")) nil [3474 3519])
+            ("XSLTPROC" variable (:default-value ("xsltproc")) nil [3543 3569])
+            ("XSLTPROC_FLAGS" variable (:default-value ("--nonet" "--xinclude")) nil [3569 3605])
+            ("XSL_HTML_CHUNK_STYLE" variable (:default-value ("$(mylibdir)/vg-html-chunk.xsl")) nil [3620 3674])
+            ("XSL_FO_STYLE" variable (:default-value ("$(mylibdir)/vg-fo.xsl")) nil [3674 3720])
+            ("XSL_TEXT_STYLE" variable (:default-value ("$(mylibdir)/vg-faq2txt.xsl")) nil [3720 3771])
+            ("XSL_WEBSITE_STYLE" variable (:default-value ("$(mylibdir)/vg-html-website.xsl")) nil [3771 3827])
+            ("XSL_MAN_STYLES" variable (:default-value ("/usr/share/sgml/docbook/xsl-stylesheets/manpages/docbook.xsl" "/usr/share/xml/docbook/stylesheet/nwalsh/current/manpages/docbook.xsl" "/usr/share/xml/docbook/stylesheet/nwalsh/manpages/docbook.xsl")) nil [3827 4055])
+            ("all-docs" function (:arguments ("FAQ.txt" "man-pages" "html-docs" "print-docs")) nil [4056 4105])
+            ("valid" function nil nil [4106 4164])
+            ("FAQ.txt" function nil nil [4196 4391])
+            ("man-pages" function nil nil [4416 4910])
+            ("html-docs" function nil nil [4957 5367])
+            ("print-docs" function nil nil [5389 5957])
+            ("install-data-hook" function nil nil [6366 6662])
+            ("dist-hook" function (:arguments ("FAQ.txt" "html-docs" "man-pages" "print-docs")) nil [7207 7386])
+            ("dist-hook" function (:arguments ("FAQ.txt" "html-docs" "man-pages")) nil [7392 7499])
+            ("distclean-local" function nil nil [7507 7614])
+            ("website-docs" function nil nil [7917 8164])
+            ("valkyrie-docs" function nil nil [8227 8619])
+            ("download-docs" function nil nil [8689 9982]))          
+      :file "Makefile.am"
+      :pointmax 9982
+      :fsize 9981
+      :lastmodtime '(21998 57679 0 0)
+      :unmatched-syntax '((shell-command 9961 . 9981) (bol 9960 . 9960) (ENDIF 7500 . 7505) (bol 7499 . 7499) (ELSE 7387 . 7391) (bol 7386 . 7386) (semantic-list 7183 . 7206) (IFEQ 7178 . 7182) (bol 7177 . 7177) (ENDIF 7022 . 7027) (bol 7021 . 7021) (shell-command 6859 . 7020) (bol 6858 . 6858) (shell-command 6693 . 6857) (bol 6692 . 6692) (semantic-list 6668 . 6691) (IFEQ 6663 . 6667) (bol 6662 . 6662))))
+  :file "!Users!danieldoynov!Downloads!valgrind-3.11.0!docs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

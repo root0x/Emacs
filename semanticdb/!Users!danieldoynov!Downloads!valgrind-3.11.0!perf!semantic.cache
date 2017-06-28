@@ -1,0 +1,27 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-automake-mode
+      :tags 
+        '( ("$(top_srcdir)/Makefile.tool-tests.am" include nil nil [2 47])
+            ("dist_noinst_SCRIPTS" variable (:default-value ("vg_perf")) nil [48 78])
+            ("EXTRA_DIST" variable (:default-value ("bigcode1.vgperf" "bigcode2.vgperf" "bz2.vgperf" "fbench.vgperf" "ffbench.vgperf" "heap.vgperf" "heap_pdb4.vgperf" "many-loss-records.vgperf" "many-xpts.vgperf" "memrw.vgperf" "sarp.vgperf" "tinycc.vgperf" "test_input_for_tinycc.c")) nil [79 337])
+            ("check_PROGRAMS" variable (:default-value ("bigcode")) nil [338 439])
+            ("AM_CFLAGS" variable (:default-value ("-O" "$(AM_FLAG_M3264_PRI)")) nil [440 479])
+            ("AM_CXXFLAGS" variable (:default-value ("-O" "$(AM_FLAG_M3264_PRI)")) nil [479 518])
+            ("bz2_CFLAGS" variable (:default-value ("$(AM_CFLAGS)" "-Wno-inline")) nil [534 572])
+            ("fbench_CFLAGS" variable (:default-value ("$(AM_CFLAGS)" "-O2")) nil [573 608])
+            ("ffbench_LDADD" variable (:default-value ("-lm")) nil [608 628])
+            ("memrw_LDADD" variable (:default-value ("-lpthread")) nil [628 652])
+            ("tinycc_CFLAGS" variable (:default-value ("$(AM_CFLAGS)" "-Wno-shadow" "-Wno-inline" "@FLAG_W_NO_POINTER_SIGN@")) nil [653 751]))          
+      :file "Makefile.am"
+      :pointmax 751
+      :fsize 750
+      :lastmodtime '(21998 57678 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!danieldoynov!Downloads!valgrind-3.11.0!perf!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

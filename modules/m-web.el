@@ -36,3 +36,6 @@
              (require 'company-php)
              (company-mode t)
              (add-to-list 'company-backends 'company-ac-php-backend )))
+
+(require 'company-web-html)
+(add-to-list 'company-backends 'company-tern)

@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags nil
+      :file "syswrap-linux.c"
+      :pointmax 383589
+      :fsize 383588
+      :lastmodtime '(22015 54364 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!danieldoynov!Downloads!valgrind-3.11.0!coregrind!m_syswrap!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
