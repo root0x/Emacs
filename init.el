@@ -1,45 +1,99 @@
 
+;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/") 
+;(browse-url-emacs "https://melpa.org/packages/archive-contents" t)
+
+
+(setq package-list '(company doom-themes powerline company-c-headers helm
+			     irony company-irony company-irony-c-headers auctex
+			     rtags
+			     ))
+
+
 (require 'package)
+(setq package-archives '(("elpa" . "http://tromey.com/elpa/")
+                         ("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")))
+
 
 (add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
-(add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/"))
-
+          '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
+; fetch the list of packages available 
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+(load "~/.emacs.d/config/cpp.el")
+(load "~/.emacs.d/config/elisp.el")
+
+;;;; Editor
+
+;; Helm
+(require 'helm-config)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
+(helm-mode 1)
 
 
-(add-to-list 'load-path "~/.emacs.d/modules/")
-(load-library "m-editor")
-(load-library "m-org")
-(load-library "m-latex")
-(load-library "m-matlab")
-(load-library "m-cpp")
-(load-library "m-web")
-(load-library "m-helm")
-;(load-library "m-gtags")
+;; Theme
+(require 'doom-themes)
 
-;(setq load-path (cons "/opt/local/bin/gtags/" load-path))
-;(autoload 'gtags-mode "gtags" "" t)
+;; Global settings (defaults)
+(setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+      doom-themes-enable-italic t) ; if nil, italics is universally disabled
+
+;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each theme
+;; may have their own settings.
+(load-theme 'doom-one t)
+
+;; Enable flashing mode-line on errors
+(doom-themes-visual-bell-config)
+
+;; Enable custom neotree theme
+(doom-themes-neotree-config)  ; all-the-icons fonts must be installed!
+
+;; Corrects (and improves) org-mode's native fontification.
+(doom-themes-org-config)
+
+
+;; Powerline
+
+(require 'powerline)
+(powerline-default-theme)
 
 
 
-;
+;; MISC
+(global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
+
+(setq tab-width 4) 
+(setq-default c-basic-offset 4)
+
+
+
+(setq c-default-style "bsd" c-basic-offset 4)
+
+
+
+(tool-bar-mode -1) 
+;(menu-bar-mode -1) 
+(toggle-scroll-bar -1) 
+
+
+
+
+(setq inhibit-startup-message t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (company-tern company-math cmake-ide php-extras php-mode company-php ac-php helm-dash magit gtags helm-gtags helm dumb-jump company-web web-mode move-text matlab-mode flycheck-irony company-irony-c-headers paredit hlinum smartparens nlinum all-the-icons-dired flycheck xcscope use-package smooth-scrolling smooth-scroll rtags rainbow-delimiters powerline org-bullets material-theme latex-preview-pane langtool iedit haskell-mode flycheck-color-mode-line exec-path-from-shell drag-stuff doom-themes dash-functional company-c-headers company-auctex bug-hunter auto-complete-c-headers auto-complete-auctex auctex-lua auctex-latexmk atom-one-dark-theme ace-flyspell ac-math)))
- '(sp-highlight-pair-overlay nil)
- '(sp-highlight-wrap-overlay nil)
- '(sp-highlight-wrap-tag-overlay nil))
+ '(package-selected-packages (quote (company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

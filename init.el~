@@ -1,42 +1,46 @@
 
+;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/") 
+;(browse-url-emacs "https://melpa.org/packages/archive-contents" t)
+
+
+(setq package-list '(company doom-themes))
+
+
 (require 'package)
-(add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(setq package-archives '(("elpa" . "http://tromey.com/elpa/")
+                         ("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")))
+
 
 (add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/"))
-
+          '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 
+; fetch the list of packages available 
+(unless package-archive-contents
+  (package-refresh-contents))
 
-(add-to-list 'load-path "~/.emacs.d/modules/")
-(load-library "m-editor")
-(load-library "m-org")
-(load-library "m-latex")
-(load-library "m-matlab")
-(load-library "m-cpp")
-(load-library "m-web")
-(load-library "m-helm")
-(load-library "m-gtags")
-
-(setq load-path (cons "/usr/local/bin/global" load-path))
-(setq load-path (cons "/usr/local/bin/gtags" load-path))
-(autoload 'gtags-mode "gtags" "" t)
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
 
 
 
-;
+
+
+
+
+
+
+
+(setq inhibit-startup-message t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (gtags helm-gtags helm dumb-jump company-web web-mode move-text matlab-mode flycheck-irony company-irony-c-headers paredit hlinum smartparens nlinum all-the-icons-dired flycheck xcscope use-package smooth-scrolling smooth-scroll rtags rainbow-delimiters powerline org-bullets material-theme latex-preview-pane langtool iedit haskell-mode flycheck-color-mode-line exec-path-from-shell drag-stuff doom-themes dash-functional company-c-headers company-auctex bug-hunter auto-complete-c-headers auto-complete-auctex auctex-lua auctex-latexmk atom-one-dark-theme ace-flyspell ac-math)))
- '(sp-highlight-pair-overlay nil)
- '(sp-highlight-wrap-overlay nil)
- '(sp-highlight-wrap-tag-overlay nil))
+ '(package-selected-packages (quote (doom-themes company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

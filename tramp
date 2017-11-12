@@ -1,16 +1,26 @@
-;; -*- emacs-lisp -*- <16/11/17 23:32:47 /Users/danieldoynov/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <17/11/12 16:51:51 /Users/danieldoynov/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
-((["ssh" nil "sudo" nil "ssh:psydbd@bann.cs.nott.ac.uk|"]
-  nil)
- (["ssh" nil "ssh" nil nil]
-  nil)
- (["sudo" "root" "bann.cs.nott.ac.uk" nil "ssh:psydbd@bann.cs.nott.ac.uk|"]
-  nil)
- (["ssh" nil "bann.cs.nott.ac.uk" nil "ssh:psydbd@bann.cs.nott.ac.uk|"]
-  nil)
- (["ssh" "psydbd" "bann.cs.nott.ac.uk" nil nil]
-  nil)
- (["sudo" "root" "bann.cs.nott.ac.uk" nil nil]
-  nil))
+(((tramp-file-name "ssh" "parallels" nil "10.211.55.9" nil nil nil)
+  ("uname" "Linux 3.10.0-327.28.3.el7.x86_64")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("test" "test")
+  ("remote-path"
+   ("/usr/bin" "/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("~" "/home/parallels")
+  ("file-exists" "test -e")
+  ("stat" "env QUOTING_STYLE=locale \\stat")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 1000)
+  ("gid-string" "parallels")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("case-insensitive" nil)
+  ("ls" "/usr/bin/ls --color=never")
+  ("ls-quoting-style" t)
+  ("ls-dired" t)
+  ("df" "\\df")
+  ("readlink" "\\readlink")))
