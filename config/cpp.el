@@ -26,3 +26,15 @@
   '(add-to-list
     'company-backends '(company-irony-c-headers company-irony)))
 
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
+
+
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+(require 'flycheck-color-mode-line)
+
+(eval-after-load "flycheck"
+  '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))

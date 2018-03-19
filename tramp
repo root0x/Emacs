@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <17/11/12 16:51:51 /Users/danieldoynov/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <18/01/05 13:57:46 /Users/danieldoynov/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -23,4 +23,8 @@
   ("ls-quoting-style" t)
   ("ls-dired" t)
   ("df" "\\df")
-  ("readlink" "\\readlink")))
+  ("readlink" "\\readlink")
+  ("uid-integer" 1000)
+  ("tmpdir" "/ssh:parallels@10.211.55.9:/tmp")
+  ("touch-t" t)
+  ("touch" "\\touch")))

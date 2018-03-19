@@ -1,11 +1,11 @@
-
-;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/") 
-;(browse-url-emacs "https://melpa.org/packages/archive-contents" t)
-
+;;; Package -- Summary
+;;; Code:
+;;; Commentary:
 
 (setq package-list '(company doom-themes powerline company-c-headers helm
 			     irony company-irony company-irony-c-headers auctex
-			     rtags
+			     rtags flycheck flycheck-irony rainbow-delimiters
+			     flycheck-color-mode-line company-auctex yasnippet
 			     ))
 
 
@@ -15,11 +15,12 @@
                          ("marmalade" . "http://marmalade-repo.org/packages/")))
 
 
+
 (add-to-list 'package-archives
           '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 
-; fetch the list of packages available 
+; fetch the list of packages available
 (unless package-archive-contents
   (package-refresh-contents))
 
@@ -30,7 +31,7 @@
 
 (load "~/.emacs.d/config/cpp.el")
 (load "~/.emacs.d/config/elisp.el")
-
+(load "~/.emacs.d/config/latex.el")
 ;;;; Editor
 
 ;; Helm
@@ -67,11 +68,17 @@
 (powerline-default-theme)
 
 
+;;Yasnippet
+(add-to-list 'load-path
+              "~/.emacs.d/plugins/yasnippet")
+(require 'yasnippet)
+(yas-global-mode 1)
+
 
 ;; MISC
 (global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
 
-(setq tab-width 4) 
+(setq tab-width 4)
 (setq-default c-basic-offset 4)
 
 
@@ -80,12 +87,21 @@
 
 
 
-(tool-bar-mode -1) 
-;(menu-bar-mode -1) 
-(toggle-scroll-bar -1) 
+(tool-bar-mode -1)
+(global-linum-mode 1)
+(toggle-scroll-bar -1)
 
 
-
+;removes line wrap symbol from left side
+(define-fringe-bitmap 'left-curly-arrow
+  [#b00000000
+   #b00001000
+   #b00001000
+   #b00001110
+   #b00000000
+   #b00000000
+   #b00000000
+   #b00000000])
 
 (setq inhibit-startup-message t)
 (custom-set-variables
@@ -93,7 +109,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (company))))
+ '(package-selected-packages (quote (helm-bibtex org-bullets company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
