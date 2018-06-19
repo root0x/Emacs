@@ -6,33 +6,41 @@
 			     irony company-irony company-irony-c-headers auctex
 			     rtags flycheck flycheck-irony rainbow-delimiters
 			     flycheck-color-mode-line company-auctex yasnippet
-			     ))
+			     indium js2-refactor xref-js2 company-tern
+			     exec-path-from-shell web-mode
+		       	     ))
+
 
 
 (require 'package)
-(setq package-archives '(("elpa" . "http://tromey.com/elpa/")
-                         ("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")))
 
+(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
+;(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/") t) 
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+	(setq package-enable-at-startup nil)
 
-
-(add-to-list 'package-archives
-          '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 
-; fetch the list of packages available
-(unless package-archive-contents
-  (package-refresh-contents))
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(setq use-package-verbose nil)
 
-; install the missing packages
+(load "~/.emacs.d/config/cpp.el")	
+;(load "~/.emacs.d/config/elisp.el")
+;(load "~/.emacs.d/config/latex.el")
+(load "~/.emacs.d/config/js.el")
+;;;Editor					
+
 (dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))
 
-(load "~/.emacs.d/config/cpp.el")
-(load "~/.emacs.d/config/elisp.el")
-(load "~/.emacs.d/config/latex.el")
-;;;; Editor
+
+(setq warning-minimum-level :emergency)
+
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 ;; Helm
 (require 'helm-config)
@@ -109,7 +117,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (helm-bibtex org-bullets company))))
+ '(package-selected-packages
+   '(web-mode js2-refactor indium matlab-mode helm-bibtex org-bullets company)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
