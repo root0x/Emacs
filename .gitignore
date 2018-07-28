@@ -127,4 +127,6 @@ $RECYCLE.BIN/
 *.lnk
 
 elpa/
+ede-projects.el
+network-security.data
 # End of https://www.gitignore.io/api/osx,linux,elisp,emacs,windows
