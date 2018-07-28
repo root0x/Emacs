@@ -129,4 +129,5 @@ $RECYCLE.BIN/
 elpa/
 ede-projects.el
 network-security.data
+games/
 # End of https://www.gitignore.io/api/osx,linux,elisp,emacs,windows
