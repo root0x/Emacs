@@ -9,6 +9,9 @@
 
 (setq package-pinned-packages '())
 
+(if (eq system-type 'gnu/linux)
+    (setq package-check-signature nil)
+  )
 
 
 
