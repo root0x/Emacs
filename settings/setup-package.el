@@ -13,6 +13,10 @@
     (setq package-check-signature nil)
   )
 
+(package-initialize)
+					;
+;(unless package--initialized (package-initialize t))
+
 
 
 (unless (file-exists-p "~/.emacs.d/elpa/archives/melpa")

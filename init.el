@@ -8,7 +8,6 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
-
 ;; Remove security vulnerability
 (eval-after-load "enriched"
   '(defun enriched-decode-display-prop (start end &optional param)
@@ -151,7 +150,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(web-mode js2-refactor indium matlab-mode helm-bibtex org-bullets company)))
+   (quote
+    (web-mode js2-refactor indium matlab-mode helm-bibtex org-bullets company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
