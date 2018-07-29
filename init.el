@@ -59,31 +59,6 @@
      exec-path-from-shell
      web-mode
      )))
-;; (defun init--install-packages()
-;;   (package install
-;; 	   '(company
-	      ;; doom-themes
-	      ;; powerline
-	      ;; company-c-headers
-	      ;; helm
-	      ;; irony
-	      ;; company-irony
-	      ;; company-irony-c-headers
-	      ;; auctex
-	      ;; rtags
-	      ;; flycheck
-	      ;; flycheck-irony
-	      ;; rainbow-delimiters
-	      ;; flycheck-color-mode-line
-	      ;; company-auctex
-	      ;; yasnippet
-	      ;; indium js2-refactor
-	      ;; xref-js2
-	      ;; company-tern
-	      ;; exec-path-from-shell
-	      ;; web-mode
-;; 	      )))
-
 
 (condition-case nil
     (init--install-packages)
@@ -93,49 +68,17 @@
 
 (when is-mac
   (require-package 'exec-path-from-shell)
+  (setq exec-path-from-shell-arguments '("-l"))
   (exec-path-from-shell-initialize))
 
-
-;; (setq package-list '(company doom-themes powerline company-c-headers helm
-;; 			     irony company-irony company-irony-c-headers auctex
-;; 			     rtags flycheck flycheck-irony rainbow-delimiters
-;; 			     flycheck-color-mode-line company-auctex yasnippet
-;; 			     indium js2-refactor xref-js2 company-tern
-;; 			     exec-path-from-shell web-mode
-;; 		       	     ))
-
-
-
-;; (require 'package)
-
-;; (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
-;; (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/") t)
-;; (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-;; 	(setq package-enable-at-startup nil)
-
-
-;; (unless (package-installed-p 'use-package)
-;;   (package-refresh-contents)
-;;   (package-install 'use-package))
-;; (setq use-package-verbose nil)
 
 (load "~/.emacs.d/config/cpp.el")
 ;(load "~/.emacs.d/config/elisp.el")
 ;(load "~/.emacs.d/config/latex.el")
 (load "~/.emacs.d/config/js.el")
-;;;Editor					
-
-;; (dolist (package package-list)
-;;   (unless (package-installed-p package)
-;;     (package-install package)))
-
+;;;Editor
 
 (setq warning-minimum-level :emergency)
-
-(when is-mac
-  (require-package 'exec-path-from-shell)
-  (exec-path-from-shell-initialize))(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
 
 ;; Helm
 (require 'helm-config)
