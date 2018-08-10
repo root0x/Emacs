@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: async detect
+# key: adetect
+# --
+
+async.detect(${col},function(${elem},${callback})
+{
+
+},function(err,res)
+{
+	
+});

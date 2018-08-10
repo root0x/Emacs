@@ -1,5 +1,9 @@
 (require 'package)
 
+
+(require 'gnutls)
+(add-to-list 'gnutls-trustfiles "/usr/local/etc/openssl/cert.pem")
+
 ;; Add melpa to package repos
 
 ;(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)

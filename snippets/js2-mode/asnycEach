@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: async each
+# key: aeach
+# --
+async.each(${col},function(${iteratee},${callback})
+{
+
+	$0
+
+},function(err)
+{
+	if(err)
+	{
+			
+	}
+});	
+

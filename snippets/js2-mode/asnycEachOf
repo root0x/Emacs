@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: asyn each of
+# key: aeachof
+# --
+
+async.eachOf(${col},function(${value},${key},${callback})
+{
+	$0
+},function(err){
+
+	if(err)
+	{
+
+	}
+}

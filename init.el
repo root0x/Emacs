@@ -52,9 +52,15 @@
      yasnippet
      indium js2-refactor
      xref-js2
+     tern
      company-tern
      exec-path-from-shell
      web-mode
+     json-mode
+     angular-snippets
+     dockerfile-mode
+     docker-compose-mode
+     docker-tramp
      )))
 
 (condition-case nil
@@ -65,8 +71,10 @@
 
 (when is-mac
   (require-package 'exec-path-from-shell)
-  (setq exec-path-from-shell-arguments '("-l"))
-  (exec-path-from-shell-initialize))
+  (setq shell-command-switch "-ic")
+;  (setq exec-path-from-shell-arguments '("-l")) 
+  (exec-path-from-shell-initialize)
+  )
 
 
 (load "~/.emacs.d/config/cpp.el")
@@ -133,6 +141,8 @@
 (global-linum-mode 1)
 
 
+
+
 ;removes line wrap symbol from left side
 (define-fringe-bitmap 'left-curly-arrow
   [#b00000000
@@ -144,6 +154,21 @@
    #b00000000
    #b00000000])
 
+;Deal with temporary files
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+(message "Deleting old backup files...")
+(let ((week (* 60 60 24 7))
+      (current (float-time (current-time))))
+  (dolist (file (directory-files temporary-file-directory t))
+    (when (and (backup-file-name-p file)
+               (> (- current (float-time (fifth (file-attributes file))))
+                  week))
+      (message "%s" file)
+      (delete-file file))))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -151,7 +176,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (web-mode js2-refactor indium matlab-mode helm-bibtex org-bullets company))))
+    (json-mode web-mode js2-refactor indium matlab-mode helm-bibtex org-bullets company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
