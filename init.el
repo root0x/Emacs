@@ -70,6 +70,7 @@
      company-nginx
      npm-mode
      rjsx-mode
+     move-text
      )))
 
 (condition-case nil
@@ -182,6 +183,10 @@
    #b00000000
    #b00000000])
 
+(global-set-key [\M-up] 'move-text-up)
+(global-set-key [\M-down] 'move-text-down)
+
+
 ;Deal with temporary files
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
@@ -203,7 +208,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(auto-package-update js-align json-mode web-mode js2-refactor indium matlab-mode helm-bibtex org-bullets company)))
+   '(move-text auto-package-update js-align json-mode web-mode js2-refactor indium matlab-mode helm-bibtex org-bullets company)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
