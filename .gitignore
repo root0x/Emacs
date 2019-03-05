@@ -132,3 +132,7 @@ network-security.data
 games/
 irony/
 # End of https://www.gitignore.io/api/osx,linux,elisp,emacs,windows
+
+
+
+semanticdb/
