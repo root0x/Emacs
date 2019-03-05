@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file-43e5a268
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-43e5a268"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-43e5a248"
+      :major-mode js2-mode
+      :tags nil
+      :file "Gruntfile.js"
+      :pointmax 4307
+      :fsize 4306
+      :lastmodtime '(23500 41056 162669 946000)
+      :unmatched-syntax '((FUNCTION 18 . 26) (PAREN_BLOCK 26 . 33))))
+  :file "!Users!danieldoynov!Documents!puma!pumaportal!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

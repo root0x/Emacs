@@ -1,0 +1,38 @@
+;; Object semanticdb-project-database-file-43d0f058
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-43d0f058"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-43d0f038"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("pthread.h" include (:system-flag t) nil [20 40])
+            ("DoTask" function
+               (:pointer 1
+                :arguments 
+                  ( ("anArg" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [55 66]))                  
+                :type "void")
+                nil [42 209])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [222 231])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [232 252]))                  
+                :type "int")
+                nil [212 520]))          
+      :file "main.c"
+      :pointmax 523
+      :fsize 577
+      :lastmodtime '(23509 55259 469735 989000)
+      :unmatched-syntax nil))
+  :file "!Users!danieldoynov!Documents!puma!Gateway C!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

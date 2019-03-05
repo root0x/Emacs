@@ -14,6 +14,8 @@
      (list start end)))
 
 
+
+
 ;; No splash screen please ... jeez
 (setq inhibit-startup-message t)
 
@@ -61,6 +63,13 @@
      dockerfile-mode
      docker-compose-mode
      docker-tramp
+     smartparens
+     srefactor
+     grunt
+     nginx-mode
+     company-nginx
+     npm-mode
+     rjsx-mode
      )))
 
 (condition-case nil
@@ -112,6 +121,8 @@
 ;; Corrects (and improves) org-mode's native fontification.
 (doom-themes-org-config)
 
+(require 'smartparens-config)
+(add-hook 'emacs-lisp-mode-hook #'smartparens-mode)
 
 ;; Powerline
 
@@ -141,8 +152,25 @@
 (global-linum-mode 1)
 
 
+(setq data '(("John" . "root@209.97.187.87")
+             ("Jim" . "jim@email.com")
+             ("Jane" . "jane@email.com")
+             ("Jill" . "jill@email.com")))
+
+(setq some-helm-source
+      `((name . "HELM at the Emacs")
+        (candidates . ,data)
+        (action . (lambda (candidate)
+                    (helm-marked-candidates)))))
 
 
+(defun foo ()
+  (interactive)
+  (helm :sources 'some-helm-source)
+   (insert 
+   (mapconcat 'identity
+              (helm :sources '(some-helm-source))","))
+   )
 ;removes line wrap symbol from left side
 (define-fringe-bitmap 'left-curly-arrow
   [#b00000000
@@ -175,8 +203,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (json-mode web-mode js2-refactor indium matlab-mode helm-bibtex org-bullets company))))
+   '(auto-package-update js-align json-mode web-mode js2-refactor indium matlab-mode helm-bibtex org-bullets company)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

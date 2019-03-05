@@ -38,3 +38,12 @@
 
 (eval-after-load "flycheck"
   '(add-hook 'flycheck-mode-hook 'flycheck-color-mode-line-mode))
+
+
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
+
+(require 'srefactor)
+(semantic-mode 1)
+(define-key c-mode-map (kbd "M-RET") 'srefactor-refactor-at-point)
+(define-key c++-mode-map (kbd "M-RET") 'srefactor-refactor-at-point)

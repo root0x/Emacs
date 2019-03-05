@@ -31,6 +31,10 @@
 ;;;; JSON mode
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
 
+(add-hook 'js-mode-hook #'smartparens-mode)
+
+(require 'js-align)
+(add-hook 'js-mode 'js-align-mode)
 
 ;;;; Tern
 ;; Combine Tern and dumb-jump

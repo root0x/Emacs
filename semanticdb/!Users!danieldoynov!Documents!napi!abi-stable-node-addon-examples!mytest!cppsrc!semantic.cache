@@ -1,0 +1,24 @@
+;; Object semanticdb-project-database-file-404d6780
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-404d6780"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-404d205c"
+      :major-mode c++-mode
+      :tags 
+        '( ("napi.h" include (:system-flag t) nil [23 40])
+            ("Samples/functionexample.h" include nil nil [41 77])
+            ("InitAll" function
+               (:arguments 
+                  ( ("env" variable (:type ("Napi::Env" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [101 115])
+                    ("exports" variable (:type ("Napi::Object" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [116 137]))                  
+                :type ("Napi::Object" type (:type "class") nil nil))
+                nil [80 187]))          
+      :file "main.cpp"
+      :pointmax 225
+      :fsize 224
+      :lastmodtime '(23460 62091 506783 731000)
+      :unmatched-syntax nil))
+  :file "!Users!danieldoynov!Documents!napi!abi-stable-node-addon-examples!mytest!cppsrc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

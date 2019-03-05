@@ -1,0 +1,106 @@
+;; Object semanticdb-project-database-file-40ddd54c
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file-40ddd54c"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table-40ddd50c"
+      :major-mode c++-mode
+      :tags 
+        '( ("napi.h" include (:system-flag t) nil [1 18])
+            ("functionexample" type
+               (:members 
+                  ( ("hello" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [51 71])
+                    ("add" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [84 90])
+                            ("b" variable (:type "int") (reparse-symbol arg-sub-list) [90 96]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [76 97])
+                    ("AddWrapped" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("info" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Napi::CallbackInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [126 157]))                          
+                        :type ("Napi::Number" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [102 158])
+                    ("HelloWrapped" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("info" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Napi::CallbackInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [189 220]))                          
+                        :type ("Napi::String" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [163 221])
+                    ("Init" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("env" variable (:type ("Napi::Env" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [244 258])
+                            ("exports" variable (:type ("Napi::Object" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [259 280]))                          
+                        :type ("Napi::Object" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [226 281]))                  
+                :type "namespace")
+                nil [19 283]))          
+      :file "functionexample.h"
+      :pointmax 284
+      :fsize 283
+      :lastmodtime '(23460 63595 545347 750000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table-40ddd52c"
+      :major-mode c++-mode
+      :tags 
+        '( ("functionexample.h" include nil nil [1 29])
+            ("hello" function
+               (:parent "functionexample"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [33 98])
+            ("add" function
+               (:parent "functionexample"
+                :arguments 
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [126 132])
+                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [133 139]))                  
+                :type "int")
+                nil [101 161])
+            ("AddWrapped" function
+               (:parent "functionexample"
+                :arguments 
+                  ( ("info" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Napi::CallbackInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [205 236]))                  
+                :type ("Napi::Number" type (:type "class") nil nil))
+                nil [164 653])
+            ("HelloWrapped" function
+               (:parent "functionexample"
+                :arguments 
+                  ( ("info" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Napi::CallbackInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [700 731]))                  
+                :type ("Napi::String" type (:type "class") nil nil))
+                nil [657 876])
+            ("Init" function
+               (:parent "functionexample"
+                :arguments 
+                  ( ("env" variable (:type ("Napi::Env" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [913 927])
+                    ("exports" variable (:type ("Napi::Object" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [928 949]))                  
+                :type ("Napi::Object" type (:type "class") nil nil))
+                nil [878 1136]))          
+      :file "functionexample.cpp"
+      :pointmax 1137
+      :fsize 1136
+      :lastmodtime '(23460 63787 698597 439000)
+      :unmatched-syntax nil))
+  :file "!Users!danieldoynov!Documents!napi!abi-stable-node-addon-examples!mytest!cppsrc!Samples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
