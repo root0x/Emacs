@@ -71,6 +71,7 @@
      npm-mode
      rjsx-mode
      move-text
+     org-bullets
      )))
 
 (condition-case nil
@@ -91,6 +92,7 @@
 ;(load "~/.emacs.d/config/elisp.el")
 ;(load "~/.emacs.d/config/latex.el")
 (load "~/.emacs.d/config/js.el")
+(load "~/.emacs.d/config/typescript.el")
 ;;;Editor
 
 (setq warning-minimum-level :emergency)
@@ -186,6 +188,8 @@
 (global-set-key [\M-up] 'move-text-up)
 (global-set-key [\M-down] 'move-text-down)
 
+(add-hook 'org-mode-hook 'org-bullets-mode)
+
 
 ;Deal with temporary files
 (setq backup-directory-alist
@@ -208,7 +212,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(move-text auto-package-update js-align json-mode web-mode js2-refactor indium matlab-mode helm-bibtex org-bullets company)))
+   '(tide move-text auto-package-update js-align json-mode web-mode js2-refactor indium matlab-mode helm-bibtex org-bullets company)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
