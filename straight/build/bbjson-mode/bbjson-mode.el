@@ -1,1 +1,0 @@
-/Users/danieldoynov/.emacs.d/straight/repos/bbjson-mode.el/bbjson-mode.el

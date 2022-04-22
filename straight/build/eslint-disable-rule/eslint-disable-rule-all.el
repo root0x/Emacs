@@ -1,1 +1,0 @@
-/Users/danieldoynov/.emacs.d/straight/repos/eslint-disable-rule/eslint-disable-rule-all.el

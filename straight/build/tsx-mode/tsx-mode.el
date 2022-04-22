@@ -1,1 +1,0 @@
-/Users/danieldoynov/.emacs.d/straight/repos/tsx-mode.el/tsx-mode.el

@@ -1,1 +1,0 @@
-/Users/danieldoynov/.emacs.d/straight/repos/elisp-tree-sitter/lisp/tree-sitter-load.el

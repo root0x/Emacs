@@ -1,1 +1,0 @@
-/Users/danieldoynov/.emacs.d/straight/repos/mmm-mode/mmm-class.el

@@ -1,1 +1,0 @@
-/Users/danieldoynov/.emacs.d/straight/repos/flymake-eslint/flymake-eslint.el
