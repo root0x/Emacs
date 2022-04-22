@@ -1,0 +1,1 @@
+("~/.emacs.d/" "~/Documents/merlin/" "~/Documents/wlr-merlin/" "~/.emacs.d/straight/repos/tsx-mode.el/")

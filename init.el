@@ -1,218 +1,248 @@
-;;; Package -- Summary
-;;; Code:
-;;; Commentary:
-
-
-;; Turn off mouse interface early in startup to avoid momentary display
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-
-;; Remove security vulnerability
-(eval-after-load "enriched"
-  '(defun enriched-decode-display-prop (start end &optional param)
-     (list start end)))
-
-
-
-
-;; No splash screen please ... jeez
 (setq inhibit-startup-message t)
 
+(scroll-bar-mode -1)        ; Disable visible scrollbar
+(tool-bar-mode -1)          ; Disable the toolbar
+(tooltip-mode -1)           ; Disable tooltips
+(set-fringe-mode 10)        ; Give some breathing room
 
-(setq config-dir
-      (expand-file-name "settings" user-emacs-directory))
-
-
-(add-to-list 'load-path config-dir)
-
-
-(require 'setup-package)
+(menu-bar-mode -1)            ; Disable the menu bar
 
 
-(setq is-mac (equal system-type 'darwin))
+;; Make ESC quit prompts
+					;(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
+;; Initialize package sources
+(require 'package)
 
 
-(defun init--install-packages ()
-  (packages-install
-   '(magit
-     company
-     doom-themes
-     powerline
-     company-c-headers
-     helm
-     irony
-     company-irony
-     company-irony-c-headers
-     auctex
-     rtags
-     flycheck
-     flycheck-irony
-     rainbow-delimiters
-     flycheck-color-mode-line
-     company-auctex
-     yasnippet
-     indium js2-refactor
-     xref-js2
-     tern
-     company-tern
-     exec-path-from-shell
-     web-mode
-     json-mode
-     angular-snippets
-     dockerfile-mode
-     docker-compose-mode
-     docker-tramp
-     smartparens
-     srefactor
-     grunt
-     nginx-mode
-     company-nginx
-     npm-mode
-     rjsx-mode
-     move-text
-     org-bullets
-     )))
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("org" . "https://orgmode.org/elpa/")
+                         ("elpa" . "https://elpa.gnu.org/packages/")))
 
-(condition-case nil
-    (init--install-packages)
-  (error
-   (package-refresh-contents)
-   (init--install-packages)))
+(package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
 
-(when is-mac
-  (require-package 'exec-path-from-shell)
-  (setq shell-command-switch "-ic")
-;  (setq exec-path-from-shell-arguments '("-l")) 
-  (exec-path-from-shell-initialize)
+;; Install straight.el
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 5))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+
+
+(straight-use-package 'use-package)
+
+(setq make-backup-files nil)
+;; Initialize use-package on non-Linux platforms
+					;(unless (package-installed-p 'use-package)
+					; (package-install 'use-package))
+
+
+(require 'use-package)
+(setq use-package-always-ensure t)
+
+(use-package exec-path-from-shell)
+
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
+(column-number-mode)
+(global-display-line-numbers-mode t)
+
+;; Disable line numbers for some modes
+(dolist (mode '(org-mode-hook
+                term-mode-hook
+		treemacs-mode-hook))
+					; shell-mode-hook
+					; eshell-mode-hook
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
+
+(use-package command-log-mode)
+
+(use-package ivy
+  :diminish
+  :bind (("C-s" . swiper)
+         :map ivy-minibuffer-map
+         ("TAB" . ivy-alt-done)
+         ("C-l" . ivy-alt-done)
+         ("C-j" . ivy-next-line)
+         ("C-k" . ivy-previous-line)
+         :map ivy-switch-buffer-map
+         ("C-k" . ivy-previous-line)
+         ("C-l" . ivy-done)
+         ("C-d" . ivy-switch-buffer-kill)
+         :map ivy-reverse-i-search-map
+         ("C-k" . ivy-previous-line)
+         ("C-d" . ivy-reverse-i-search-kill))
+  :config
+  (ivy-mode 1))
+
+(use-package doom-modeline
+  :init (doom-modeline-mode 1)
+  :custom ((doom-modeline-height 15)))
+
+(use-package doom-themes
+  :init (load-theme 'doom-one t))
+
+(with-eval-after-load 'doom-themes
+  (doom-themes-treemacs-config))
+
+(use-package all-the-icons)
+
+(use-package rainbow-delimiters
+  :hook (prog-mode . rainbow-delimiters-mode))
+
+(use-package which-key
+  :init (which-key-mode)
+  :diminish which-key-mode
+  :config
+  (setq which-key-idle-delay 1))
+
+(use-package ivy-rich
+  :init
+  (ivy-rich-mode 1))
+
+(use-package counsel
+  :bind (("M-x" . counsel-M-x)
+         ("C-x b" . counsel-ibuffer)
+         ("C-x C-f" . counsel-find-file)
+	 ("C-x b" . 'counsel-switch-buffer)
+         :map minibuffer-local-map
+         ("C-r" . 'counsel-minibuffer-history)))
+
+(use-package helpful
+  :custom
+  (counsel-describe-function-function #'helpful-callable)
+  (counsel-describe-variable-function #'helpful-variable)
+  :bind
+  ([remap describe-function] . counsel-describe-function)
+  ([remap describe-command] . helpful-command)
+  ([remap describe-variable] . counsel-describe-variable)
+  ([remap describe-key] . helpful-key))
+
+
+(use-package org-superstar
+  :init
+  (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
+  (setq org-hide-leading-stars nil)
+  (setq org-superstar-leading-bullet ?\s))
+
+
+(setq garbage-collection-messages t)
+
+(use-package projectile
+  :diminish projectile-mode
+  :config (projectile-mode)
+  :custom ((projectile-completion-system 'ivy))
+  :bind-keymap
+  ("C-c p" . projectile-command-map)
+  :init
+  ;; NOTE: Set this to the folder where you keep your Git repos!
+  )
+
+(use-package counsel-projectile
+  :config (counsel-projectile-mode))
+
+
+(use-package php-mode
+  :ensure t)
+
+(use-package vue-mode
+  :init
+  (setq indent-tabs-mode nil
+	js-indent-level 4)
+  :ensure t)
+
+
+(use-package lsp-mode
+  :init
+  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
+  (setq lsp-keymap-prefix "C-c l")
+  :config
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\node_modules\\'")
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\vendor\\'")
+  :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
+         (typescript-mode . lsp)
+	 (php-mode . lsp)
+	 (vue-mode . lsp)
+         ;; if you want which-key integration
+         (lsp-mode . lsp-enable-which-key-integration))
+  :bind (("s-<down>" . lsp-find-definition))
+  :commands lsp)
+
+(use-package lsp-ui :commands lsp-ui-mode)
+
+(use-package lsp-ivy
+  :commands lsp-ivy-workspace-symbol)
+(use-package lsp-treemacs
+  :commands lsp-treemacs-errors-list
+  :config
+  (lsp-treemacs-sync-mode 1))
+
+(with-eval-after-load 'treemacs
+  (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action))
+
+
+
+(use-package typescript-mode
+  :mode "\\.ts\\'"
+  :hook (typescript-mode . lsp-deferred)
+  :config
+  (setq typescript-indent-level 4)
+  )
+
+(use-package tsi
+  :straight (tsi
+	     :type git
+       	     :host github
+	     :repo "orzechowskid/tsi.el")
   )
 
 
-(load "~/.emacs.d/config/cpp.el")
-;(load "~/.emacs.d/config/elisp.el")
-;(load "~/.emacs.d/config/latex.el")
-(load "~/.emacs.d/config/js.el")
-(load "~/.emacs.d/config/typescript.el")
-;;;Editor
+(use-package tsx-mode
+  :mode "\\.tsx\\'"
+  :straight (tsx-mode
+	     :type git
+	     :host github
+	     :repo "orzechowskid/tsx-mode.el")  )
 
-(setq warning-minimum-level :emergency)
-
-;; Helm
-(require 'helm-config)
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x C-f") #'helm-find-files)
-(helm-mode 1)
-
-
-;; Theme
-(require 'doom-themes)
-
-;; Global settings (defaults)
-(setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-      doom-themes-enable-italic t) ; if nil, italics is universally disabled
-
-;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each theme
-;; may have their own settings.
-(load-theme 'doom-one t)
-
-;; Enable flashing mode-line on errors
-(doom-themes-visual-bell-config)
-
-;; Enable custom neotree theme
-(doom-themes-neotree-config)  ; all-the-icons fonts must be installed!
-
-;; Corrects (and improves) org-mode's native fontification.
-(doom-themes-org-config)
-
-(require 'smartparens-config)
-(add-hook 'emacs-lisp-mode-hook #'smartparens-mode)
-
-;; Powerline
-
-(require 'powerline)
-(powerline-default-theme)
-
-
-;;Yasnippet
-(add-to-list 'load-path
-              "~/.emacs.d/plugins/yasnippet")
-(require 'yasnippet)
-(yas-global-mode 1)
-
-
-;; MISC
-(global-set-key (kbd "M-3") '(lambda () (interactive) (insert "#")))
-
-(setq tab-width 4)
-(setq-default c-basic-offset 4)
+(with-eval-after-load 'tree-sitter-langs
+  (tree-sitter-require 'tsx)
+  (add-to-list 'tree-sitter-major-mode-language-alist '(typescript-mode . tsx)))
 
 
 
-(setq c-default-style "bsd" c-basic-offset 4)
+;; (use-package company
+;;   :after lsp-mode
+;;   :hook (lsp-mode . company-mode)
+;;   :bind (:map company-active-map
+;;               ("<tab>" . company-complete-selection))
+;;   (:map lsp-mode-map
+;;         ("<tab>" . company-indent-or-complete-common))
+;;   :custom
+;;   (company-minimum-prefix-length 1)
+;;   (company-idle-delay 0.0))
 
-
-
-(global-linum-mode 1)
-
-
-(setq data '(("John" . "root@209.97.187.87")
-             ("Jim" . "jim@email.com")
-             ("Jane" . "jane@email.com")
-             ("Jill" . "jill@email.com")))
-
-(setq some-helm-source
-      `((name . "HELM at the Emacs")
-        (candidates . ,data)
-        (action . (lambda (candidate)
-                    (helm-marked-candidates)))))
-
-
-(defun foo ()
-  (interactive)
-  (helm :sources 'some-helm-source)
-   (insert 
-   (mapconcat 'identity
-              (helm :sources '(some-helm-source))","))
-   )
-;removes line wrap symbol from left side
-(define-fringe-bitmap 'left-curly-arrow
-  [#b00000000
-   #b00001000
-   #b00001000
-   #b00001110
-   #b00000000
-   #b00000000
-   #b00000000
-   #b00000000])
-
-(global-set-key [\M-up] 'move-text-up)
-(global-set-key [\M-down] 'move-text-down)
-
-(add-hook 'org-mode-hook 'org-bullets-mode)
-
-
-;Deal with temporary files
-(setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
-(setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
-(message "Deleting old backup files...")
-(let ((week (* 60 60 24 7))
-      (current (float-time (current-time))))
-  (dolist (file (directory-files temporary-file-directory t))
-    (when (and (backup-file-name-p file)
-               (> (- current (float-time (fifth (file-attributes file))))
-                  week))
-      (message "%s" file)
-      (delete-file file))))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("835868dcd17131ba8b9619d14c67c127aa18b90a82438c8613586331129dda63" "db3e80842b48f9decb532a1d74e7575716821ee631f30267e4991f4ba2ddf56e" default))
+ '(doom-themes-treemacs-theme "doom-colors")
  '(package-selected-packages
-   '(tide move-text auto-package-update js-align json-mode web-mode js2-refactor indium matlab-mode helm-bibtex org-bullets company)))
+   '(rjsx-mode web-mode emms-info-mediainfo php-mode org-superstar which-key use-package rainbow-delimiters ivy-rich helpful doom-themes doom-modeline counsel command-log-mode))
+ '(tsi-typescript-indent-offset 4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

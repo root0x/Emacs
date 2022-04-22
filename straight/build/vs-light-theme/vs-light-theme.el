@@ -1,0 +1,1 @@
+/Users/danieldoynov/.emacs.d/straight/repos/vs-light-theme/vs-light-theme.el
