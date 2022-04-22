@@ -137,3 +137,7 @@ irony/
 
 semanticdb/
 straight/
+intelephense/
+lsp-cache/
+eln-cache/
+auto-save-list
